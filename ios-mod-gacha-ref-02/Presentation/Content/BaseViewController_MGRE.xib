@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseViewController_MGRE" customModule="ios_mod_gacha_ref_02" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView_MGRE" destination="FLf-uu-14M" id="mHC-jd-hW7"/>
-                <outlet property="emptyLabel_MGRE" destination="CR8-sb-oY7" id="bwR-G2-R3a"/>
                 <outlet property="filterView_MGRE" destination="ky6-va-hAY" id="HRm-M3-Erv"/>
                 <outlet property="navigationView_MGRE" destination="bVc-QX-JII" id="cML-6A-gyu"/>
                 <outlet property="searchBar_MGRE" destination="78j-28-J4O" id="APM-dK-LOb"/>
@@ -46,12 +45,6 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="58"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CR8-sb-oY7">
-                    <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="background"/>
@@ -62,9 +55,7 @@
                 <constraint firstItem="bVc-QX-JII" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NWH-id-Pp3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ky6-va-hAY" secondAttribute="trailing" id="NXc-f2-yn7"/>
                 <constraint firstItem="78j-28-J4O" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="VOq-LI-Kwo"/>
-                <constraint firstItem="CR8-sb-oY7" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Y4X-xh-Kgi"/>
                 <constraint firstItem="FLf-uu-14M" firstAttribute="top" secondItem="ky6-va-hAY" secondAttribute="bottom" id="bf0-Nw-ixs"/>
-                <constraint firstItem="CR8-sb-oY7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cWP-N5-WXl"/>
                 <constraint firstItem="78j-28-J4O" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fiB-l7-rS0"/>
                 <constraint firstItem="bVc-QX-JII" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hxs-N7-tM2"/>
                 <constraint firstItem="ky6-va-hAY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="woT-bg-tAc"/>

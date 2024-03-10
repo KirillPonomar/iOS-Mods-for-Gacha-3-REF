@@ -17,14 +17,18 @@ enum Images_MGRE: String {
     case closeIcon
     case deleteIcon
     case doneIcon
+    case leftIcon
+    case rightIcon
     
     case favoriteIconEmpty
     case favoriteIcon
+    case failureIcon
     case heartIcon
     case heartIconEmpty
     
     case chevronTopIcon
     case chevronBottomIcon
+    case successIcon
     
     case deleteLargeIcon
 }

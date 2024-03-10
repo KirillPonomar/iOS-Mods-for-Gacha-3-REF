@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,45 +19,57 @@
                 <rect key="frame" x="0.0" y="0.0" width="164" height="242"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CNg-02-uqK">
-                        <rect key="frame" x="8" y="8" width="148" height="226"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hzr-0R-mGi">
-                                <rect key="frame" x="0.0" y="0.0" width="148" height="148"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ou-hJ-KAw">
-                                <rect key="frame" x="0.0" y="156" width="148" height="70"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                        </subviews>
-                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Hzr-0R-mGi">
+                        <rect key="frame" x="8" y="8" width="148" height="182"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Ul6-La-HKj">
+                        <rect key="frame" x="108" y="16" width="40" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
+                        <connections>
+                            <action selector="favoriteButtonDidTap_MGRE:" destination="gTV-IL-0wX" eventType="touchUpInside" id="L41-uq-QEZ"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="7ou-hJ-KAw">
+                        <rect key="frame" x="8" y="198" width="148" height="36"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Download">
+                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="detailButtonDidTap_MGRE:" destination="gTV-IL-0wX" eventType="touchUpInside" id="akG-Qn-KjM"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" name="background_GM"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="CNg-02-uqK" secondAttribute="trailing" constant="8" id="MTr-Dh-1Wl"/>
-                <constraint firstAttribute="bottom" secondItem="CNg-02-uqK" secondAttribute="bottom" constant="8" id="bvt-Rf-ge7"/>
-                <constraint firstItem="CNg-02-uqK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="pJf-k5-wNZ"/>
-                <constraint firstItem="CNg-02-uqK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="vDl-B8-r9Z"/>
-            </constraints>
             <size key="customSize" width="166" height="250"/>
             <connections>
+                <outlet property="downloadButton" destination="7ou-hJ-KAw" id="sOD-FY-ClU"/>
+                <outlet property="favoriteButton" destination="Ul6-La-HKj" id="Zzd-Y0-dxh"/>
                 <outlet property="imageView_MGRE" destination="Hzr-0R-mGi" id="Aws-Vp-SHI"/>
             </connections>
-            <point key="canvasLocation" x="138.93129770992365" y="17.95774647887324"/>
+            <point key="canvasLocation" x="138.93129770992365" y="17.605633802816904"/>
         </collectionViewCell>
     </objects>
     <resources>
         <namedColor name="background_GM">
             <color red="0.96899998188018799" green="0.96100002527236938" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

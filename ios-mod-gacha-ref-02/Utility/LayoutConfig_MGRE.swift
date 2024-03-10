@@ -40,7 +40,7 @@ extension NSCollectionLayoutSection_MGRE {
                                        itemHeight: 278,
                                        columns: 1,
                                        horizontalSpacing: 0,
-                                       verticalSpacing: 8,
+                                       verticalSpacing: 6,
                                        sectionInsets: LayoutConfig_MGRE.defaultPhoneInsets)
         case (.mods_mgre, .pad):
             let itemWidth = LayoutConfig_MGRE.getItemWidth(with: 2,
@@ -57,10 +57,10 @@ extension NSCollectionLayoutSection_MGRE {
                                                            horizontalSpacing: 0,
                                                            sectionInsets: LayoutConfig_MGRE.defaultPhoneInsets)
             config = LayoutConfig_MGRE(itemWidth: itemWidth,
-                                       itemHeight: 218,
+                                       itemHeight: 198,
                                        columns: 1,
                                        horizontalSpacing: 0,
-                                       verticalSpacing: 8,
+                                       verticalSpacing: 6,
                                        sectionInsets: LayoutConfig_MGRE.defaultPhoneInsets)
         case (.outfitIdeas_mgre, .pad):
             let itemWidth = LayoutConfig_MGRE.getItemWidth(with: 2, 
@@ -74,13 +74,13 @@ extension NSCollectionLayoutSection_MGRE {
                                        sectionInsets: LayoutConfig_MGRE.defaultPadInsets)
         case (.wallpapers_mgre, .phone):
             let itemWidth = LayoutConfig_MGRE.getItemWidth(with: 3, 
-                                                           horizontalSpacing: 5,
+                                                           horizontalSpacing: 4,
                                                            sectionInsets: LayoutConfig_MGRE.defaultPhoneInsets)
             config = LayoutConfig_MGRE(itemWidth: itemWidth, 
                                        itemHeight: itemWidth*1.67,
                                        columns: 3,
-                                       horizontalSpacing: 5,
-                                       verticalSpacing: 8,
+                                       horizontalSpacing: 4,
+                                       verticalSpacing: 4,
                                        sectionInsets: LayoutConfig_MGRE.defaultPhoneInsets)
         case (.wallpapers_mgre, .pad):
             let itemWidth = LayoutConfig_MGRE.getItemWidth(with: 3,
@@ -97,10 +97,10 @@ extension NSCollectionLayoutSection_MGRE {
                                                            horizontalSpacing: 10,
                                                            sectionInsets: LayoutConfig_MGRE.defaultPhoneInsets)
             config = LayoutConfig_MGRE(itemWidth: itemWidth, 
-                                       itemHeight: itemWidth*0.83,
+                                       itemHeight: 242,
                                        columns: 2,
                                        horizontalSpacing: 10,
-                                       verticalSpacing: 10,
+                                       verticalSpacing: 8,
                                        sectionInsets: LayoutConfig_MGRE.defaultPhoneInsets)
             
         case (.characters_mgre, .pad), (.collections_mgre, .pad):

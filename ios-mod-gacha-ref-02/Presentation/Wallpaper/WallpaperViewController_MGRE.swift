@@ -20,10 +20,8 @@ class WallpaperViewController_MGRE: UIViewController {
     @IBOutlet private weak var imageView_MGRE: UIImageView!
     @IBOutlet private weak var rightIndentConstraint_MGRE: NSLayoutConstraint!
     @IBOutlet private weak var leftIndentConstraint_MGRE: NSLayoutConstraint!
-    @IBOutlet private weak var buttonsViewHeight_MGRE: NSLayoutConstraint!
-    @IBOutlet private weak var rightButtonsIndentConstraint_MGRE: NSLayoutConstraint!
-    @IBOutlet private weak var leftButtonsIndentConstraint_MGRE: NSLayoutConstraint!
     @IBOutlet var actionButtons_MGRE: [UIButton]!
+    @IBOutlet private weak var downloadButton: UIButton!
     
     var modelType_MGRE: ModelType_MGRE?
     var contentType_MGRE: ContentType_MGRE?
@@ -38,12 +36,22 @@ class WallpaperViewController_MGRE: UIViewController {
     }
     
     private func configureLayout_MGRE() {
-        let deviceType = UIDevice.current.userInterfaceIdiom
-        rightIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 85
-        leftIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 85
-        buttonsViewHeight_MGRE.constant = deviceType == .phone ? 56 : 68
-        leftButtonsIndentConstraint_MGRE.constant = deviceType == .phone ? 12 : 120
-        rightButtonsIndentConstraint_MGRE.constant = deviceType == .phone ? -12 : -120
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = downloadButton.bounds
+        gradientLayer.colors = [
+            UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
+            UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor
+        ]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        downloadButton.layer.insertSublayer(gradientLayer, at: 0)
+        downloadButton.layer.cornerRadius = 16
+        downloadButton.layer.masksToBounds = true
+        downloadButton.setImage(.downloadIcon, for: .normal)
+        downloadButton.semanticContentAttribute = .forceRightToLeft
+        downloadButton.setTitle("Download", for: .normal)
+        downloadButton.configuration?.imagePadding = 12
+        imageView_MGRE.layer.cornerRadius = 20
     }
     
     func configureSubviews_MGRE() {
@@ -53,13 +61,13 @@ class WallpaperViewController_MGRE: UIViewController {
         }
         switch modelType {
         case .wallpapers(let model):
-            navigationView_MGRE.build_MGRE(with: "Wallpaper", leftIcon: UIImage(.backChevronIcon), rightIcon: nil)
+            navigationView_MGRE.build_MGRE(with: "Wallpaper", leftIcon: UIImage(.leftIcon), rightIcon: nil)
             imageView_MGRE.add_MGRE(image: model.image, for: .wallpapers_mgre)
             imageView_MGRE.contentMode = .scaleAspectFill
             contentType_MGRE = .wallpapers_mgre
 //            actionButtons[0].isHidden = true
         case .collections(let model):
-            navigationView_MGRE.build_MGRE(with: "Collection", leftIcon: UIImage(.backChevronIcon), rightIcon: nil)
+            navigationView_MGRE.build_MGRE(with: "Collection", leftIcon: UIImage(.leftIcon), rightIcon: nil)
             imageView_MGRE.add_MGRE(image: model.image, for: .wallpapers_mgre)
             imageView_MGRE.contentMode = .scaleAspectFill
             contentType_MGRE = .collections_mgre
@@ -75,7 +83,7 @@ class WallpaperViewController_MGRE: UIViewController {
         case 0: favoriteButtonDidTap_MGRE()
         case 1: shareImage_MGRE(image: imageView_MGRE.image, viewController: self)
         case 2: scan_MGRE(image: imageView_MGRE.image)
-        case 3: save_MGRE(image: imageView_MGRE.image)
+        case 3: downloadButtonDidTap(downloadButton)
         default: break
         }
     }
@@ -121,6 +129,13 @@ class WallpaperViewController_MGRE: UIViewController {
         } else {
             DBManager_MGRE.shared.contentManager.deleteFavorites_MGRE(with: favId, contentType: contentType)
         }
+    }
+    
+    @IBAction func downloadButtonDidTap(_ sender: UIButton) {
+        var _M3dafsr2: Int { 0 }
+        var _M38dsaa: Bool { false }
+//        save_MGRE(image: imageView_MGRE.image)
+        shareImage_MGRE(image: imageView_MGRE.image, viewController: self)
     }
     
     func save_MGRE(image: UIImage?) {

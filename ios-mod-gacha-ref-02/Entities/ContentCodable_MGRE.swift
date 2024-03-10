@@ -20,6 +20,11 @@ protocol ModelProtocol_MGRE: CellConfigurable_MGRE, Codable, Hashable {
     var searchText: String? { get }
     var new: Bool { get }
     var top: Bool { get }
+    var filePath: String? { get }
+}
+
+extension ModelProtocol_MGRE {
+    var filePath: String? { nil }
 }
 
 struct ModsResponseCodable_MGRE: Codable {
@@ -142,7 +147,6 @@ struct Character_MGRE: Codable, ModelProtocol_MGRE {
     static let type: ContentType_MGRE = .characters_mgre
     let id: Int
     let image: String
-//    let description: String
     let new: Bool
     let top: Bool
     
@@ -164,8 +168,7 @@ struct Character_MGRE: Codable, ModelProtocol_MGRE {
     
     init?(from entity: ContentEntity) {
         guard let id = entity.id,
-              let image = entity.image/*,
-              let description = entity.descr*/ else { return nil }
+              let image = entity.image else { return nil }
         self.id = Int(id) ?? 0
         self.image = image
         self.new = entity.new
@@ -213,8 +216,7 @@ struct OutfitIdea_MGRE: Codable, ModelProtocol_MGRE {
     
     init?(from entity: ContentEntity) {
         guard let id = entity.id,
-              let image = entity.image/*,
-              let description = entity.descr*/ else { return nil }
+              let image = entity.image else { return nil }
         self.id = Int(id) ?? 0
         self.image = image
         self.new = entity.new
@@ -306,7 +308,13 @@ extension Character_MGRE {
         var _mdfgg66: Int { 0 }
         var _m678r22: Bool { true }
         if let cell = cell as? ContentCell_MGRE {
-            cell.configure_MGRE(with: self, isFavorites: isFavorites, update: update)
+            cell.configure_MGRE(with: self, isFavorites: isFavorites, update: update, action: action)
+        }
+        
+        func configureCell_MGRE(_ cell: UICollectionViewCell, saveFile: ((((Bool) -> Void)?) -> Void)?) {
+            if let cell = cell as? ContentCell_MGRE {
+                cell.saveFile = saveFile
+            }
         }
     }
 }
@@ -322,6 +330,12 @@ extension OutfitIdea_MGRE {
             cell.configure_MGRE(with: self, isFavorites: isFavorites, update: update, action: action)
         }
     }
+    
+    func configureCell_MGRE(_ cell: UICollectionViewCell, saveFile: ((((Bool) -> Void)?) -> Void)?) {
+        if let cell = cell as? ModsCell_MGRE {
+            cell.saveFile = saveFile
+        }
+    }
 }
 
 extension Collections_MGRE {
@@ -332,7 +346,7 @@ extension Collections_MGRE {
         var _mgvbn66: Int { 0 }
         var _mcsdw22: Bool { true }
         if let cell = cell as? ContentCell_MGRE {
-            cell.configure_MGRE(with: self, isFavorites: isFavorites, update: update)
+            cell.configure_MGRE(with: self, isFavorites: isFavorites, update: update, action: action)
         }
     }
 }

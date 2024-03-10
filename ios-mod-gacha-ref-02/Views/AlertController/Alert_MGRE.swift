@@ -46,25 +46,26 @@ class Alert_MGRE: UIView {
     
     private func configureLayout_MGRE() {
         let deviceType = UIDevice.current.userInterfaceIdiom
-        rightIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 32
-        leftIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 32
-        buttonHeight_MGRE.constant = deviceType == .phone ? 34 : 44
-        
-        let titleFontSize: CGFloat = deviceType == .phone ? 22 : 32
-        let subtitleFontSize: CGFloat = deviceType == .phone ? 16 : 24
-        let buttonFontSize: CGFloat = deviceType == .phone ? 16 : 24
-        
-        titleLabel_MGRE.font = UIFont(name: "BakbakOne-Regular", size: titleFontSize) ?? UIFont.systemFont(ofSize: titleFontSize)
-        subtitleLabel_MGRE.font = UIFont(name: "SF-Pro-Display-Regular", size: subtitleFontSize) ?? UIFont.systemFont(ofSize: subtitleFontSize)
-        leftButton_MGRE.titleLabel?.font = UIFont(name: "BakbakOne-Regular", size: buttonFontSize) ?? UIFont.systemFont(ofSize: buttonFontSize)
-        rightButton_MGRE.titleLabel?.font = UIFont(name: "BakbakOne-Regular", size: buttonFontSize) ?? UIFont.systemFont(ofSize: buttonFontSize)
-        leftButton_MGRE.layer.cornerRadius = deviceType == .phone ? 17 : 22
-        rightButton_MGRE.layer.cornerRadius = deviceType == .phone ? 17 : 22
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = rightButton_MGRE.bounds
+        gradientLayer.colors = [
+            UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
+            UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor
+        ]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        rightButton_MGRE.layer.insertSublayer(gradientLayer, at: 0)
+        rightButton_MGRE.layer.cornerRadius = 8
+        leftButton_MGRE.layer.cornerRadius = 8
+        leftButton_MGRE.backgroundColor = .tertiary
+//        rightIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 32
+//        leftIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 32
+//        buttonHeight_MGRE.constant = deviceType == .phone ? 34 : 44
     }
     
     func build_MGRE(with data: AlertData_MGRE) {
-        leftButton_MGRE.setTitle(data.leftBtnText, for: .normal)
-        rightButton_MGRE.setTitle(data.rightBtnText, for: .normal)
+        leftButton_MGRE.setTitle(data.rightBtnText, for: .normal)
+        rightButton_MGRE.setTitle(data.leftBtnText, for: .normal)
         
         buttonContainer_MGRE.isHidden = false
         

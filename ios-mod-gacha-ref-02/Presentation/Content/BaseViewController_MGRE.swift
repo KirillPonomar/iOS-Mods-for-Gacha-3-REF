@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Kingfisher
+import SwiftyDropbox
 
 enum Filter_MGRE: String {
     case all_mgre = "All", new_mgre = "New", last_mgre = "Last Added", top_mgre = "Top", favourites_mgre = "Favorites"
@@ -27,7 +29,6 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
     typealias Snapshot_MGRE = NSDiffableDataSourceSnapshot<Int, UnifiedModel_MGRE>
     
     @IBOutlet private weak var collectionView_MGRE: UICollectionView!
-    @IBOutlet private weak var emptyLabel_MGRE: UILabel!
     @IBOutlet private weak var navigationView_MGRE: NavigationView_MGRE!
     @IBOutlet private weak var searchBar_MGRE: SearchBar_MGRE!
     @IBOutlet private weak var filterView_MGRE: FilterView_MGRE!
@@ -75,10 +76,6 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
     }
     
     func configureSubviews_MGRE() {
-        let deviceType = UIDevice.current.userInterfaceIdiom
-        let fontSize: CGFloat = deviceType == .phone ? 20 : 32
-        emptyLabel_MGRE.font =  UIFont(name: "BakbakOne-Regular", size: fontSize)!
-
         configureNavigationView_MGRE()
         configureCollectionView_MGRE()
         configureSearchView_MGRE()
@@ -178,11 +175,21 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
             
             let model: any ModelProtocol_MGRE
             switch unifiedModel {
-            case .mods_mgre(let value): model = value
-            case .wallpaper_mgre(let value): model = value
-            case .characters_mgre(let value): model = value
-            case .outfitIdea_mgre(let value): model = value
-            case .collections_mgre(let value): model = value
+            case .mods_mgre(let value): 
+                model = value
+            case .wallpaper_mgre(let value):
+                model = value
+            case .characters_mgre(let value):
+                model = value
+            case .outfitIdea_mgre(let value):
+                model = value
+                value.configureCell_MGRE(cell) { [weak self] compl in
+                    self?.saveFile_MGRE(with: value.image) { completed in
+                        compl?(completed)
+                    }
+                }
+            case .collections_mgre(let value): 
+                model = value
             }
             
             let isFavorites = favorites_MGRE.contains(model.favId)
@@ -216,17 +223,6 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
     func applySnapshot_MGRE(for contentType: ContentType_MGRE) {
         var snapshot = Snapshot_MGRE()
         snapshot.appendSections([.zero])
-        
-        if data_MGRE.isEmpty {
-            emptyLabel_MGRE.isHidden = false
-            if let searchText = searchText_MGRE, !searchText.isEmpty {
-                emptyLabel_MGRE.text = "We didn’t find anything"
-            } else {
-                emptyLabel_MGRE.text = "You don’t have characters"
-            }
-        } else {
-            emptyLabel_MGRE.isHidden = true
-        }
         
         switch contentType {
         case .mods_mgre:            snapshot.appendItems(data_MGRE.map { .mods_mgre($0 as! Mods_MGRE) })
@@ -334,5 +330,45 @@ extension BaseViewController_MGRE {
         var _MGNrttg2: Int { 0 }
         var _MGcbdfdfda: Bool { false }
         favorites_MGRE = dropbox_MGRE.contentManager.fetchFavorites_MGRE(contentType: modelType_MGRE)
+    }
+}
+
+extension BaseViewController_MGRE {
+    func saveFile_MGRE(with imageUrl: String, completion: @escaping (UIImage?) -> Void) {
+        let cache = ImageCache.default
+        cache.retrieveImage(forKey: imageUrl) { result in
+            switch result {
+            case .success(let value):
+                completion(value.image)
+            case .failure(let error):
+                print("Error retrieving image from cache: \(error)")
+                completion(nil)
+            }
+        }
+    }
+    
+    func saveFile_MGRE(with imageUrl: String, coml: ((Bool) -> Void)?) {
+        saveFile_MGRE(with: imageUrl) { [weak self] image in
+            guard let self, let data = image?.pngData() else {
+                return
+            }
+            var _MGNsdgg2: Int { 0 }
+            var _MGcbna: Bool { false }
+            let activityVC = UIActivityViewController(activityItems: [data], applicationActivities: nil)
+            activityVC.title = "Download Mod"
+            activityVC.completionWithItemsHandler = { activityType, completed, items, error in
+                coml?(completed)
+            }
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                activityVC.modalPresentationStyle = .popover
+                
+                if let popoverPresentationController = activityVC.popoverPresentationController {
+                    popoverPresentationController.sourceView = self.view
+                    popoverPresentationController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+                    popoverPresentationController.permittedArrowDirections = []
+                }
+            }
+            self.present(activityVC, animated: true)
+        }
     }
 }

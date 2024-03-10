@@ -12,20 +12,13 @@ class ContentCharacterCell_MGRE: UICollectionViewCell {
 
     @IBOutlet weak var contentImageView_MGRE: UIImageView!
     
-    override var isSelected: Bool {
-        didSet {
-            layer.borderWidth = isSelected ? 2 : 0
-            layer.borderColor = isSelected ? UIColor.buttonBg.cgColor : UIColor.clear.cgColor
-        }
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 20
         layer.borderWidth = 0
         layer.borderColor = UIColor.clear.cgColor
         layer.masksToBounds = true
-        backgroundColor = UIColor(red: 0.962, green: 0.962, blue: 0.962, alpha: 1)
+        backgroundColor = .red
     }
     
     override func prepareForReuse() {

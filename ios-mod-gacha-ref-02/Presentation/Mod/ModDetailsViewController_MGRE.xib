@@ -71,18 +71,6 @@
                             <color key="textColor" systemColor="systemBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ejE-ry-jgC">
-                            <rect key="frame" x="0.0" y="636" width="361" height="52"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" name="buttonBg"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Download">
-                                <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                            </buttonConfiguration>
-                            <connections>
-                                <action selector="saveButtonDidTap_MGRE:" destination="-1" eventType="touchUpInside" id="su6-Tz-sGY"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Wcc-fd-SrB">
                             <rect key="frame" x="309" y="12" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
@@ -91,6 +79,30 @@
                             <buttonConfiguration key="configuration" style="plain" title=""/>
                             <connections>
                                 <action selector="favoriteButtonDidTap_MGRE:" destination="-1" eventType="touchUpInside" id="221-Pv-y5Y"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HrT-Lj-Scm">
+                            <rect key="frame" x="16" y="601" width="321" height="148"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="backgroundSecondary"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ejE-ry-jgC">
+                            <rect key="frame" x="0.0" y="617" width="361" height="52"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="buttonBg"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Download">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="saveButtonDidTap_MGRE:" destination="-1" eventType="touchUpInside" id="su6-Tz-sGY"/>
                             </connections>
                         </button>
                     </subviews>
@@ -136,6 +148,9 @@
     <resources>
         <namedColor name="background">
             <color red="0.097999997437000275" green="0.10580000281333923" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundSecondary">
+            <color red="0.18819999694824219" green="0.15289999544620514" blue="0.27450001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="buttonBg">
             <color red="1" green="0.59600001573562622" blue="0.23100000619888306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

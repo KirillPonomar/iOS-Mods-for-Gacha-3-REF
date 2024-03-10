@@ -31,10 +31,24 @@ class CharacterViewController_MGRE: UIViewController {
     
     private func configureLayout_MGRE() {
         let deviceType = UIDevice.current.userInterfaceIdiom
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = downloadButton_MGRE.bounds
+        gradientLayer.colors = [
+            UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
+            UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor
+        ]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        downloadButton_MGRE.layer.insertSublayer(gradientLayer, at: 0)
+        downloadButton_MGRE.layer.cornerRadius = 16
+        downloadButton_MGRE.layer.masksToBounds = true
+        downloadButton_MGRE.configuration?.imagePadding = 12
+        downloadButton_MGRE.setImage(.downloadIcon, for: .normal)
+        downloadButton_MGRE.semanticContentAttribute = .forceRightToLeft
+        downloadButton_MGRE.setTitle("Download", for: .normal)
         let fontSize: CGFloat = deviceType == .phone ? 20 : 32
         downloadButton_MGRE.titleLabel?.font =  UIFont(name: "BakbakOne-Regular", size: fontSize)!
         addNewButtonHeight_MGRE.constant = deviceType == .phone ? 58 : 72
-        downloadButton_MGRE.layer.cornerRadius = deviceType == .phone ? 30 : 40
         navBarHeight_MGRE.constant = deviceType == .phone ? 58 : 97
         rightIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 85
         leftIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 85
@@ -48,7 +62,7 @@ class CharacterViewController_MGRE: UIViewController {
     
     private func configureNavigationView_MGRE() {
         navigationView_MGRE.build_MGRE(with: "",
-                                  leftIcon: UIImage(.backChevronIcon),
+                                  leftIcon: UIImage(.leftIcon),
                                   rightIcon: nil)
         navigationView_MGRE.leftButtonAction_MGRE = { [weak self] in
             self?.navigationController?.popToRootViewController(animated: true)

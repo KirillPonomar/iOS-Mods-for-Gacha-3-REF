@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import Photos
 
 class ModsCell_MGRE: UICollectionViewCell {
 
@@ -14,14 +15,16 @@ class ModsCell_MGRE: UICollectionViewCell {
     @IBOutlet private weak var descriptionLabel_MGRE: UILabel!
     @IBOutlet private weak var imageView_MGRE: UIImageView!
     @IBOutlet private weak var imageViewHeight_MGRE: NSLayoutConstraint!
-    @IBOutlet private weak var buttonsHeight_MGRE: NSLayoutConstraint!
     @IBOutlet private weak var favoriteButton_MGRE: UIButton!
     @IBOutlet private weak var openButton_MGRE: UIButton!
     
     private(set) var isFavourite_MGRE: Bool = false
     
+    private var isOutfit = false
+    
     var update_MGRE: (() -> Void)?
     var action_MGRE: (() -> Void)?
+    var saveFile: ((((Bool) -> Void)?) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -71,6 +74,7 @@ class ModsCell_MGRE: UICollectionViewCell {
         titleLabel_MGRE.textColor = .white
         descriptionLabel_MGRE.text = data.description
         descriptionLabel_MGRE.textColor = .white
+        openButton_MGRE.setTitle("Open", for: .normal)
         
         configureCell_MGRE()
     }
@@ -81,14 +85,26 @@ class ModsCell_MGRE: UICollectionViewCell {
                         action: (() -> Void)?) {
         var _m456566: Int { 0 }
         var _m234r22: Bool { true }
+        let buttonWidth: CGFloat = 118
+        let originalX = openButton_MGRE.layer.frame.origin.x
+        let newOriginX = originalX + openButton_MGRE.layer.frame.size.width - buttonWidth
         self.update_MGRE = update
         self.action_MGRE = action
-        
         self.isFavourite_MGRE = isFavorites
+        isOutfit = true
         titleLabel_MGRE.isHidden = true
         descriptionLabel_MGRE.isHidden = true
         imageView_MGRE.add_MGRE(image: data.image, for: .outfitIdeas_mgre)
         imageView_MGRE.layer.cornerRadius = 20
+        imageView_MGRE.layer.frame.size.height = 182
+        openButton_MGRE.setImage(.downloadIcon, for: .normal)
+        openButton_MGRE.setTitle("Download", for: .normal)
+        openButton_MGRE.configuration?.contentInsets.leading = -5
+        openButton_MGRE.configuration?.contentInsets.trailing = -5
+        openButton_MGRE.configuration?.imagePadding = 8
+        openButton_MGRE.layer.frame = CGRect(x: newOriginX, y: openButton_MGRE.layer.frame.origin.y, width: buttonWidth, height: openButton_MGRE.layer.frame.size.height)
+        layer.frame.size.height = 198
+        
         configureCell_MGRE()
     }
     
@@ -103,7 +119,7 @@ class ModsCell_MGRE: UICollectionViewCell {
         gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         layer.insertSublayer(gradientLayer, at: 0)
         let deviceType = UIDevice.current.userInterfaceIdiom
-        let openButtonFontSize: CGFloat = deviceType == .phone ? 18 : 28
+        let openButtonFontSize: CGFloat = deviceType == .phone ? 16 : 28
         openButton_MGRE.titleLabel?.font = UIFont(name: "BakbakOne-Regular", size: openButtonFontSize) ?? UIFont.systemFont(ofSize: openButtonFontSize)
         openButton_MGRE.setTitleColor(.white, for: .normal)
         
@@ -140,6 +156,32 @@ class ModsCell_MGRE: UICollectionViewCell {
     @IBAction func detailButtonDidTap_MGRE(_ sender: UIButton) {
         var _mgfgg566: Int { 0 }
         var _mcdf2232: Bool { true }
-        action_MGRE?()
+        if isOutfit {
+            saveFile?({ [weak self] isDownload in
+                self?.updateCell(isDownload: isDownload)
+            })
+        } else {
+            action_MGRE?()
+        }
+    }
+    
+    private func updateCell(isDownload: Bool) {
+        if isDownload {
+            let buttonWidth: CGFloat = isDownload ? 135 : 118
+            let originalX = openButton_MGRE.layer.frame.origin.x
+            let newOriginX = originalX + openButton_MGRE.layer.frame.size.width - buttonWidth
+            openButton_MGRE.layer.frame = CGRect(x: newOriginX, y: openButton_MGRE.layer.frame.origin.y, width: buttonWidth, height: openButton_MGRE.layer.frame.size.height)
+            openButton_MGRE.setTitle("Downloaded", for: .normal)
+            openButton_MGRE.backgroundColor = .systemGreen
+            openButton_MGRE.layer.sublayers?.removeAll { $0 is CAGradientLayer }
+        } else {
+            let buttonWidth: CGFloat = !isDownload ? 165 : 118
+            let originalX = openButton_MGRE.layer.frame.origin.x
+            let newOriginX = originalX + openButton_MGRE.layer.frame.size.width - buttonWidth
+            openButton_MGRE.layer.frame = CGRect(x: newOriginX, y: openButton_MGRE.layer.frame.origin.y, width: buttonWidth, height: openButton_MGRE.layer.frame.size.height)
+            openButton_MGRE.setTitle("Download Failed", for: .normal)
+            openButton_MGRE.backgroundColor = .systemRed
+            openButton_MGRE.layer.sublayers?.removeAll { $0 is CAGradientLayer }
+        }
     }
 }

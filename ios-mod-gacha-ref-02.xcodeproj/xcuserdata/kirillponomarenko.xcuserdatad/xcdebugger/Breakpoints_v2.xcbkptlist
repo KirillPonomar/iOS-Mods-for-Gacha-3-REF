@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "337EED72-4481-4343-B45C-09F9568F0E05"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C54AB0E-98FA-4B89-AC37-7C2DA72A90E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Views/ContentCell/ContentCell_MGRE.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "detailButtonDidTap_MGRE(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8C54AB0E-98FA-4B89-AC37-7C2DA72A90E4 - 34d035398cb1c46f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in ios_mod_gacha_ref_02.ContentCell_MGRE.detailButtonDidTap_MGRE(__C.UIButton) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/base/ios-mod-gacha-ref-02/Views/ContentCell/ContentCell_MGRE.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "8C54AB0E-98FA-4B89-AC37-7C2DA72A90E4 - 46c5b4edf77133"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ios_mod_gacha_ref_02.ContentCell_MGRE.detailButtonDidTap_MGRE(__C.UIButton) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/base/ios-mod-gacha-ref-02/Views/ContentCell/ContentCell_MGRE.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "8C54AB0E-98FA-4B89-AC37-7C2DA72A90E4 - 34d035398cb1c46f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in ios_mod_gacha_ref_02.ContentCell_MGRE.detailButtonDidTap_MGRE(__C.UIButton) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/base/ios-mod-gacha-ref-02/Views/ContentCell/ContentCell_MGRE.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44A18101-2748-4EE7-A6E4-A893F1144F98"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Views/ContentCell/ContentCell_MGRE.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "detailButtonDidTap_MGRE(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF1E9E7F-27A3-4449-A270-AF0CD2CD1ED1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Views/ContentCell/ContentCell_MGRE.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "detailButtonDidTap_MGRE(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0AB202B5-BA66-4A9C-A99F-BEA6DB88AE68"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Views/ModCell/ModsCell_MGRE.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "detailButtonDidTap_MGRE(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0AB202B5-BA66-4A9C-A99F-BEA6DB88AE68 - de11aa10c0f74feb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ios_mod_gacha_ref_02.ModsCell_MGRE.detailButtonDidTap_MGRE(__C.UIButton) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/base/ios-mod-gacha-ref-02/Views/ModCell/ModsCell_MGRE.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "0AB202B5-BA66-4A9C-A99F-BEA6DB88AE68 - 8ed168a6cdef54d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in ios_mod_gacha_ref_02.ModsCell_MGRE.detailButtonDidTap_MGRE(__C.UIButton) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/base/ios-mod-gacha-ref-02/Views/ModCell/ModsCell_MGRE.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

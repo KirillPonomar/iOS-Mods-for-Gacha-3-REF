@@ -14,11 +14,8 @@ class CharacterListViewController_MGRE: UIViewController {
     @IBOutlet weak var leftButton_MGRE: UIButton!
     @IBOutlet weak var rightButton_MGRE: UIButton!
     @IBOutlet weak var addNewButton_MGRE: UIButton!
-    @IBOutlet weak var emptyLabel_MGRE: UILabel!
     @IBOutlet weak var addNewButtonTopConstraint_MGRE: NSLayoutConstraint!
     @IBOutlet weak var addNewButtonHeight_MGRE: NSLayoutConstraint!
-    @IBOutlet weak var leftButtonHeight_MGRE: NSLayoutConstraint!
-    @IBOutlet weak var rightButtonHeight_MGRE: NSLayoutConstraint!
     @IBOutlet weak var rightIndentConstraint_MGRE: NSLayoutConstraint!
     @IBOutlet weak var leftIndentConstraint_MGRE: NSLayoutConstraint!
     
@@ -48,24 +45,27 @@ class CharacterListViewController_MGRE: UIViewController {
     
     private func configureLayout_MGRE() {
         let deviceType = UIDevice.current.userInterfaceIdiom
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = addNewButton_MGRE.bounds
+        gradientLayer.colors = [
+            UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
+            UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor
+        ]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        addNewButton_MGRE.layer.insertSublayer(gradientLayer, at: 0)
+        addNewButton_MGRE.layer.cornerRadius = 16
         rightIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 85
         leftIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 85
         topConstraint_MGRE.constant = deviceType == .phone ? 58 : 97
-        leftButtonHeight_MGRE.constant = deviceType == .phone ? 64 : 80
-        rightButtonHeight_MGRE.constant = deviceType == .phone ? 64 : 80
         addNewButtonTopConstraint_MGRE.constant = deviceType == .phone ? -16 : -43
-        
-        rightButton_MGRE.layer.cornerRadius = deviceType == .phone ? 32 : 40
-        leftButton_MGRE.layer.cornerRadius = deviceType == .phone ? 32 : 40
+        rightButton_MGRE.layer.cornerRadius = 8
+        rightButton_MGRE.backgroundColor = .white.withAlphaComponent(0.56)
+        leftButton_MGRE.layer.cornerRadius = 8
+        leftButton_MGRE.backgroundColor = .white.withAlphaComponent(0.56)
         
         let fontSize: CGFloat = deviceType == .phone ? 20 : 32
         addNewButton_MGRE.titleLabel?.font =  UIFont(name: "BakbakOne-Regular", size: fontSize)!
-        addNewButtonHeight_MGRE.constant = deviceType == .phone ? 58 : 72
-        addNewButton_MGRE.layer.cornerRadius = deviceType == .phone ? 29 : 36
-        
-        let emptyLabelFontSize: CGFloat = deviceType == .phone ? 24 : 32
-        emptyLabel_MGRE.font = UIFont(name: "BakbakOne-Regular", size: emptyLabelFontSize)!
-        emptyLabel_MGRE.text = "You haven't created any\ncharacters yet"
     }
     
     private func updateCharImageView_MGRE() {
@@ -116,15 +116,14 @@ class CharacterListViewController_MGRE: UIViewController {
             let charactersCount = characters_MGRE.count
             currentPage_MGRE = charactersCount-1
         }
-        emptyLabel_MGRE.isHidden = !characters_MGRE.isEmpty
         updateCharImageView_MGRE()
     }
     
     private func deleteButtonDidTap_MGRE() {
         guard !characters_MGRE.isEmpty else { return }
-        let alertData = AlertData_MGRE(with: "ARE YOU CERTAIN?",
-                                  subtitle: "You want to erase your character?",
-                                  leftBtnText: "NO",
+        let alertData = AlertData_MGRE(with: "ARE YOU SURE?",
+                                  subtitle: "This will be delete all changes.",
+                                  leftBtnText: "No",
                                   rightBtnText: "Delete") { [weak self] in
             self?.deleteCharacter_MGRE()
         }
@@ -136,7 +135,6 @@ class CharacterListViewController_MGRE: UIViewController {
         let character = characters_MGRE[currentPage_MGRE]
         dropbox_MGRE.contentManager.delete_MGRE(character: character)
         characters_MGRE.remove(at: currentPage_MGRE)
-        emptyLabel_MGRE.isHidden = !characters_MGRE.isEmpty
         currentPage_MGRE = characters_MGRE.count > 0 ? characters_MGRE.count - 1 : 0
         updateCharImageView_MGRE()
     }
@@ -167,7 +165,6 @@ class CharacterListViewController_MGRE: UIViewController {
 extension CharacterListViewController_MGRE {
     func loadCharacters_MGRE() {
         characters_MGRE = dropbox_MGRE.contentManager.fetchCharacters_MGRE()
-        emptyLabel_MGRE.isHidden = !characters_MGRE.isEmpty
         updateCharImageView_MGRE()
     }
     

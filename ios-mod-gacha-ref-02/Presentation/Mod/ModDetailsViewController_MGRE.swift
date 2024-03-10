@@ -47,6 +47,20 @@ class ModDetailsViewController_MGRE: UIViewController {
     
     private func configureLayout_MGRE() {
         let deviceType = UIDevice.current.userInterfaceIdiom
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = downloadButton_MGRE.bounds
+        gradientLayer.colors = [
+            UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
+            UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor
+        ]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        downloadButton_MGRE.layer.insertSublayer(gradientLayer, at: 0)
+        downloadButton_MGRE.layer.cornerRadius = 16
+        downloadButton_MGRE.layer.masksToBounds = true
+        downloadButton_MGRE.configuration?.imagePadding = 12
+        downloadButton_MGRE.semanticContentAttribute = .forceRightToLeft
+        downloadButton_MGRE.setImage(.downloadIcon, for: .normal)
         rightIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 85
         leftIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 85
         
@@ -64,6 +78,7 @@ class ModDetailsViewController_MGRE: UIViewController {
         downloadButton_MGRE.layer.cornerRadius = buttonCornerRadius
         favoriteButton_MGRE.layer.cornerRadius = 8
         favoriteButton_MGRE.backgroundColor = .white.withAlphaComponent(0.56)
+        imageView_MGRE.layer.cornerRadius = 16
     }
     
     func configureSubviews_MGRE() {
@@ -74,21 +89,21 @@ class ModDetailsViewController_MGRE: UIViewController {
         }
         switch modelType {
         case .mods_mgre(let model):
-            navigationView_MGRE.build_MGRE(with: "Mods", leftIcon: UIImage(.backChevronIcon), rightIcon: nil)
+            navigationView_MGRE.build_MGRE(with: "Mods", leftIcon: UIImage(.leftIcon), rightIcon: nil)
             titleLabel_MGRE.text = model.name
             descriptionLabel_MGRE.text = model.description
             let width = UIScreen.main.bounds.width - (deviceType == .phone ? 36 : 101)
             imageViewHeight_MGRE.constant = deviceType == .phone ? (width * 0.5) : (width * 0.9)
             imageView_MGRE.add_MGRE(image: model.image, for: .mods_mgre)
         case .outfitIdeas_mgre(let model):
-            navigationView_MGRE.build_MGRE(with: "Outfit idea", leftIcon: UIImage(.backChevronIcon), rightIcon: nil)
+            navigationView_MGRE.build_MGRE(with: "Outfit idea", leftIcon: UIImage(.leftIcon), rightIcon: nil)
             titleLabel_MGRE.isHidden = true
             descriptionLabel_MGRE.isHidden = true
             let width = UIScreen.main.bounds.width - (deviceType == .phone ? 36 : 101)
             imageViewHeight_MGRE.constant = deviceType == .phone ? (width * 1.1) : (width * 0.9)
             imageView_MGRE.add_MGRE(image: model.image, for: .outfitIdeas_mgre)
         case .characters_mgre(let model):
-            navigationView_MGRE.build_MGRE(with: "Character", leftIcon: UIImage(.backChevronIcon), rightIcon: nil)
+            navigationView_MGRE.build_MGRE(with: "Character", leftIcon: UIImage(.leftIcon), rightIcon: nil)
             titleLabel_MGRE.isHidden = true
             descriptionLabel_MGRE.isHidden = true
             let width = UIScreen.main.bounds.width - (deviceType == .phone ? 36 : 101)
@@ -216,10 +231,14 @@ class ModDetailsViewController_MGRE: UIViewController {
         activityVC.title = "Download Mod"
         activityVC.completionWithItemsHandler = { [weak self] activityType, completed, items, error in
             if completed {
-                let alertData = AlertData_MGRE(with: "Downloaded!")
-                self?.showAlert_MGRE(with: alertData)
+                self?.downloadButton_MGRE.setTitle("Downloaded", for: .normal)
+                self?.downloadButton_MGRE.setImage(.successIcon, for: .normal)
+                self?.downloadButton_MGRE.titleLabel?.textColor = .systemGreen
             } else {
                 print("Действие отменено")
+                self?.downloadButton_MGRE.setTitle("Download Failed", for: .normal)
+                self?.downloadButton_MGRE.setImage(.failureIcon, for: .normal)
+                self?.downloadButton_MGRE.titleLabel?.textColor = .systemRed
             }
         }
         if UIDevice.current.userInterfaceIdiom == .pad {
