@@ -1,8 +1,7 @@
 //
 //  DropDownView_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/13/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -12,7 +11,6 @@ class DropDownView_MGRE: UIView {
     @IBOutlet private weak var categoryLabel_MGRE: UILabel!
     @IBOutlet private weak var imageView_MGRE: UIImageView!
     @IBOutlet private weak var tableView_MGRE: UITableView!
-    
     @IBOutlet private weak var categoryLabelHeight_MGRE: NSLayoutConstraint!
     @IBOutlet private weak var tableViewHeight_MGRE: NSLayoutConstraint!
     
@@ -101,5 +99,71 @@ extension DropDownView_MGRE: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let deviceType = UIDevice.current.userInterfaceIdiom
         return deviceType == .phone ? 48 : 63
+    }
+}
+
+
+protocol DropDownCategorySelectionDelegate: AnyObject {
+    func didSelectCategory(_ category: String)
+}
+
+class DropDownCollectionView: UIView {
+    
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
+    weak var delegate: DropDownCategorySelectionDelegate?
+    
+    var categories: [String] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        configureCollectionView()
+    }
+    
+    private func configureCollectionView() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        collectionView.collectionViewLayout = layout
+    }
+}
+
+extension DropDownCollectionView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        cell.backgroundColor = .clear // Customize cell appearance if needed
+        cell.contentView.subviews.forEach { $0.removeFromSuperview() }
+        
+        let label = UILabel(frame: cell.bounds)
+        label.text = categories[indexPath.item]
+        label.textAlignment = .center
+        label.textColor = .black // Customize label appearance if needed
+        cell.contentView.addSubview(label)
+        
+        return cell
+    }
+}
+
+extension DropDownCollectionView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCategory = categories[indexPath.item]
+        delegate?.didSelectCategory(selectedCategory)
+    }
+}
+
+extension DropDownCollectionView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // Adjust cell size as needed
+        return CGSize(width: 100, height: 40)
     }
 }

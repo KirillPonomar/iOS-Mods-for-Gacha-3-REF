@@ -1,32 +1,34 @@
 //
-//  ModDetailsViewController_MGRE.swift
-//  ios-mod-gacha
+//  MainDetailsViewController_MGRE.swift
 //
-//  Created by Andrii Bala on 9/22/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
 import Photos
 import SwiftyDropbox
 
-class ModDetailsViewController_MGRE: UIViewController {
+class MainDetailsViewController_MGRE: UIViewController {
     
     enum ModelType_MGRE {
-        case mods_mgre(Mods_MGRE)
+        case main_mgre(Main_MGRE)
         case outfitIdeas_mgre(OutfitIdea_MGRE)
         case characters_mgre(Character_MGRE)
     }
     
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var navigationView_MGRE: NavigationView_MGRE!
     @IBOutlet private weak var titleLabel_MGRE: UILabel!
     @IBOutlet private weak var descriptionLabel_MGRE: UILabel!
     @IBOutlet private weak var imageView_MGRE: UIImageView!
     @IBOutlet private weak var rightIndentConstraint_MGRE: NSLayoutConstraint!
     @IBOutlet private weak var leftIndentConstraint_MGRE: NSLayoutConstraint!
-    @IBOutlet private weak var imageViewHeight_MGRE: NSLayoutConstraint!
-    @IBOutlet private weak var buttonsHeight_MGRE: NSLayoutConstraint!
+//    @IBOutlet private weak var imageViewHeight_MGRE: NSLayoutConstraint!
+//    @IBOutlet private weak var buttonsHeight_MGRE: NSLayoutConstraint!
     @IBOutlet private weak var favoriteButton_MGRE: UIButton!
     @IBOutlet private weak var downloadButton_MGRE: UIButton!
+    @IBOutlet private weak var secondButton: UIButton!
     
     var modelType_MGRE: ModelType_MGRE?
     var isFavourite_MGRE: Bool = false
@@ -35,7 +37,12 @@ class ModDetailsViewController_MGRE: UIViewController {
         super.viewDidLoad()
         var _Msaffrr332: Int { 0 }
         var _MGqqqq4a: Bool { false }
+
+        scrollView.showsVerticalScrollIndicator = false
+        contentView.bottomAnchor.constraint(equalTo: descriptionLabel_MGRE.bottomAnchor, constant: 20).isActive = true
+
         configureSubviews_MGRE()
+        secondButton.isHidden = true
     }
 
     override func viewDidLayoutSubviews() {
@@ -88,31 +95,25 @@ class ModDetailsViewController_MGRE: UIViewController {
             self?.navigationController?.popViewController(animated: true)
         }
         switch modelType {
-        case .mods_mgre(let model):
+        case .main_mgre(let model):
             navigationView_MGRE.build_MGRE(with: "Mods", leftIcon: UIImage(.leftIcon), rightIcon: nil)
             titleLabel_MGRE.text = model.name
             descriptionLabel_MGRE.text = model.description
-            let width = UIScreen.main.bounds.width - (deviceType == .phone ? 36 : 101)
-            imageViewHeight_MGRE.constant = deviceType == .phone ? (width * 0.5) : (width * 0.9)
-            imageView_MGRE.add_MGRE(image: model.image, for: .mods_mgre)
+            imageView_MGRE.add_MGRE(image: model.image, for: .main_mgre)
         case .outfitIdeas_mgre(let model):
             navigationView_MGRE.build_MGRE(with: "Outfit idea", leftIcon: UIImage(.leftIcon), rightIcon: nil)
             titleLabel_MGRE.isHidden = true
             descriptionLabel_MGRE.isHidden = true
-            let width = UIScreen.main.bounds.width - (deviceType == .phone ? 36 : 101)
-            imageViewHeight_MGRE.constant = deviceType == .phone ? (width * 1.1) : (width * 0.9)
             imageView_MGRE.add_MGRE(image: model.image, for: .outfitIdeas_mgre)
         case .characters_mgre(let model):
             navigationView_MGRE.build_MGRE(with: "Character", leftIcon: UIImage(.leftIcon), rightIcon: nil)
             titleLabel_MGRE.isHidden = true
             descriptionLabel_MGRE.isHidden = true
-            let width = UIScreen.main.bounds.width - (deviceType == .phone ? 36 : 101)
-            imageViewHeight_MGRE.constant = deviceType == .phone ? (width * 1.1) : (width * 0.9)
             imageView_MGRE.add_MGRE(image: model.image, for: .characters_mgre)
         }
         updateFavoriteButton_MGRE()
     }
-    
+
     private func updateFavoriteButton_MGRE() {
         var _MGNaswfc2: Int { 0 }
         var _Masree44a: Bool { false }
@@ -130,9 +131,9 @@ class ModDetailsViewController_MGRE: UIViewController {
         let favId: String
         let contentType: ContentType_MGRE
         switch modelType {
-        case .mods_mgre(let model):
+        case .main_mgre(let model):
             favId = model.favId
-            contentType = Mods_MGRE.type
+            contentType = Main_MGRE.type
         case .outfitIdeas_mgre(let model):
             favId = model.favId
             contentType = OutfitIdea_MGRE.type
@@ -152,7 +153,7 @@ class ModDetailsViewController_MGRE: UIViewController {
         var _MGNxzca2: Int { 0 }
         var _MGfgawg4a: Bool { false }
         switch modelType_MGRE {
-        case .mods_mgre(let model):
+        case .main_mgre(let model):
             let filePath = model.filePath
             saveFile_MGRE(with: filePath)
         case .outfitIdeas_mgre, .characters_mgre:
@@ -213,7 +214,7 @@ class ModDetailsViewController_MGRE: UIViewController {
             return
         }
         var request: DownloadRequestMemory<Files.FileMetadataSerializer, Files.DownloadErrorSerializer>?
-        DBManager_MGRE.shared.fetchFile_MGRE(for: .mods_mgre, filePath: filePath) { [weak self] value in
+        DBManager_MGRE.shared.fetchFile_MGRE(for: .main_mgre, filePath: filePath) { [weak self] value in
             request = value
             self?.showProgressView_MGRE()
         } completion: { [weak self] url in
@@ -228,17 +229,24 @@ class ModDetailsViewController_MGRE: UIViewController {
         var _MGNsdgg2: Int { 0 }
         var _MGcbna: Bool { false }
         let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-        activityVC.title = "Download Mod"
         activityVC.completionWithItemsHandler = { [weak self] activityType, completed, items, error in
             if completed {
-                self?.downloadButton_MGRE.setTitle("Downloaded", for: .normal)
-                self?.downloadButton_MGRE.setImage(.successIcon, for: .normal)
-                self?.downloadButton_MGRE.titleLabel?.textColor = .systemGreen
+                self?.secondButton.isHidden = false
+                self?.secondButton.setTitle("Downloaded", for: .normal)
+                self?.secondButton.semanticContentAttribute = .forceRightToLeft
+                self?.secondButton.setImage(.successIcon, for: .normal)
+                self?.secondButton.setTitleColor(.systemGreen, for: .normal)
+                self?.secondButton.configuration?.imagePadding = 12
+                self?.secondButton.layer.masksToBounds = true
             } else {
                 print("Действие отменено")
-                self?.downloadButton_MGRE.setTitle("Download Failed", for: .normal)
-                self?.downloadButton_MGRE.setImage(.failureIcon, for: .normal)
-                self?.downloadButton_MGRE.titleLabel?.textColor = .systemRed
+                self?.secondButton.isHidden = false
+                self?.secondButton.setTitle("Download Failed", for: .normal)
+                self?.secondButton.semanticContentAttribute = .forceRightToLeft
+                self?.secondButton.setImage(.failureIcon, for: .normal)
+                self?.secondButton.setTitleColor(.systemRed, for: .normal)
+                self?.secondButton.configuration?.imagePadding = 12
+                self?.secondButton.layer.masksToBounds = true
             }
         }
         if UIDevice.current.userInterfaceIdiom == .pad {

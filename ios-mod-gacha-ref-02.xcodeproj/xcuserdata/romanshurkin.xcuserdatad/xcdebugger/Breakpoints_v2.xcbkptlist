@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "39ECC6F6-275A-4367-8C16-CF9108C4A319"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FB3FE16-2A9A-4FB9-905D-E1E35B59C6BC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/DBManager_MGRE.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "connect_MGRE(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5FB3FE16-2A9A-4FB9-905D-E1E35B59C6BC - e313a3b9825b491e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in ios_mod_gacha_ref_02.DBManager_MGRE.connect_MGRE(completion: Swift.Optional&lt;(Swift.Optional&lt;SwiftyDropbox.DropboxClient&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/romanshurkin/Desktop/Kirill/base/ios-mod-gacha-ref-02/Utility/DBManager_MGRE.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "5FB3FE16-2A9A-4FB9-905D-E1E35B59C6BC - e41e151c6362f243"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ios_mod_gacha_ref_02.DBManager_MGRE.connect_MGRE(completion: Swift.Optional&lt;(Swift.Optional&lt;SwiftyDropbox.DropboxClient&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/romanshurkin/Desktop/Kirill/base/ios-mod-gacha-ref-02/Utility/DBManager_MGRE.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "1156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A45B3AD3-A3F0-44E0-AEF4-E5CA6BD04729"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/DBManager_MGRE.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "fetchImage_MGRE(for:imgPath:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A45B3AD3-A3F0-44E0-AEF4-E5CA6BD04729 - b36087617928512b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwiftyDropbox.DropboxClient) -&gt; () in ios_mod_gacha_ref_02.DBManager_MGRE.fetchImage_MGRE(for: ios_mod_gacha_ref_02.ContentType_MGRE, imgPath: Swift.String, completion: (Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/romanshurkin/Desktop/Kirill/base/ios-mod-gacha-ref-02/Utility/DBManager_MGRE.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "A45B3AD3-A3F0-44E0-AEF4-E5CA6BD04729 - 60d9c2408bf45a26"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in closure #1 (SwiftyDropbox.DropboxClient) -&gt; () in ios_mod_gacha_ref_02.DBManager_MGRE.fetchImage_MGRE(for: ios_mod_gacha_ref_02.ContentType_MGRE, imgPath: Swift.String, completion: (Swift.Optional&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/romanshurkin/Desktop/Kirill/base/ios-mod-gacha-ref-02/Utility/DBManager_MGRE.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "170"
+                  endingLineNumber = "170"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

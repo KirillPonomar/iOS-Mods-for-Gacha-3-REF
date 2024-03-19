@@ -1,8 +1,7 @@
 //
 //  MenuCell_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/5/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -76,17 +75,5 @@ class MenuCell_MGRE: UICollectionViewCell {
         }
         titleLabel_MGRE.textColor = .white
         chevronImage_MGRE.image = UIImage(.menuChevron)
-    }
-}
-
-extension UIView {
-    func applyGradient(colors: [UIColor]) {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = bounds
-        gradientLayer.colors = colors.map { $0.cgColor }
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
-        
-        layer.insertSublayer(gradientLayer, at: 0)
     }
 }

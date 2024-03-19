@@ -16,6 +16,9 @@
                 <outlet property="favoriteButton_MGRE" destination="5r5-Tm-Qhk" id="4wY-qe-Vhz"/>
                 <outlet property="imageView_MGRE" destination="F1J-N0-48f" id="PcU-04-UET"/>
                 <outlet property="navigationView_MGRE" destination="kbz-hG-RYs" id="jfN-4q-Fmh"/>
+                <outlet property="previewButton_MGRE" destination="uU6-lK-Vjg" id="R0D-i7-pkf"/>
+                <outlet property="secondButton" destination="ge4-Vm-t5e" id="Lat-WQ-Td1"/>
+                <outlet property="shareButton_MGRE" destination="bqg-Ve-ePB" id="b4v-pB-ytl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="actionButtons_MGRE" destination="5r5-Tm-Qhk" collectionClass="NSMutableArray" id="UfJ-Jj-53d"/>
                 <outletCollection property="actionButtons_MGRE" destination="bqg-Ve-ePB" collectionClass="NSMutableArray" id="1Jf-A1-aeu"/>
@@ -48,7 +51,7 @@
                     <buttonConfiguration key="configuration" style="plain" image="heartIconEmpty"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="20"/>
+                            <integer key="value" value="12"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -64,7 +67,7 @@
                     <buttonConfiguration key="configuration" style="plain" image="shareIcon"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="20"/>
+                            <integer key="value" value="12"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
@@ -98,13 +101,25 @@
                     <buttonConfiguration key="configuration" style="plain" image="scanIcon"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="20"/>
+                            <integer key="value" value="12"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="actionButtonDidTap_MGRE:" destination="-1" eventType="touchUpInside" id="Ojy-T8-k0U"/>
                     </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge4-Vm-t5e">
+                    <rect key="frame" x="27" y="750" width="339" height="48"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <color key="backgroundColor" name="background"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

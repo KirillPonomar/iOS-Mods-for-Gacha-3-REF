@@ -1,8 +1,7 @@
 //
 //  CharacterListViewController_MGRE.swift
-//  ios-mod-gacha
 //
-//  Created by Andrii Bala on 9/28/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit

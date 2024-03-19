@@ -1,8 +1,7 @@
 //
 //  BaseContainer_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/8/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -14,18 +13,18 @@ class BaseContainer_MGRE: UIViewController {
     private var dimmingView_MGRE: UIView!
     
     private var isMenuOpen_MGRE: Bool = false
-    private var selectedMenu_MGRE: MenuItem_MGRE = .mods_MGRE
+    private var selectedMenu_MGRE: MenuItem_MGRE = .main_MGRE
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let contentViewController = BaseViewController_MGRE.loadFromNib_MGRE()
-        contentViewController.modelType_MGRE = .mods_mgre
-        contentViewController.navTitle_MGRE = MenuItem_MGRE.mods_MGRE.rawValue
+        contentViewController.modelType_MGRE = .main_mgre
+        contentViewController.navTitle_MGRE = MenuItem_MGRE.main_MGRE.rawValue
         contentViewController.toggleMenuAction_MGRE = { [weak self] in
             self?.toggleMenu_MGRE()
         }
-        selectedMenu_MGRE = .mods_MGRE
+        selectedMenu_MGRE = .main_MGRE
         navController_MGRE = UINavigationController(rootViewController: contentViewController)
         addChild(navController_MGRE)
         view.addSubview(navController_MGRE.view)
@@ -72,9 +71,9 @@ class BaseContainer_MGRE: UIViewController {
         guard item != selectedMenu_MGRE else { return }
         selectedMenu_MGRE = item
         switch item {
-        case .mods_MGRE:
+        case .main_MGRE:
             let vc = BaseViewController_MGRE.loadFromNib_MGRE()
-            vc.modelType_MGRE = .mods_mgre
+            vc.modelType_MGRE = .main_mgre
             vc.navTitle_MGRE = item.rawValue
             vc.toggleMenuAction_MGRE = { [weak self] in self?.toggleMenu_MGRE() }
             switchToViewController(vc)
@@ -109,7 +108,7 @@ class BaseContainer_MGRE: UIViewController {
         case .favorites_MGRE:
             let vc = BaseViewController_MGRE.loadFromNib_MGRE()
             vc.isFavoriteMode_MGRE = true
-            vc.modelType_MGRE = .mods_mgre
+            vc.modelType_MGRE = .main_mgre
             vc.navTitle_MGRE = item.rawValue
             vc.toggleMenuAction_MGRE = { [weak self] in self?.toggleMenu_MGRE() }
             switchToViewController(vc)

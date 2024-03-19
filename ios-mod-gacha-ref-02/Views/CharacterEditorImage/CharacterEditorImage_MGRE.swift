@@ -1,8 +1,7 @@
 //
 //  CharacterEditorImage_MGRE.swift
-//  ios-mod-gacha
 //
-//  Created by Andrii Bala on 9/26/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit

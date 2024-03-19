@@ -1,8 +1,7 @@
 //
 //  CharacterModel_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/3/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit

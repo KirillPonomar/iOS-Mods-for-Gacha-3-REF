@@ -1,8 +1,7 @@
 //
 //  ContentCell_MGRE.swift
-//  ios-mod-gacha
 //
-//  Created by Andrii Bala on 9/23/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -80,14 +79,14 @@ class ContentCell_MGRE: UICollectionViewCell {
         self.action_MGRE = action
         isCharacter = true
         
-//        imageView_MGRE.contentMode = .scaleAspectFill
         imageView_MGRE.layer.cornerRadius = 12
         favoriteButton.layer.cornerRadius = 8
         favoriteButton.backgroundColor = .white.withAlphaComponent(0.56)
         downloadButton.setImage(.downloadIcon, for: .normal)
         downloadButton.configuration?.imagePadding = 8
-        imageView_MGRE.add_MGRE(image: data.image, for: .wallpapers_mgre)
-        
+        downloadButton.setTitle("Download", for: .normal)
+        downloadButton.backgroundColor = .clear
+        imageView_MGRE.add_MGRE(image: data.image, for: .characters_mgre)
         updateFavoriteButton_MGRE()
     }
     
@@ -105,16 +104,34 @@ class ContentCell_MGRE: UICollectionViewCell {
         if isCharacter {
             saveFile?({ [weak self] isDownload in
                 self?.updateCell(isDownload: isDownload)})
-            } else {
-                action_MGRE?()
-            }
-}
+        } else {
+            action_MGRE?()
+        }
+    }
     
     private func updateCell(isDownload: Bool) {
-        if isDownload {
-            print(isDownload)
+        if !isCharacter {
+            if isDownload {
+                downloadButton.setTitle("Downloaded", for: .normal)
+                downloadButton.backgroundColor = .systemGreen
+            } else {
+                downloadButton.setTitle("Download Failed", for: .normal)
+                downloadButton.backgroundColor = .systemRed
+            }
         } else {
-            print(isDownload)
+            if isDownload {
+                downloadButton.setTitle("Downloaded", for: .normal)
+                downloadButton.backgroundColor = .systemGreen
+                downloadButton.setImage(.successIconWhite, for: .normal)
+                downloadButton.configuration?.imagePadding = 8
+                downloadButton.configuration?.contentInsets.leading = -5
+                downloadButton.configuration?.contentInsets.trailing = -5
+            } else {
+                downloadButton.setTitle("Failed", for: .normal)
+                downloadButton.backgroundColor = .systemRed
+                downloadButton.setImage(.failureIconWhite, for: .normal)
+                downloadButton.configuration?.imagePadding = 8
+            }
         }
     }
     

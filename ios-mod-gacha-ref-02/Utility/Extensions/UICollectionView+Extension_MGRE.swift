@@ -1,8 +1,7 @@
 //
 //  UICollectionView+Extension_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/5/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -13,7 +12,7 @@ extension UICollectionView_MGRE {
     func registerAllNibs_MGRE() {
         registerNib_MGRE(for: ContentCell_MGRE.self)
         registerNib_MGRE(for: WallpaperCell_MGRE.self)
-        registerNib_MGRE(for: ModsCell_MGRE.self)
+        registerNib_MGRE(for: MainCell_MGRE.self)
     }
     
     func registerNib_MGRE(for cellClass: UICollectionViewCell.Type?) {

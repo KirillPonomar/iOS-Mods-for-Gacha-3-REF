@@ -1,8 +1,7 @@
 //
 //  Constants_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/5/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -23,12 +22,14 @@ enum Images_MGRE: String {
     case favoriteIconEmpty
     case favoriteIcon
     case failureIcon
+    case failureIconWhite
     case heartIcon
     case heartIconEmpty
     
     case chevronTopIcon
     case chevronBottomIcon
     case successIcon
+    case successIconWhite
     
     case deleteLargeIcon
 }

@@ -1,8 +1,7 @@
 //
 //  FilterCell_MGRE.swift
-//  ios-mod-gacha
 //
-//  Created by Andrii Bala on 10/1/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit

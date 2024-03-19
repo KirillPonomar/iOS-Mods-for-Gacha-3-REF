@@ -1,8 +1,7 @@
 //
 //  Alert_MGRE.swift
-//  ios-mod-gacha
 //
-//  Created by Andrii Bala on 9/29/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -45,7 +44,6 @@ class Alert_MGRE: UIView {
     }
     
     private func configureLayout_MGRE() {
-        let deviceType = UIDevice.current.userInterfaceIdiom
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = rightButton_MGRE.bounds
         gradientLayer.colors = [
@@ -58,9 +56,6 @@ class Alert_MGRE: UIView {
         rightButton_MGRE.layer.cornerRadius = 8
         leftButton_MGRE.layer.cornerRadius = 8
         leftButton_MGRE.backgroundColor = .tertiary
-//        rightIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 32
-//        leftIndentConstraint_MGRE.constant = deviceType == .phone ? 20 : 32
-//        buttonHeight_MGRE.constant = deviceType == .phone ? 34 : 44
     }
     
     func build_MGRE(with data: AlertData_MGRE) {

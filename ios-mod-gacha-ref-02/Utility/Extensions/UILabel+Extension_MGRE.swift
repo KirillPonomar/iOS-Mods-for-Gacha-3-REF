@@ -1,8 +1,7 @@
 //
 //  UILabel+Extension_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/10/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit

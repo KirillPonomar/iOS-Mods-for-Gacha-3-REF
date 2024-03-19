@@ -1,8 +1,7 @@
 //
 //  MenuViewController_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/3/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -17,7 +16,7 @@ class MenuViewController_MGRE: UIViewController {
     var menuBackgroundColor: UIColor = UIColor(red: 0.19, green: 0.15, blue: 0.27, alpha: 0.82)
     var menuCollectionBackgroundColor: UIColor = UIColor(red: 0.19, green: 0.15, blue: 0.27, alpha: 0.05)
     var menuAction_MGRE: ((MenuItem_MGRE) -> Void)?
-    var selectedMenu_MGRE: MenuItem_MGRE = .mods_MGRE
+    var selectedMenu_MGRE: MenuItem_MGRE = .main_MGRE
     
     override func viewDidLoad() {
         super.viewDidLoad()

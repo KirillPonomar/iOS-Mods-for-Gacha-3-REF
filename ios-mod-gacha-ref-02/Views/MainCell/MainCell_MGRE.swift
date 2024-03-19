@@ -1,15 +1,14 @@
 //
-//  ModsCell_MGRE.swift
-//  ios-mod-gacha
+//  MainCell_MGRE.swift
 //
-//  Created by Andrii Bala on 9/14/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
 import Kingfisher
 import Photos
 
-class ModsCell_MGRE: UICollectionViewCell {
+class MainCell_MGRE: UICollectionViewCell {
 
     @IBOutlet private weak var titleLabel_MGRE: UILabel!
     @IBOutlet private weak var descriptionLabel_MGRE: UILabel!
@@ -58,7 +57,7 @@ class ModsCell_MGRE: UICollectionViewCell {
         openButton_MGRE.layer.masksToBounds = true
     }
     
-    func configure_MGRE(with data: Mods_MGRE,
+    func configure_MGRE(with data: Main_MGRE,
                         isFavorites: Bool,
                         update: (() -> Void)?,
                         action: (() -> Void)?) {
@@ -68,10 +67,11 @@ class ModsCell_MGRE: UICollectionViewCell {
         self.action_MGRE = action
         
         self.isFavourite_MGRE = isFavorites
-        imageView_MGRE.add_MGRE(image: data.image, for: .mods_mgre)
+        imageView_MGRE.add_MGRE(image: data.image, for: .main_mgre)
         imageView_MGRE.layer.cornerRadius = 20
         titleLabel_MGRE.text = data.name
         titleLabel_MGRE.textColor = .white
+        titleLabel_MGRE.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
         descriptionLabel_MGRE.text = data.description
         descriptionLabel_MGRE.textColor = .white
         openButton_MGRE.setTitle("Open", for: .normal)
@@ -131,7 +131,7 @@ class ModsCell_MGRE: UICollectionViewCell {
         
         let buttonCornerRadius: CGFloat = deviceType == .phone ? 8 : 26
         openButton_MGRE.layer.cornerRadius = buttonCornerRadius
-        favoriteButton_MGRE.layer.cornerRadius = buttonCornerRadius
+        favoriteButton_MGRE.layer.cornerRadius = 8
         favoriteButton_MGRE.backgroundColor = .white.withAlphaComponent(0.56)
         imageViewHeight_MGRE.constant = deviceType == .phone ? 182 : 190
         

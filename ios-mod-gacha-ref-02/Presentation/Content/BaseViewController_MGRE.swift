@@ -1,8 +1,7 @@
 //
 //  BaseViewController_MS.swift
-//  ios-mod-gacha
 //
-//  Created by Andrii Bala on 9/23/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -11,14 +10,14 @@ import SwiftyDropbox
 
 enum Filter_MGRE: String {
     case all_mgre = "All", new_mgre = "New", last_mgre = "Last Added", top_mgre = "Top", favourites_mgre = "Favorites"
-    case mods_mgre = "Mods", outfitIdea_mgre = "Outfit ideas",
+    case main_mgre = "Mods", outfitIdea_mgre = "Outfit ideas",
     characters_mgre = "Characters", collections_mgre = "Collections", wallpapers_mgre = "Wallpapers"
 }
 
 class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
     
     enum UnifiedModel_MGRE: Hashable {
-        case mods_mgre(Mods_MGRE)
+        case main_mgre(Main_MGRE)
         case wallpaper_mgre(Wallpaper_MGRE)
         case characters_mgre(Character_MGRE)
         case outfitIdea_mgre(OutfitIdea_MGRE)
@@ -37,7 +36,7 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
     private var dataSource_MGRE: DataSource_MGRE?
     
     var isFavoriteMode_MGRE = false
-    var modelType_MGRE: ContentType_MGRE = .mods_mgre
+    var modelType_MGRE: ContentType_MGRE = .main_mgre
     var navTitle_MGRE = ""
     var allData_MGRE: [any ModelProtocol_MGRE] = []
     var data_MGRE: [any ModelProtocol_MGRE] = []
@@ -45,7 +44,7 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
     
     var filters_MGRE: [Filter_MGRE] {
         if isFavoriteMode_MGRE {
-            return [.mods_mgre, .outfitIdea_mgre, .characters_mgre, .collections_mgre, .wallpapers_mgre]
+            return [.main_mgre, .outfitIdea_mgre, .characters_mgre, .collections_mgre, .wallpapers_mgre]
         } else {
             return [.all_mgre, .new_mgre, .last_mgre, .top_mgre, .favourites_mgre]
         }
@@ -103,14 +102,14 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
     func configureFilterView_MGRE() {
         filterView_MGRE.filters_MGRE = filters_MGRE
         if self.isFavoriteMode_MGRE {
-            filterView_MGRE.activeFilter_MGRE = .mods_mgre
-            activeFilter_MGRE = .mods_mgre
+            filterView_MGRE.activeFilter_MGRE = .main_mgre
+            activeFilter_MGRE = .main_mgre
         }
         filterView_MGRE.filtersAction_MGRE = { [weak self] filter in
             guard let self = self else { return }
             if self.isFavoriteMode_MGRE {
                 switch filter {
-                case .mods_mgre:        self.modelType_MGRE = .mods_mgre
+                case .main_mgre:        self.modelType_MGRE = .main_mgre
                 case .outfitIdea_mgre:  self.modelType_MGRE = .outfitIdeas_mgre
                 case .characters_mgre:  self.modelType_MGRE = .characters_mgre
                 case .collections_mgre: self.modelType_MGRE = .collections_mgre
@@ -175,12 +174,17 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
             
             let model: any ModelProtocol_MGRE
             switch unifiedModel {
-            case .mods_mgre(let value): 
+            case .main_mgre(let value):
                 model = value
             case .wallpaper_mgre(let value):
                 model = value
             case .characters_mgre(let value):
                 model = value
+                value.configureCell_MGRE(cell) { [weak self] compl in
+                    self?.saveFile_MGRE(with: value.image) { completed in
+                        compl?(completed)
+                    }
+                }
             case .outfitIdea_mgre(let value):
                 model = value
                 value.configureCell_MGRE(cell) { [weak self] compl in
@@ -196,7 +200,7 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
             model.configureCell_MGRE(cell, isFavorites: isFavorites) { [weak self] in
                 self?.updateFavorites_MGRE(with: model.favId)
             } action: { [weak self] in
-                self?.pushTo_MGRE(contentType: self?.modelType_MGRE ?? .mods_mgre, index: indexPath.item)
+                self?.pushTo_MGRE(contentType: self?.modelType_MGRE ?? .main_mgre, index: indexPath.item)
             }
             return cell
         }
@@ -225,7 +229,7 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
         snapshot.appendSections([.zero])
         
         switch contentType {
-        case .mods_mgre:            snapshot.appendItems(data_MGRE.map { .mods_mgre($0 as! Mods_MGRE) })
+        case .main_mgre:            snapshot.appendItems(data_MGRE.map { .main_mgre($0 as! Main_MGRE) })
         case .outfitIdeas_mgre:     snapshot.appendItems(data_MGRE.map { .outfitIdea_mgre($0 as! OutfitIdea_MGRE) })
         case .characters_mgre:      snapshot.appendItems(data_MGRE.map { .characters_mgre($0 as! Character_MGRE) })
         case .collections_mgre:     snapshot.appendItems(data_MGRE.map { .collections_mgre($0 as! Collections_MGRE) })
@@ -240,7 +244,8 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard modelType_MGRE != .mods_mgre && modelType_MGRE != .outfitIdeas_mgre else { return }
+        let needOpen = modelType_MGRE != .main_mgre && modelType_MGRE != .outfitIdeas_mgre && modelType_MGRE != .characters_mgre && modelType_MGRE != .collections_mgre
+        guard needOpen else { return }
         pushTo_MGRE(contentType: modelType_MGRE, index: indexPath.item)
     }
     
@@ -249,13 +254,13 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
         let vc: UIViewController
         isPushed_MGRE = true
         switch contentType {
-        case .mods_mgre:
-            guard let model = data_MGRE[index] as? Mods_MGRE else { return }
+        case .main_mgre:
+            guard let model = data_MGRE[index] as? Main_MGRE else { return }
             let isFavorites = favorites_MGRE.contains(model.favId)
-            let modDetailsVC = ModDetailsViewController_MGRE.loadFromNib_MGRE()
-            modDetailsVC.isFavourite_MGRE = isFavorites
-            modDetailsVC.modelType_MGRE = .mods_mgre(model)
-            vc = modDetailsVC
+            let mainDetailsVC = MainDetailsViewController_MGRE.loadFromNib_MGRE()
+            mainDetailsVC.isFavourite_MGRE = isFavorites
+            mainDetailsVC.modelType_MGRE = .main_mgre(model)
+            vc = mainDetailsVC
         case .wallpapers_mgre:
             guard let model = data_MGRE[index] as? Wallpaper_MGRE else { return }
             let isFavorites = favorites_MGRE.contains(model.favId)
@@ -266,17 +271,17 @@ class BaseViewController_MGRE: UIViewController, UICollectionViewDelegate {
         case .characters_mgre:
             guard let model = data_MGRE[index] as? Character_MGRE else { return }
             let isFavorites = favorites_MGRE.contains(model.favId)
-            let charactersVC = ModDetailsViewController_MGRE.loadFromNib_MGRE()
+            let charactersVC = MainDetailsViewController_MGRE.loadFromNib_MGRE()
             charactersVC.isFavourite_MGRE = isFavorites
             charactersVC.modelType_MGRE = .characters_mgre(model)
             vc = charactersVC
         case .outfitIdeas_mgre:
             guard let model = data_MGRE[index] as? OutfitIdea_MGRE else { return }
             let isFavorites = favorites_MGRE.contains(model.favId)
-            let modDetailsVC = ModDetailsViewController_MGRE.loadFromNib_MGRE()
-            modDetailsVC.isFavourite_MGRE = isFavorites
-            modDetailsVC.modelType_MGRE = .outfitIdeas_mgre(model)
-            vc = modDetailsVC
+            let mainDetailsVC = MainDetailsViewController_MGRE.loadFromNib_MGRE()
+            mainDetailsVC.isFavourite_MGRE = isFavorites
+            mainDetailsVC.modelType_MGRE = .outfitIdeas_mgre(model)
+            vc = mainDetailsVC
         case .collections_mgre:
             guard let model = data_MGRE[index] as? Collections_MGRE else { return }
             let isFavorites = favorites_MGRE.contains(model.favId)
@@ -355,7 +360,6 @@ extension BaseViewController_MGRE {
             var _MGNsdgg2: Int { 0 }
             var _MGcbna: Bool { false }
             let activityVC = UIActivityViewController(activityItems: [data], applicationActivities: nil)
-            activityVC.title = "Download Mod"
             activityVC.completionWithItemsHandler = { activityType, completed, items, error in
                 coml?(completed)
             }

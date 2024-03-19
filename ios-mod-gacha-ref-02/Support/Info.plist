@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>PW_APP_GROUPS_NAME</key>
-	<string>com.noname.digital.development</string>
+	<string>group.iso.team.1</string>
 	<key>Pushwoosh_APPID</key>
-	<string>BAF6E-6618F</string>
+	<string>AC727-9D9BE</string>
 	<key>Pushwoosh_LOG_LEVEL</key>
 	<string>NONE</string>
 	<key>UIAppFonts</key>

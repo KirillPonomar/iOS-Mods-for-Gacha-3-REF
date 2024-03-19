@@ -1,8 +1,7 @@
 //
 //  AlertController_MGRE.swift
-//  ios-mod-gacha
 //
-//  Created by Andrii Bala on 9/29/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit

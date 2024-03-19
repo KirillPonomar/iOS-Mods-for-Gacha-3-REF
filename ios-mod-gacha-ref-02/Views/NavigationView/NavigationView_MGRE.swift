@@ -1,8 +1,7 @@
 //
 //  NavigationView_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/8/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -64,10 +63,10 @@ class NavigationView_MGRE: UIView {
         rightButton_MGRE.layer.cornerRadius = deviceType == .phone ? 21 : 26
 //        undoButtonBottomView_MGRE.layer.cornerRadius = deviceType == .phone ? 21 : 26
         
-        let fontSize: CGFloat = deviceType == .phone ? 18 : 24
-        let font = UIFont(name: "BakbakOne-Regular", size: fontSize)!
+//        let fontSize: CGFloat = deviceType == .phone ? 18 : 24
+//        let font = UIFont(name: "BakbakOne-Regular", size: fontSize)!
 //        undoButton_MGRE.titleLabel?.font = font
-        let width = UILabel.widthForLabel(text: "Reset changes", font: font)
+//        let width = UILabel.widthForLabel(text: "Reset changes", font: font)
 //        undoButtonWidth_MGRE.constant = width
         
 //        leftButton_MGRE.addShadow_MGRE(with: UIColor(red: 0.887, green: 0.887, blue: 0.887, alpha: 1))
@@ -84,12 +83,11 @@ class NavigationView_MGRE: UIView {
                     rightIcon: UIImage? = UIImage(.searchIcon), 
                     isEditor: Bool = false) {
         titleLabel_MGRE.text = title
-        titleLabel_MGRE.textColor = .white
-        titleView_MGRE.isHidden = isEditor ? true : false
+//        titleView_MGRE.isHidden = isEditor ? true : false
         
-        if title.isEmpty {
-            titleView_MGRE.isHidden = true
-        }
+//        if title.isEmpty {
+//            titleView_MGRE.isHidden = true
+//        }
         
         if let leftIcon = leftIcon {
             leftButton_MGRE.isHidden = false

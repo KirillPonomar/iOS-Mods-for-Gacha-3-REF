@@ -1,8 +1,7 @@
 //
 //  LayoutConfig_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/6/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -32,8 +31,8 @@ extension NSCollectionLayoutSection_MGRE {
         let config: LayoutConfig_MGRE
         let deviceType = UIDevice.current.userInterfaceIdiom
         switch (modelType, deviceType) {
-        case (.mods_mgre, .phone):
-            let itemWidth = LayoutConfig_MGRE.getItemWidth(with: 1, 
+        case (.main_mgre, .phone):
+            let itemWidth = LayoutConfig_MGRE.getItemWidth(with: 1,
                                                            horizontalSpacing: 0,
                                                            sectionInsets: LayoutConfig_MGRE.defaultPhoneInsets)
             config = LayoutConfig_MGRE(itemWidth: itemWidth, 
@@ -42,7 +41,7 @@ extension NSCollectionLayoutSection_MGRE {
                                        horizontalSpacing: 0,
                                        verticalSpacing: 6,
                                        sectionInsets: LayoutConfig_MGRE.defaultPhoneInsets)
-        case (.mods_mgre, .pad):
+        case (.main_mgre, .pad):
             let itemWidth = LayoutConfig_MGRE.getItemWidth(with: 2,
                                                            horizontalSpacing: 12,
                                                            sectionInsets: LayoutConfig_MGRE.defaultPadInsets)

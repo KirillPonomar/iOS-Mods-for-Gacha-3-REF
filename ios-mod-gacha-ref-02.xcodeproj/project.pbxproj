@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6FAD79A2B9F5F5F007D5A5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FAD7992B9F5F5F007D5A5C /* Localizable.strings */; };
 		FE4C8F882B02500D000E3DD1 /* DropDownView_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4C8F872B02500D000E3DD1 /* DropDownView_MGRE.swift */; };
 		FE4C8F8A2B025051000E3DD1 /* DropDownView_MGRE.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4C8F892B025051000E3DD1 /* DropDownView_MGRE.xib */; };
 		FE4C8F8C2B025401000E3DD1 /* UITableView+Extension_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4C8F8B2B025401000E3DD1 /* UITableView+Extension_MGRE.swift */; };
@@ -38,8 +39,8 @@
 		FE94C3AA2AF8242400B9B5C4 /* NetworkMonitor_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94C3A92AF8242400B9B5C4 /* NetworkMonitor_MGRE.swift */; };
 		FE94C3AC2AF8248B00B9B5C4 /* UIWindow+Extension_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94C3AB2AF8248B00B9B5C4 /* UIWindow+Extension_MGRE.swift */; };
 		FE94C3AF2AF82E3100B9B5C4 /* ContentCodable_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94C3AE2AF82E3100B9B5C4 /* ContentCodable_MGRE.swift */; };
-		FE94C3B82AF833D900B9B5C4 /* ModsCell_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94C3B62AF833D900B9B5C4 /* ModsCell_MGRE.swift */; };
-		FE94C3B92AF833D900B9B5C4 /* ModsCell_MGRE.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE94C3B72AF833D900B9B5C4 /* ModsCell_MGRE.xib */; };
+		FE94C3B82AF833D900B9B5C4 /* MainCell_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94C3B62AF833D900B9B5C4 /* MainCell_MGRE.swift */; };
+		FE94C3B92AF833D900B9B5C4 /* MainCell_MGRE.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE94C3B72AF833D900B9B5C4 /* MainCell_MGRE.xib */; };
 		FE94C3BC2AF833E800B9B5C4 /* WallpaperCell_MGRE.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE94C3BA2AF833E800B9B5C4 /* WallpaperCell_MGRE.xib */; };
 		FE94C3BD2AF833E800B9B5C4 /* WallpaperCell_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94C3BB2AF833E800B9B5C4 /* WallpaperCell_MGRE.swift */; };
 		FE94C3C02AF8340300B9B5C4 /* ContentCell_MGRE.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE94C3BE2AF8340300B9B5C4 /* ContentCell_MGRE.xib */; };
@@ -73,7 +74,7 @@
 		FE96E8B92AF4E0A80070BCD2 /* MenuViewController_MGRE.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE96E8B72AF4E0A80070BCD2 /* MenuViewController_MGRE.xib */; };
 		FE96E8BB2AF4E6EF0070BCD2 /* BakbakOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE96E8BA2AF4E6EF0070BCD2 /* BakbakOne-Regular.ttf */; };
 		FE96E8BD2AF4E7110070BCD2 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FE96E8BC2AF4E7110070BCD2 /* SF-Pro-Display-Regular.otf */; };
-		FEB53D9F2B06490100775DCE /* ThirdPartyServicesManager_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB53D9E2B06490100775DCE /* ThirdPartyServicesManager_MGRE.swift */; };
+		FEB53D9F2B06490100775DCE /* ServicesManager_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB53D9E2B06490100775DCE /* ServicesManager_MGRE.swift */; };
 		FEB5A0632AFE44E000424791 /* FilterView_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB5A0622AFE44E000424791 /* FilterView_MGRE.swift */; };
 		FEB5A0652AFE44EA00424791 /* FilterView_MGRE.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB5A0642AFE44EA00424791 /* FilterView_MGRE.xib */; };
 		FEB5A0692AFE467D00424791 /* FilterCell_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB5A0672AFE467D00424791 /* FilterCell_MGRE.swift */; };
@@ -81,8 +82,8 @@
 		FEB5A06C2AFE497A00424791 /* UILabel+Extension_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB5A06B2AFE497A00424791 /* UILabel+Extension_MGRE.swift */; };
 		FEB5A0702AFE519F00424791 /* SearchBar_MGRE.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB5A06E2AFE519F00424791 /* SearchBar_MGRE.xib */; };
 		FEB5A0712AFE519F00424791 /* SearchBar_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB5A06F2AFE519F00424791 /* SearchBar_MGRE.swift */; };
-		FEBB86182AFABE780059C153 /* ModDetailsViewController_MGRE.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEBB86162AFABE780059C153 /* ModDetailsViewController_MGRE.xib */; };
-		FEBB86192AFABE780059C153 /* ModDetailsViewController_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBB86172AFABE780059C153 /* ModDetailsViewController_MGRE.swift */; };
+		FEBB86182AFABE780059C153 /* MainDetailsViewController_MGRE.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEBB86162AFABE780059C153 /* MainDetailsViewController_MGRE.xib */; };
+		FEBB86192AFABE780059C153 /* MainDetailsViewController_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBB86172AFABE780059C153 /* MainDetailsViewController_MGRE.swift */; };
 		FEBB861C2AFABE8B0059C153 /* WallpaperViewController_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBB861A2AFABE8B0059C153 /* WallpaperViewController_MGRE.swift */; };
 		FEBB861D2AFABE8B0059C153 /* WallpaperViewController_MGRE.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEBB861B2AFABE8B0059C153 /* WallpaperViewController_MGRE.xib */; };
 		FEBB861F2AFAC15B0059C153 /* UIViewController+Extensions_MGRE.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBB861E2AFAC15B0059C153 /* UIViewController+Extensions_MGRE.swift */; };
@@ -123,6 +124,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A6FAD7992B9F5F5F007D5A5C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FE4C8F872B02500D000E3DD1 /* DropDownView_MGRE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView_MGRE.swift; sourceTree = "<group>"; };
 		FE4C8F892B025051000E3DD1 /* DropDownView_MGRE.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownView_MGRE.xib; sourceTree = "<group>"; };
 		FE4C8F8B2B025401000E3DD1 /* UITableView+Extension_MGRE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension_MGRE.swift"; sourceTree = "<group>"; };
@@ -149,8 +151,8 @@
 		FE94C3A92AF8242400B9B5C4 /* NetworkMonitor_MGRE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor_MGRE.swift; sourceTree = "<group>"; };
 		FE94C3AB2AF8248B00B9B5C4 /* UIWindow+Extension_MGRE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension_MGRE.swift"; sourceTree = "<group>"; };
 		FE94C3AE2AF82E3100B9B5C4 /* ContentCodable_MGRE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCodable_MGRE.swift; sourceTree = "<group>"; };
-		FE94C3B62AF833D900B9B5C4 /* ModsCell_MGRE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModsCell_MGRE.swift; sourceTree = "<group>"; };
-		FE94C3B72AF833D900B9B5C4 /* ModsCell_MGRE.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModsCell_MGRE.xib; sourceTree = "<group>"; };
+		FE94C3B62AF833D900B9B5C4 /* MainCell_MGRE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell_MGRE.swift; sourceTree = "<group>"; };
+		FE94C3B72AF833D900B9B5C4 /* MainCell_MGRE.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCell_MGRE.xib; sourceTree = "<group>"; };
 		FE94C3BA2AF833E800B9B5C4 /* WallpaperCell_MGRE.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WallpaperCell_MGRE.xib; sourceTree = "<group>"; };
 		FE94C3BB2AF833E800B9B5C4 /* WallpaperCell_MGRE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperCell_MGRE.swift; sourceTree = "<group>"; };
 		FE94C3BE2AF8340300B9B5C4 /* ContentCell_MGRE.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCell_MGRE.xib; sourceTree = "<group>"; };
@@ -186,7 +188,7 @@
 		FE96E8B72AF4E0A80070BCD2 /* MenuViewController_MGRE.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController_MGRE.xib; sourceTree = "<group>"; };
 		FE96E8BA2AF4E6EF0070BCD2 /* BakbakOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BakbakOne-Regular.ttf"; sourceTree = "<group>"; };
 		FE96E8BC2AF4E7110070BCD2 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
-		FEB53D9E2B06490100775DCE /* ThirdPartyServicesManager_MGRE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartyServicesManager_MGRE.swift; sourceTree = "<group>"; };
+		FEB53D9E2B06490100775DCE /* ServicesManager_MGRE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesManager_MGRE.swift; sourceTree = "<group>"; };
 		FEB5A0622AFE44E000424791 /* FilterView_MGRE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView_MGRE.swift; sourceTree = "<group>"; };
 		FEB5A0642AFE44EA00424791 /* FilterView_MGRE.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView_MGRE.xib; sourceTree = "<group>"; };
 		FEB5A0672AFE467D00424791 /* FilterCell_MGRE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell_MGRE.swift; sourceTree = "<group>"; };
@@ -194,8 +196,8 @@
 		FEB5A06B2AFE497A00424791 /* UILabel+Extension_MGRE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension_MGRE.swift"; sourceTree = "<group>"; };
 		FEB5A06E2AFE519F00424791 /* SearchBar_MGRE.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBar_MGRE.xib; sourceTree = "<group>"; };
 		FEB5A06F2AFE519F00424791 /* SearchBar_MGRE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar_MGRE.swift; sourceTree = "<group>"; };
-		FEBB86162AFABE780059C153 /* ModDetailsViewController_MGRE.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModDetailsViewController_MGRE.xib; sourceTree = "<group>"; };
-		FEBB86172AFABE780059C153 /* ModDetailsViewController_MGRE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModDetailsViewController_MGRE.swift; sourceTree = "<group>"; };
+		FEBB86162AFABE780059C153 /* MainDetailsViewController_MGRE.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainDetailsViewController_MGRE.xib; sourceTree = "<group>"; };
+		FEBB86172AFABE780059C153 /* MainDetailsViewController_MGRE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDetailsViewController_MGRE.swift; sourceTree = "<group>"; };
 		FEBB861A2AFABE8B0059C153 /* WallpaperViewController_MGRE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperViewController_MGRE.swift; sourceTree = "<group>"; };
 		FEBB861B2AFABE8B0059C153 /* WallpaperViewController_MGRE.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WallpaperViewController_MGRE.xib; sourceTree = "<group>"; };
 		FEBB861E2AFAC15B0059C153 /* UIViewController+Extensions_MGRE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions_MGRE.swift"; sourceTree = "<group>"; };
@@ -237,6 +239,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6FAD7982B9F5F4D007D5A5C /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				A6FAD7992B9F5F5F007D5A5C /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		FE4C8F802B024E16000E3DD1 /* DropDownView */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,13 +305,13 @@
 			path = MenuCell;
 			sourceTree = "<group>";
 		};
-		FE94C3B32AF831DB00B9B5C4 /* ModCell */ = {
+		FE94C3B32AF831DB00B9B5C4 /* MainCell */ = {
 			isa = PBXGroup;
 			children = (
-				FE94C3B62AF833D900B9B5C4 /* ModsCell_MGRE.swift */,
-				FE94C3B72AF833D900B9B5C4 /* ModsCell_MGRE.xib */,
+				FE94C3B62AF833D900B9B5C4 /* MainCell_MGRE.swift */,
+				FE94C3B72AF833D900B9B5C4 /* MainCell_MGRE.xib */,
 			);
-			path = ModCell;
+			path = MainCell;
 			sourceTree = "<group>";
 		};
 		FE94C3B42AF831EA00B9B5C4 /* WallpaperCell */ = {
@@ -396,6 +406,7 @@
 		FE96E8872AF456810070BCD2 /* ios-mod-gacha-ref-02 */ = {
 			isa = PBXGroup;
 			children = (
+				A6FAD7982B9F5F4D007D5A5C /* Localizable */,
 				FE7EF6AD2B04E54D000D73CE /* ios-mod-gacha-ref-02.entitlements */,
 				FE96E89C2AF456990070BCD2 /* Entities */,
 				FE96E8A22AF4573C0070BCD2 /* Presentation */,
@@ -462,7 +473,7 @@
 				FE94C3A72AF823AD00B9B5C4 /* Configurations_MGRE.swift */,
 				FE94C3A92AF8242400B9B5C4 /* NetworkMonitor_MGRE.swift */,
 				FE94C3C62AF8E7C600B9B5C4 /* LayoutConfig_MGRE.swift */,
-				FEB53D9E2B06490100775DCE /* ThirdPartyServicesManager_MGRE.swift */,
+				FEB53D9E2B06490100775DCE /* ServicesManager_MGRE.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -480,7 +491,7 @@
 				FEBB86202AFAC1DA0059C153 /* AlertController */,
 				FE94C3B52AF831F500B9B5C4 /* ContentCell */,
 				FE94C3B42AF831EA00B9B5C4 /* WallpaperCell */,
-				FE94C3B32AF831DB00B9B5C4 /* ModCell */,
+				FE94C3B32AF831DB00B9B5C4 /* MainCell */,
 				FE94C3B22AF831BF00B9B5C4 /* MenuCell */,
 			);
 			path = Views;
@@ -551,8 +562,8 @@
 		FEBB86142AFABE440059C153 /* Mod */ = {
 			isa = PBXGroup;
 			children = (
-				FEBB86172AFABE780059C153 /* ModDetailsViewController_MGRE.swift */,
-				FEBB86162AFABE780059C153 /* ModDetailsViewController_MGRE.xib */,
+				FEBB86172AFABE780059C153 /* MainDetailsViewController_MGRE.swift */,
+				FEBB86162AFABE780059C153 /* MainDetailsViewController_MGRE.xib */,
 			);
 			path = Mod;
 			sourceTree = "<group>";
@@ -689,16 +700,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEBB86182AFABE780059C153 /* ModDetailsViewController_MGRE.xib in Resources */,
+				FEBB86182AFABE780059C153 /* MainDetailsViewController_MGRE.xib in Resources */,
 				FE9554D32AFE7B7F000DFF12 /* ScanViewController_MGRE.xib in Resources */,
 				FEBB86252AFAC1F20059C153 /* Alert_MGRE.xib in Resources */,
 				FE9554DE2AFE7DE0000DFF12 /* CharacterEditorViewController_MGRE.xib in Resources */,
 				FE94C3BC2AF833E800B9B5C4 /* WallpaperCell_MGRE.xib in Resources */,
 				FE9554EC2B014315000DFF12 /* ContentCharacterCell_MGRE.xib in Resources */,
 				FE4DB2AE2AF7B53400E0C59D /* MenuCell_MGRE.xib in Resources */,
-				FE94C3B92AF833D900B9B5C4 /* ModsCell_MGRE.xib in Resources */,
+				FE94C3B92AF833D900B9B5C4 /* MainCell_MGRE.xib in Resources */,
 				FEB5A06A2AFE467D00424791 /* FilterCell_MGRE.xib in Resources */,
 				FE9554E22AFE7DEC000DFF12 /* CharacterViewController_MGRE.xib in Resources */,
+				A6FAD79A2B9F5F5F007D5A5C /* Localizable.strings in Resources */,
 				FE94C3C52AF8E3FE00B9B5C4 /* BaseViewController_MGRE.xib in Resources */,
 				FE96E8952AF456830070BCD2 /* LaunchScreen.storyboard in Resources */,
 				FE96E8B92AF4E0A80070BCD2 /* MenuViewController_MGRE.xib in Resources */,
@@ -743,7 +755,7 @@
 				FEB5A0712AFE519F00424791 /* SearchBar_MGRE.swift in Sources */,
 				FEB5A0692AFE467D00424791 /* FilterCell_MGRE.swift in Sources */,
 				FEB5A06C2AFE497A00424791 /* UILabel+Extension_MGRE.swift in Sources */,
-				FE94C3B82AF833D900B9B5C4 /* ModsCell_MGRE.swift in Sources */,
+				FE94C3B82AF833D900B9B5C4 /* MainCell_MGRE.swift in Sources */,
 				FE94C3BD2AF833E800B9B5C4 /* WallpaperCell_MGRE.swift in Sources */,
 				FE94C3AF2AF82E3100B9B5C4 /* ContentCodable_MGRE.swift in Sources */,
 				FE94C3AC2AF8248B00B9B5C4 /* UIWindow+Extension_MGRE.swift in Sources */,
@@ -764,7 +776,7 @@
 				FE4C8F8E2B02542D000E3DD1 /* UITableViewCell+Extension_MGRE.swift in Sources */,
 				FEBB86262AFAC1F20059C153 /* AlertController_MGRE.swift in Sources */,
 				FEBB86372AFC10B20059C153 /* BaseContainer_MGRE.swift in Sources */,
-				FEBB86192AFABE780059C153 /* ModDetailsViewController_MGRE.swift in Sources */,
+				FEBB86192AFABE780059C153 /* MainDetailsViewController_MGRE.swift in Sources */,
 				FEB5A0632AFE44E000424791 /* FilterView_MGRE.swift in Sources */,
 				FE96E8AB2AF45E6B0070BCD2 /* EditorContentModel_MGRE.swift in Sources */,
 				FE4DB2B52AF7BBB900E0C59D /* UIResponder+Extension_MGRE.swift in Sources */,
@@ -781,7 +793,7 @@
 				FE94C3882AF81C1800B9B5C4 /* Constants_MGRE.swift in Sources */,
 				FE96E8AF2AF462880070BCD2 /* CharacterPreview_MGRE.swift in Sources */,
 				FE9554DA2AFE7DD5000DFF12 /* CharacterListViewController_MGRE.swift in Sources */,
-				FEB53D9F2B06490100775DCE /* ThirdPartyServicesManager_MGRE.swift in Sources */,
+				FEB53D9F2B06490100775DCE /* ServicesManager_MGRE.swift in Sources */,
 				FE4C8F8C2B025401000E3DD1 /* UITableView+Extension_MGRE.swift in Sources */,
 				FE9554D22AFE7B7F000DFF12 /* ScanViewController_MGRE.swift in Sources */,
 				FE94C3A42AF821ED00B9B5C4 /* ContentManager_MGRE.swift in Sources */,

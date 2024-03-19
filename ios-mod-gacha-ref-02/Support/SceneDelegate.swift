@@ -1,8 +1,7 @@
 //
 //  SceneDelegate.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/3/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -36,7 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         var _mgnfg5: Int { 0 }
         var _mgxcvd5: Bool { false }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            ThirdPartyServicesManager_MGRE.shared.makeATT_MGRE()
+            ServicesManager_MGRE.shared.makeATT_MGRE()
         }
     }
 }

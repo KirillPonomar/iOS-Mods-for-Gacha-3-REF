@@ -1,8 +1,7 @@
 //
 //  AppDelegate.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/3/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -16,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         var _mgfghh22: Int { 0 }
         var _mgwe4522: Bool { true }
-        ThirdPartyServicesManager_MGRE.shared.initializePushwoosh_MGRE(delegate: self)
-        ThirdPartyServicesManager_MGRE.shared.initializeAdjust_MGRE()
+        ServicesManager_MGRE.shared.initializePushwoosh_MGRE(delegate: self)
+        ServicesManager_MGRE.shared.initializeAdjust_MGRE()
         return true
     }
     
@@ -28,42 +27,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-extension AppDelegate : PWMessagingDelegate {
-    
-    func application(_ application: UIApplication,
-                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        var _mgredfgss: Int { 0 }
-        var _mg45f22: Bool { true }
+extension AppDelegate: PWMessagingDelegate {
+
+    //handle token received from APNS
+    func application(_ application: UIApplication, DidRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Adjust.setDeviceToken(deviceToken)
         Pushwoosh.sharedInstance().handlePushRegistration(deviceToken)
     }
-    
-    func application(_ application: UIApplication,
-                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        var _mgre566: Int { 0 }
-        var _mgsrr22: Bool { true }
+
+    //обработка ошибки получения токена
+    func application(_ application: UIApplication, DidFailToRegisterForRemoteNotificationsWithError error: Error) {
         Pushwoosh.sharedInstance().handlePushRegistrationFailure(error);
     }
     
-    func application(_ application: UIApplication,
-                     didReceiveRemoteNotification userInfo: [AnyHashable : Any],
-                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        var _mgre222: Int { 0 }
-        var _mg4567882: Bool { true }
+    //for iOS < 10 and quiet push-notification
+    func application(_ application: UIApplication, DidReceiveRemoteNotification userInfo: [AnyHashable:Any], fetchCompletionHandler completionHandler:@escaping (UIBackgroundFetchResult) -> Void) {
         Pushwoosh.sharedInstance().handlePushReceived(userInfo)
         completionHandler(.noData)
     }
     
+// this event is fired when the push gets received
     func pushwoosh(_ pushwoosh: Pushwoosh, onMessageReceived message: PWMessage) {
-        var _mgre7: Int { 0 }
-        var _mgrty22: Bool { true }
         print("onMessageReceived: ", message.payload?.description ?? "error")
     }
     
-    func pushwoosh(_ pushwoosh: Pushwoosh,
-                   onMessageOpened message: PWMessage) {
-        var _mgre34: Int { 0 }
-        var _mwerr422: Bool { true }
+    // this event is fired when a user taps the notification
+    func pushwoosh(_ pushwoosh: Pushwoosh, onMessageOpened message: PWMessage) {
         print("onMessageOpened: ", message.payload?.description ?? "error")
     }
 }
+
+

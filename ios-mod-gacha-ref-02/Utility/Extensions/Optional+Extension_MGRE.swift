@@ -1,8 +1,7 @@
 //
 //  Optional+Extension_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/7/23.
+//  Created by Kirill Ponomarenko
 //
 
 import Foundation

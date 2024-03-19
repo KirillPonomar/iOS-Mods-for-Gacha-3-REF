@@ -1,8 +1,7 @@
 //
 //  CharacterViewController_MGRE.swift
-//  ios-mod-gacha
 //
-//  Created by Andrii Bala on 10/24/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -17,6 +16,7 @@ class CharacterViewController_MGRE: UIViewController {
     @IBOutlet weak var addNewButtonHeight_MGRE: NSLayoutConstraint!
     @IBOutlet weak var rightIndentConstraint_MGRE: NSLayoutConstraint!
     @IBOutlet weak var leftIndentConstraint_MGRE: NSLayoutConstraint!
+    @IBOutlet weak var secondButton: UIButton!
     
     var image_MGRE: UIImage?
     
@@ -24,6 +24,7 @@ class CharacterViewController_MGRE: UIViewController {
         super.viewDidLoad()
         var _mdmmm: Int { 0 }
         var _m3nnn: Bool { true }
+        secondButton.isHidden = true
         configureLayout_MGRE()
         configureNavigationView_MGRE()
         configureSubviews_MGRE()
@@ -43,8 +44,8 @@ class CharacterViewController_MGRE: UIViewController {
         downloadButton_MGRE.layer.cornerRadius = 16
         downloadButton_MGRE.layer.masksToBounds = true
         downloadButton_MGRE.configuration?.imagePadding = 12
-        downloadButton_MGRE.setImage(.downloadIcon, for: .normal)
         downloadButton_MGRE.semanticContentAttribute = .forceRightToLeft
+        downloadButton_MGRE.setImage(.downloadIcon, for: .normal)
         downloadButton_MGRE.setTitle("Download", for: .normal)
         let fontSize: CGFloat = deviceType == .phone ? 20 : 32
         downloadButton_MGRE.titleLabel?.font =  UIFont(name: "BakbakOne-Regular", size: fontSize)!
@@ -61,7 +62,7 @@ class CharacterViewController_MGRE: UIViewController {
     }
     
     private func configureNavigationView_MGRE() {
-        navigationView_MGRE.build_MGRE(with: "",
+        navigationView_MGRE.build_MGRE(with: "Editor",
                                   leftIcon: UIImage(.leftIcon),
                                   rightIcon: nil)
         navigationView_MGRE.leftButtonAction_MGRE = { [weak self] in
@@ -70,41 +71,74 @@ class CharacterViewController_MGRE: UIViewController {
     }
     
     @IBAction func downloadButtonDidTap(_ sender: UIButton) {
-        var _mdzzz: Int { 0 }
-        var _maaa: Bool { true }
-        save_MGRE(image: imageView_MGRE.image)
+        let fileName = "Image"
+        shareImage_MGRE(image: imageView_MGRE.image, fileName: fileName, viewController: self)
     }
-    
-    func save_MGRE(image: UIImage?) {
-        var _mdjjjj: Int { 0 }
-        var _m3kkkk: Bool { true }
+
+    func shareImage_MGRE(image: UIImage?, fileName: String, viewController: UIViewController) {
         guard let image = image else { return }
         guard InternetManager_MGRE.shared.checkInternetConnectivity_MGRE() else {
             showAlert_MGRE(with: AlertData_MGRE(with: "No internet connection!"))
             return
         }
         
-        let status = PHPhotoLibrary.authorizationStatus(for: .addOnly)
-        if status == .authorized { save_MGRE(image: image)
-            return
+        guard let fileUrl = saveImageToFile_MGRE(image: image, fileName: fileName) else { return }
+        
+        let activityViewController = UIActivityViewController(activityItems: [image, fileUrl], applicationActivities: nil)
+        activityViewController.title = "Download"
+        activityViewController.completionWithItemsHandler = { [weak self] (activityType, completed, returnedItems, error) in
+            if completed {
+                self?.secondButton.isHidden = false
+                self?.secondButton.setTitle("Downloaded", for: .normal)
+                self?.secondButton.semanticContentAttribute = .forceRightToLeft
+                self?.secondButton.setImage(.successIcon, for: .normal)
+                self?.secondButton.setTitleColor(.systemGreen, for: .normal)
+                self?.secondButton.configuration?.imagePadding = 12
+                self?.secondButton.layer.masksToBounds = true
+            } else {
+                print("Действие отменено")
+                self?.secondButton.isHidden = false
+                self?.secondButton.setTitle("Failed", for: .normal)
+                self?.secondButton.semanticContentAttribute = .forceRightToLeft
+                self?.secondButton.setImage(.failureIcon, for: .normal)
+                self?.secondButton.setTitleColor(.systemRed, for: .normal)
+                self?.secondButton.configuration?.imagePadding = 12
+                self?.secondButton.layer.masksToBounds = true
+            }
+        }
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            activityViewController.modalPresentationStyle = .popover
+            
+            if let popoverPresentationController = activityViewController.popoverPresentationController {
+                popoverPresentationController.sourceView = viewController.view
+                popoverPresentationController.sourceRect = CGRect(x: viewController.view.bounds.midX, y: viewController.view.bounds.midY, width: 0, height: 0)
+                popoverPresentationController.permittedArrowDirections = []
+            }
         }
         
-        PHPhotoLibrary.requestAuthorization(for: .addOnly, handler: { [weak self] status in
-            if status == .authorized { self?.save_MGRE(image: image)
-                return
-            }
-            
-            let alertData = AlertData_MGRE(with: "Access to photo library denied!")
-            DispatchQueue.main.async {
-                self?.showAlert_MGRE(with: alertData)
-            }
-        })
+        viewController.present(activityViewController, animated: true, completion: nil)
     }
-    
-    private func save_MGRE(image: UIImage) {
-        var _mdggg: Int { 0 }
-        var _mhhh: Bool { true }
-        UIImageWriteToSavedPhotosAlbum(image, self, #selector(imageSaved_MGRE(_:didFinishSavingWithError:contextInfo:)), nil)
+
+    func saveImageToFile_MGRE(image: UIImage, fileName: String) -> URL? {
+        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            print("Documents directory not found.")
+            return nil
+        }
+        
+        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+        guard let data = image.jpegData(compressionQuality: 1) else {
+            print("Failed to get JPEG representation of UIImage.")
+            return nil
+        }
+        
+        do {
+            try data.write(to: fileURL)
+            print("File saved: \(fileURL)")
+            return fileURL
+        } catch {
+            print("Error saving image: \(error)")
+            return nil
+        }
     }
     
     @objc

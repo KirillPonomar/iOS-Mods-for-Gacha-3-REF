@@ -1,8 +1,7 @@
 //
 //  CharacterEditorViewController_MGRE.swift
-//  ios-mod-gacha
 //
-//  Created by Andrii Bala on 9/25/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -13,6 +12,7 @@ class CharacterEditorViewController_MGRE: UIViewController {
     @IBOutlet private weak var dropDownView_MGRE: DropDownView_MGRE!
     @IBOutlet weak var contentImageView_MGRE: CharacterEditorImage_MGRE!
     @IBOutlet weak var contentCollectionView_MGRE: UICollectionView!
+    @IBOutlet weak var typeContentCollectionView: UICollectionView!
     @IBOutlet weak var navBarHeight_MGRE: NSLayoutConstraint!
     @IBOutlet weak var contentLabel_MGRE: UILabel!
     @IBOutlet weak var leftIndentConstraint_MGRE: NSLayoutConstraint!
@@ -24,6 +24,7 @@ class CharacterEditorViewController_MGRE: UIViewController {
     private var dropbox_MGRE: DBManager_MGRE { .shared }
     var editorContentSet_MGRE: EditorContentSet_MGRE!
     var characterPreview_MGRE: CharacterPreview_MGRE?
+    let layout = UICollectionViewFlowLayout()
     
     private var categories_MGRE: [String] = []
     private var selectedCategory_MGRE: String = "body"
@@ -61,10 +62,25 @@ class CharacterEditorViewController_MGRE: UIViewController {
         configureNavigationView_MGRE()
         configureCharacterEditorImage_MGRE()
         configureCollectionView_MGRE()
+        configureTypeContentCollectionView()
     }
     
+    private func configureTypeContentCollectionView() {
+        typeContentCollectionView.dataSource = self
+        typeContentCollectionView.delegate = self
+        
+        layout.scrollDirection = .horizontal
+        layout.minimumInteritemSpacing = 10
+        layout.sectionInset = .init(top: 10, left: 10, bottom: 10, right: 10)
+        layout.estimatedItemSize = .init(width: 50, height: 50)
+        
+        typeContentCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "UICollectionViewCell")
+        typeContentCollectionView.register(CategoryCell.self, forCellWithReuseIdentifier: "CategoryCell")
+        typeContentCollectionView.collectionViewLayout = layout
+}
+    
     private func configureNavigationView_MGRE() {
-        navigationView_MGRE.build_MGRE(with: "",
+        navigationView_MGRE.build_MGRE(with: "Editor",
                                   leftIcon: UIImage(.backChevronIcon),
                                   rightIcon: UIImage(.doneIcon),
                                   isEditor: true)
@@ -88,7 +104,6 @@ class CharacterEditorViewController_MGRE: UIViewController {
             self.selectedCategory_MGRE = categoryType
             self.applyContentSnapshot_MGRE()
         }
-        dropDownView_MGRE.setupDropDownView_MGRE(with: categories_MGRE, selectedCategory: selectedCategory_MGRE)
     }
     
     private func configureLayout_MGRE() {
@@ -196,17 +211,7 @@ class CharacterEditorViewController_MGRE: UIViewController {
     
     func backButtonDidTap_MGRE() {
         dropDownView_MGRE.closeView_MGRE()
-        if actionСache_MGRE.isEmpty {
-            navigationController?.popViewController(animated: true)
-        } else {
-            let alertData = AlertData_MGRE(with: "THINK TWICE",
-                                      subtitle: "Exiting means discarding all modifications.",
-                                      leftBtnText: "NO",
-                                      rightBtnText: "Exit") { [weak self] in
-                self?.navigationController?.popViewController(animated: true)
-            }
-            showAlert_MGRE(with: alertData)
-        }
+        navigationController?.popViewController(animated: true)
     }
     
     func undoButtonDidTap_MGRE() {
@@ -250,10 +255,14 @@ class CharacterEditorViewController_MGRE: UIViewController {
 
 extension CharacterEditorViewController_MGRE: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView.cellForItem(at: indexPath) is CategoryCell {
+            let selectedCategory = categories_MGRE[indexPath.item]
+            dropDownView_MGRE.categoryDidChange_MGRE?(selectedCategory)
+            return
+        }
         collectionView.scrollToItem(at: indexPath,
                                     at: .centeredHorizontally,
                                     animated: true)
-        dropDownView_MGRE.closeView_MGRE()
         let old = contentImageView_MGRE.getContent_MGRE(for: selectedCategory_MGRE)?.id
         
         let isHair = selectedCategory_MGRE == "HairTop"
@@ -312,5 +321,99 @@ extension CharacterEditorViewController_MGRE: UICollectionViewDelegateFlowLayout
         let deviceType = UIDevice.current.userInterfaceIdiom
         let size: CGFloat = deviceType == .phone ? 92 : 138
         return CGSize(width: size, height: size)
+    }
+}
+
+extension CharacterEditorViewController_MGRE: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categories_MGRE.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeue_MGRE(id: CategoryCell.self, for: indexPath)
+        let categoryName = categories_MGRE[indexPath.item]
+        if let categoryCell = cell as? CategoryCell {
+            categoryCell.titleLabel.text = categoryName
+            
+        }
+        return cell
+    }
+}
+
+class CategoryCell: UICollectionViewCell {
+    let titleLabel = UILabel()
+    let backView = UIView()
+    
+    override var isSelected: Bool {
+        didSet {
+            update_MGRE(with: isSelected)
+        }
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+        contentView.backgroundColor = .white
+        layer.cornerRadius = 10
+        layer.masksToBounds = true
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    private func commonInit() {
+        setupBackView()
+        setupTitleLabel()
+    }
+    
+    private func update_MGRE(with isSelected: Bool) {
+        titleLabel.textColor = isSelected ? .white : .blackText
+        if isSelected {
+            if let _ = contentView.layer.sublayers?.first(where: { $0 is CAGradientLayer }) {
+                contentView.layer.sublayers?.removeAll(where: { $0 is CAGradientLayer })
+            }
+            
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.frame = contentView.bounds
+            gradientLayer.colors = [UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
+                                    UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor]
+            gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+            gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+            contentView.layer.insertSublayer(gradientLayer, at: 0)
+        } else {
+            contentView.layer.sublayers?.removeAll(where: { $0 is CAGradientLayer })
+            contentView.backgroundColor = UIColor(red: 0.72, green: 0.717, blue: 0.74, alpha: 1)
+        }
+    }
+    
+    override func layoutSubviews() {
+            super.layoutSubviews()
+        update_MGRE(with: isSelected)
+        }
+    
+    private func setupBackView() {
+        backView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(backView)
+        NSLayoutConstraint.activate([
+            backView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+            backView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            backView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            backView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
+    }
+
+    private func setupTitleLabel() {
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        backView.addSubview(titleLabel)
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
+            titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
+        ])
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.systemFont(ofSize: 16)
     }
 }

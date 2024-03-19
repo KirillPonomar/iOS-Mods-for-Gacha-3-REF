@@ -1,8 +1,7 @@
 //
 //  UIView+Extension_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/7/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -49,5 +48,45 @@ extension UIView_MGRE {
         self.layer.shadowRadius = shadowRadius
         self.layer.shadowOffset = CGSize(width: 0, height: shadowVerticalOffset)
         self.clipsToBounds = false
+    }
+}
+
+extension UIView_MGRE {
+    func addBlurEffect() {
+        let blurEffect = UIBlurEffect(style: .regular)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.frame = bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(blurView, at: 0)
+    }
+}
+
+extension UIColor {
+    func blurredImage(withSize size: CGSize) -> UIImage? {
+        guard let filter = CIFilter(name: "CIColorMonochrome") else {
+            return nil
+        }
+        filter.setDefaults()
+        filter.setValue(CIColor(color: .white), forKey: "inputColor")
+        filter.setValue(0.0, forKey: "inputIntensity")
+        
+        guard let coloredImage = filter.outputImage else {
+            return nil
+        }
+        
+        let blurFilter = CIFilter(name: "CIGaussianBlur")
+        blurFilter?.setValue(coloredImage, forKey: kCIInputImageKey)
+        blurFilter?.setValue(5.0, forKey: kCIInputRadiusKey)
+        
+        guard let blurredImage = blurFilter?.outputImage else {
+            return nil
+        }
+        
+        let context = CIContext(options: nil)
+        if let cgImage = context.createCGImage(blurredImage, from: CGRect(origin: .zero, size: size)) {
+            return UIImage(cgImage: cgImage)
+        }
+        
+        return nil
     }
 }

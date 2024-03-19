@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+
+  Created by Kirill Ponomarenko
+  
+*/
+
+"OutfitIdeas" = "Outfit ideas";
+"Characters" = "Characters";
+"Collections" = "Collections";
+"Wallpapers" = "Wallpapers";
+"Favorites" = "Favorites";
+"Editor" = "Editor";
+"Loading" = "Loading";
+"All" = "All";
+"New" = "New";
+"LastAdded" = "LastAdded";
+"Top" = "Top";
+"NoInternet" = "No internet connection!";
+"PhotoLibAccess" = "Access to photo library denied";
+"DownloadedSuccess" = "Downloaded";
+"DownloadedFailed" = "Downloaded failed";
+"Download" = "Download";
+"ConfirmQuestion" = "ARE YOU SURE?";
+"ConfirmSubtitle" = "This will be delete all changes";
+"No" = "No";
+"Delete" = "Delete";
+"Body" = "Body";
+"Hair" = "Hair";
+"HairTop" = "Hair Top";
+"HairBottom" = "Hair Bottom";
+"Brows" = "Brows";
+"Eyes" = "Eyes";
+"Top" = "Top";
+"Trousers" = "Trousers";
+"Mouth" = "Mouth";
+"Exit" = "Exit";
+"Additions" = "Additions";
+"Reset" = "Reset changes";
+"Open" = "Open";
+"Progress" = "Progress";
+"MiniGames" = "Mini-games";

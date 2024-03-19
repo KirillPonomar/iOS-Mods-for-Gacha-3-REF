@@ -1,8 +1,7 @@
 //
 //  DropDownCell_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/13/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit

@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ModsCell_MGRE" id="gTV-IL-0wX" customClass="ModsCell_MGRE" customModule="ios_mod_gacha_ref_02" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCell_MGRE" id="gTV-IL-0wX" userLabel="MainCell_MGRE" customClass="MainCell_MGRE" customModule="ios_mod_gacha_ref_02" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="382" height="253"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

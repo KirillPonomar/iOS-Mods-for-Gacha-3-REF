@@ -1,8 +1,7 @@
 //
 //  DBManager_MGRERE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/5/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -45,14 +44,16 @@ extension DBManager_MGRE {
         
         guard InternetManager_MGRE.shared.checkInternetConnectivity_MGRE() else {
             completion?(nil)
-//            showInternetError_MGRE()
+            showInternetError_MGRE()
             return
         }
         print("DBManager_MGRE - connect_MGRE!")
         
         UserDefaults
             .standard
-            .setValue("6eNF4kUntTIAAAAAAAAAARVhTAFlHQzg2DOiTR0mVmofgGEDj5owPXgzwj5rD-Xa",
+            .setValue(
+                "WxC3cShNQagAAAAAAAAAAQOr7J7WsvFyuv_PiEPDqYrPG8hghwLx2g2njldLEzdM",
+                //"6eNF4kUntTIAAAAAAAAAARVhTAFlHQzg2DOiTR0mVmofgGEDj5owPXgzwj5rD-Xa",
                       //"ZkDH9EX10HwAAAAAAAAAAQKgnDK5D73cZsy_3HD-sSNT1SiM8Y5RfTEYwetoZgKN",
                       forKey: "refresh_token")
         
@@ -61,7 +62,7 @@ extension DBManager_MGRE {
             print("DBManager_MGRE - connect_MGREed!")
             completion?(client)
         }
-        
+
         let refreshTokenBlock: (_ refreshToken: String) -> Void = { refreshToken in
             NetworkManager_MGRE.requestAccessToken_MGRE(with: refreshToken) { accessToken in
                 guard let accessToken else {
@@ -72,23 +73,23 @@ extension DBManager_MGRE {
                 connect_MGREionBlock(accessToken)
             }
         }
-        
+
         if let refreshToken = UserDefaults.standard.string(forKey: "refresh_token") {
             refreshTokenBlock(refreshToken)
             return
         }
-        
-        NetworkManager_MGRE.requestRefreshtoken_MGRE(with: Keys_MGRE.App_MGRE.accessCode_MGRE.rawValue) { refreshToken in
-            guard let refreshToken else {
-                completion?(nil)
-                return
-            }
-            
-            UserDefaults.setValue(refreshToken, forKey: "refresh_token")
-            print("DBManager_MGRE - Refreshtoken: \(refreshToken)")
-            
-            refreshTokenBlock(refreshToken)
-        }
+
+//        NetworkManager_MGRE.requestRefreshtoken_MGRE(with: Keys_MGRE.App_MGRE.accessCode_MGRE.rawValue) { refreshToken in
+//            guard let refreshToken else {
+//                completion?(nil)
+//                return
+//            }
+//            
+//            UserDefaults.setValue(refreshToken, forKey: "refresh_token")
+//            print("DBManager_MGRE - Refreshtoken: \(refreshToken)")
+//            
+//            refreshTokenBlock(refreshToken)
+//        }
     }
     
     func fetchContent_MGRE(for contentType: ContentType_MGRE,
@@ -120,8 +121,8 @@ extension DBManager_MGRE {
             getFile_MGRE(client: client, with: path) { [unowned self] data in
                 guard let data else { completion([]); return }
                 switch contentType {
-                case .mods_mgre:
-                    let models: [Mods_MGRE] = serialized_MGRE(ModsResponseCodable_MGRE.self, from: data) { $0.list }
+                case .main_mgre:
+                    let models: [Main_MGRE] = serialized_MGRE(MainResponseCodable_MGRE.self, from: data) { $0.list }
                     contentManager.storeContents_MGRE(with: contentType, models: models)
                     completion(models.sorted(by: { $0.favId < $1.favId }))
                 case .wallpapers_mgre:

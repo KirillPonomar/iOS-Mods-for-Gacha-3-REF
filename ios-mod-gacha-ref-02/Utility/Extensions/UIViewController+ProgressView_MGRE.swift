@@ -1,8 +1,7 @@
 //
 //  UIViewController+ProgressView_MGRE.swift
-//  ios-mod-gacha-ref-02
 //
-//  Created by Andrii Bala on 11/7/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -39,7 +38,7 @@ class ProgressView_MGRE: UIView {
         
         let label = UILabel()
         label.text = "Loading...."
-        label.textColor = .blackText
+        label.textColor = .white
         let deviceType = UIDevice.current.userInterfaceIdiom
         let titleFontSize: CGFloat = deviceType == .phone ? 22 : 32
         label.font = UIFont(name: "BakbakOne-Regular", size: titleFontSize)!

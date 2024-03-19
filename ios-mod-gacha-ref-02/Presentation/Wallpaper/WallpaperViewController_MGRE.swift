@@ -1,8 +1,7 @@
 //
 //  WallpaperViewController_MGRE.swift
-//  ios-mod-gacha
 //
-//  Created by Andrii Bala on 9/23/23.
+//  Created by Kirill Ponomarenko
 //
 
 import UIKit
@@ -17,12 +16,14 @@ class WallpaperViewController_MGRE: UIViewController {
     
     @IBOutlet private weak var navigationView_MGRE: NavigationView_MGRE!
     @IBOutlet private weak var favoriteButton_MGRE: UIButton!
+    @IBOutlet private weak var shareButton_MGRE: UIButton!
     @IBOutlet private weak var imageView_MGRE: UIImageView!
+    @IBOutlet private weak var previewButton_MGRE: UIButton!
     @IBOutlet private weak var rightIndentConstraint_MGRE: NSLayoutConstraint!
     @IBOutlet private weak var leftIndentConstraint_MGRE: NSLayoutConstraint!
     @IBOutlet var actionButtons_MGRE: [UIButton]!
     @IBOutlet private weak var downloadButton: UIButton!
-    
+    @IBOutlet private weak var secondButton: UIButton!
     var modelType_MGRE: ModelType_MGRE?
     var contentType_MGRE: ContentType_MGRE?
     var isFavourite_MGRE: Bool = false
@@ -33,6 +34,7 @@ class WallpaperViewController_MGRE: UIViewController {
         var _MGfghgxa: Bool { false }
         configureLayout_MGRE()
         configureSubviews_MGRE()
+        secondButton.isHidden = true
     }
     
     private func configureLayout_MGRE() {
@@ -80,6 +82,7 @@ class WallpaperViewController_MGRE: UIViewController {
         var _M54wetter2: Int { 0 }
         var _MGqqwwa: Bool { false }
         switch sender.tag {
+            
         case 0: favoriteButtonDidTap_MGRE()
         case 1: shareImage_MGRE(image: imageView_MGRE.image, viewController: self)
         case 2: scan_MGRE(image: imageView_MGRE.image)
@@ -104,6 +107,7 @@ class WallpaperViewController_MGRE: UIViewController {
         var _MGNq1414r2: Int { 0 }
         var _MGf1515xa: Bool { false }
         favoriteButton_MGRE.setImage(isFavourite_MGRE ? .heartIcon : .heartIconEmpty, for: .normal)
+        favoriteButton_MGRE.backgroundColor = UIColor.white.withAlphaComponent(0.56)
     }
     
     func favoriteButtonDidTap_MGRE() {
@@ -210,8 +214,22 @@ class WallpaperViewController_MGRE: UIViewController {
         activityViewController.title = "Download \(type)"
         activityViewController.completionWithItemsHandler = { [weak self] (activityType, completed, returnedItems, error) in
             if completed {
-                let alertData = AlertData_MGRE(with: "Success!")
-                self?.showAlert_MGRE(with: alertData)
+                self?.secondButton.isHidden = false
+                self?.secondButton.setTitle("Downloaded", for: .normal)
+                self?.secondButton.semanticContentAttribute = .forceRightToLeft
+                self?.secondButton.setImage(.successIcon, for: .normal)
+                self?.secondButton.setTitleColor(.systemGreen, for: .normal)
+                self?.secondButton.configuration?.imagePadding = 12
+                self?.secondButton.layer.masksToBounds = true
+            } else {
+                print("Действие отменено")
+                self?.secondButton.isHidden = false
+                self?.secondButton.setTitle("Download Failed", for: .normal)
+                self?.secondButton.semanticContentAttribute = .forceRightToLeft
+                self?.secondButton.setImage(.failureIcon, for: .normal)
+                self?.secondButton.setTitleColor(.systemRed, for: .normal)
+                self?.secondButton.configuration?.imagePadding = 12
+                self?.secondButton.layer.masksToBounds = true
             }
         }
         if UIDevice.current.userInterfaceIdiom == .pad {

@@ -18,6 +18,7 @@
                 <outlet property="navBarHeight_MGRE" destination="zw3-ca-aoL" id="rmu-I7-n92"/>
                 <outlet property="navigationView_MGRE" destination="su5-R7-CDU" id="q2x-m4-LdN"/>
                 <outlet property="rightIndentConstraint_MGRE" destination="FeY-Nl-6vD" id="Khl-sC-ITt"/>
+                <outlet property="secondButton" destination="8gj-Vf-Cjd" id="L4d-h1-vAQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -63,6 +64,18 @@
                     <connections>
                         <action selector="downloadButtonDidTap:" destination="-1" eventType="touchUpInside" id="sVE-iu-p1l"/>
                     </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gj-Vf-Cjd">
+                    <rect key="frame" x="22" y="742" width="349" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" name="background"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=""/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

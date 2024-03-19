@@ -24,6 +24,7 @@
                 <outlet property="leftIndentConstraint_MGRE" destination="lQ3-Qu-NrQ" id="oCZ-gf-BqN"/>
                 <outlet property="navBarHeight_MGRE" destination="2sj-w9-hlC" id="ujm-8d-w8S"/>
                 <outlet property="navigationView_MGRE" destination="egI-by-7TR" id="3wl-KM-cmB"/>
+                <outlet property="typeContentCollectionView" destination="0lA-P9-23R" id="bHB-Zz-Yr3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,6 +33,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view hidden="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="241" placeholderIntrinsicHeight="48" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-mJ-uJL" customClass="DropDownView_MGRE" customModule="ios_mod_gacha_ref_02" customModuleProvider="target">
+                    <rect key="frame" x="76" y="157" width="241" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egI-by-7TR" customClass="NavigationView_MGRE" customModule="ios_mod_gacha_ref_02" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="59" width="393" height="58"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,8 +54,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPx-Vv-bFN">
                     <rect key="frame" x="0.0" y="653" width="393" height="219"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIb-0y-OSD">
-                            <rect key="frame" x="20" y="25" width="142" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIb-0y-OSD">
+                            <rect key="frame" x="20" y="25" width="0.0" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="vY7-9D-1eH"/>
                             </constraints>
@@ -65,6 +70,17 @@
                                 <constraint firstAttribute="height" constant="92" id="jTN-pC-2Z1"/>
                             </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="12" minimumInteritemSpacing="12" id="cmv-Ko-V3n">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0lA-P9-23R">
+                            <rect key="frame" x="0.0" y="2" width="393" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lDg-Zs-QGn">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -86,10 +102,6 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
-                </view>
-                <view contentMode="scaleToFill" placeholderIntrinsicWidth="241" placeholderIntrinsicHeight="48" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-mJ-uJL" customClass="DropDownView_MGRE" customModule="ios_mod_gacha_ref_02" customModuleProvider="target">
-                    <rect key="frame" x="76" y="157" width="241" height="48"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
