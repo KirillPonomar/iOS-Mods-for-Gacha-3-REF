@@ -16,6 +16,7 @@ class ContentCharacterCell_MGRE: UICollectionViewCell {
         layer.cornerRadius = 20
         layer.borderWidth = 0
         layer.borderColor = UIColor.clear.cgColor
+        layer.backgroundColor = UIColor.tertiary.cgColor
         layer.masksToBounds = true
     }
     

@@ -78,18 +78,6 @@ extension DBManager_MGRE {
             refreshTokenBlock(refreshToken)
             return
         }
-
-//        NetworkManager_MGRE.requestRefreshtoken_MGRE(with: Keys_MGRE.App_MGRE.accessCode_MGRE.rawValue) { refreshToken in
-//            guard let refreshToken else {
-//                completion?(nil)
-//                return
-//            }
-//            
-//            UserDefaults.setValue(refreshToken, forKey: "refresh_token")
-//            print("DBManager_MGRE - Refreshtoken: \(refreshToken)")
-//            
-//            refreshTokenBlock(refreshToken)
-//        }
     }
     
     func fetchContent_MGRE(for contentType: ContentType_MGRE,
@@ -288,8 +276,8 @@ extension DBManager_MGRE {
                         EditorContentModel_MGRE(id: $0.id,
                                                 contentType: markup.tag,
                                                 order: markup.order,
-                                                path: $0.path,
-                                                preview: $0.preview)
+                                                path: "girl/" + $0.path,
+                                                preview: "girl/" + $0.preview)
                     }
                     modelsSet.append(models)
                 }

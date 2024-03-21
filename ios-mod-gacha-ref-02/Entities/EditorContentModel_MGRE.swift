@@ -25,7 +25,7 @@ struct EditorContentModel_MGRE: Hashable {
         self.id = id
         self.contentType = contentType
         self.order = order
-        self.path = .init(pdfPath: path, elPath: preview)
+        self.path = .init(pdfPathSource: path, elPath: preview)
     }
     
     init?(from entity: EditorContentEntity) {
@@ -37,7 +37,7 @@ struct EditorContentModel_MGRE: Hashable {
         self.id = id
         self.contentType = contentType
         self.order = order
-        self.path = .init(pdfPath: path, elPath: preview)
+        self.path = .init(pdfPathSource: path, elPath: preview)
     }
     
     static func == (lhs: EditorContentModel_MGRE,
@@ -50,11 +50,15 @@ struct EditorContentPath_MGRE {
     var _MGN1: String { "01" }
     var _MGN2: Bool { true }
     
-    let pdfPath: String
+    let pdfPathSource: String
     let elPath: String
+
+    var pdfPath: String {
+        "editor/" + pdfPathSource
+    }
 }
 
-struct EditorCodableContentList_MGRE: Codable {
+struct EditorCodableContentList_MGRE {
     var _MGN3: String { "02" }
     var _MGN4: Bool { false }
     
@@ -62,16 +66,16 @@ struct EditorCodableContentList_MGRE: Codable {
     let order: String
     let list: [EditorCodableContent_MGRE]
     
-    enum CodingKeys_MGRE: String, CodingKey {
-        case tag = "scfwe_7f3", order = "dkfrt_2m5", list = "sdc5_3n5"
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys_MGRE.self)
-        self.tag = try container.decode(String.self, forKey: .tag)
-        self.order = try container.decode(String.self, forKey: .order)
-        self.list = try container.decode([EditorCodableContent_MGRE].self, forKey: .list)
-    }
+//    enum CodingKeys_MGRE: String, CodingKey {
+//        case tag = "scfwe_7f3", order = "dkfrt_2m5", list = "sdc5_3n5"
+//    }
+//
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys_MGRE.self)
+//        self.tag = try container.decode(String.self, forKey: .tag)
+//        self.order = try container.decode(String.self, forKey: .order)
+//        self.list = try container.decode([EditorCodableContent_MGRE].self, forKey: .list)
+//    }
 }
 
 struct EditorCodableContent_MGRE: Codable {
@@ -83,12 +87,16 @@ struct EditorCodableContent_MGRE: Codable {
     let preview: String
     
     enum CodingKeys_MGRE: String, CodingKey {
-        case id = "sdca_123", path = "stu3-qws", preview = "lfjy4_wb64"
+        case id, path, preview
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys_MGRE.self)
-        self.id = try container.decode(String.self, forKey: .id)
+        if let id = try? container.decode(Int.self, forKey: .id) {
+            self.id = String(id)
+        } else {
+            self.id = UUID().uuidString
+        }
         self.path = try container.decode(String.self, forKey: .path)
         self.preview = try container.decode(String.self, forKey: .preview)
     }

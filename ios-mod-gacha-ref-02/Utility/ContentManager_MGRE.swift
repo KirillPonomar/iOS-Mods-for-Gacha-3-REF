@@ -50,14 +50,24 @@ final class ContentManager_MGRE: NSObject {
     }
     
     func serialized_MGRE(markups data: Data) -> [EditorCodableContentList_MGRE] {
-        if let jsonObj = jsonObj_MGRE(from: data, with: "dfnsh-sd5"),
-           let markups = try? JSONDecoder().decode([EditorCodableContentList_MGRE].self,
-                                                   from: jsonObj) {
-            return markups
-        }
-        return []
+        let objects = jsonDict_MGRE(from: data)?
+            .enumerated()
+            .compactMap { index, keyValue -> EditorCodableContentList_MGRE? in
+                guard let data = try? JSONSerialization.data(withJSONObject: keyValue.value),
+                      let list = try? JSONDecoder().decode([EditorCodableContent_MGRE].self, from: data)
+                else {
+                    return nil
+                }
+                return EditorCodableContentList_MGRE(
+                    tag: keyValue.key,
+                    order: String(index),
+                    list: list
+                )
+            }
+
+        return objects ?? []
     }
-    
+
     func fetchContents_MGRE(contentType: ContentType_MGRE) -> [any ModelProtocol_MGRE] {
         let fetchRequest = ContentEntity.fetchRequest()
         fetchRequest.predicate = .init(format: "contentType == %i", contentType.int64_MGRE)
@@ -99,7 +109,7 @@ final class ContentManager_MGRE: NSObject {
         }
     }
     
-    private func update_MGRE(entity: ContentEntity, 
+    private func update_MGRE(entity: ContentEntity,
                              model: any ModelProtocol_MGRE,
                              contentType: ContentType_MGRE) {
         switch contentType {

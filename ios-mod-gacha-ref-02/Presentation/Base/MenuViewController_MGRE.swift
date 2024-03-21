@@ -12,18 +12,33 @@ class MenuViewController_MGRE: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var rightIndentConstraint: NSLayoutConstraint!
     @IBOutlet private weak var leftIndentConstraint: NSLayoutConstraint!
-    
-    var menuBackgroundColor: UIColor = UIColor(red: 0.19, green: 0.15, blue: 0.27, alpha: 0.82)
+
+    var menuBackgroundColor: UIColor = UIColor(red: 0.48, green: 0.39, blue: 0.70, alpha: 0.2)
     var menuCollectionBackgroundColor: UIColor = UIColor(red: 0.19, green: 0.15, blue: 0.27, alpha: 0.05)
     var menuAction_MGRE: ((MenuItem_MGRE) -> Void)?
     var selectedMenu_MGRE: MenuItem_MGRE = .main_MGRE
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = menuCollectionBackgroundColor
-        view.backgroundColor = menuBackgroundColor
+
+        addBlur()
         configureLayout_MGRE()
         configureCollectionView_MGRE()
+    }
+
+    private func addBlur() {
+        collectionView.backgroundColor = .clear
+        view.backgroundColor = .clear
+        let blurredView = UIVisualEffectView(effect: UIBlurEffect(style: .systemThinMaterialDark))
+        blurredView.backgroundColor = menuBackgroundColor
+        blurredView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(blurredView)
+        blurredView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        blurredView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        blurredView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        blurredView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+
+        view.sendSubviewToBack(blurredView)
     }
 
     private func configureLayout_MGRE() {

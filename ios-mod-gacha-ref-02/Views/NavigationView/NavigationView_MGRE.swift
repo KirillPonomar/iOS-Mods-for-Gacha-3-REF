@@ -41,10 +41,8 @@ class NavigationView_MGRE: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let gradient = UIImage.gradientImage(bounds: titleLabel_MGRE.bounds, colors: [
-            UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1),
-            UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1)])
-        titleLabel_MGRE.textColor = UIColor(patternImage: gradient)
+        let gradient = titleLabel_MGRE.getGradientLayer(bounds: .init(origin: .zero, size: titleLabel_MGRE.systemLayoutSizeFitting(.zero)))
+        titleLabel_MGRE.textColor = titleLabel_MGRE.gradientColor(bounds: titleLabel_MGRE.bounds, gradientLayer: gradient)
     }
     
     private func configureLayout_MGRE() {
@@ -126,5 +124,34 @@ extension UILabel_MGN {
         label.text = text
         label.sizeToFit()
         return label.frame.width
+    }
+}
+
+extension UIView {
+
+    func gradientColor(bounds: CGRect, gradientLayer: CAGradientLayer) -> UIColor? {
+
+        UIGraphicsBeginImageContext(gradientLayer.bounds.size)
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+        gradientLayer.render(in: context)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else {
+            return nil
+        }
+        UIGraphicsEndImageContext()
+        return UIColor(patternImage: image)
+    }
+
+    func getGradientLayer(bounds: CGRect) -> CAGradientLayer {
+        let gradient = CAGradientLayer()
+        gradient.frame = bounds
+        gradient.colors = [
+            UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1),
+            UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1)
+        ].map { $0.cgColor }
+        gradient.startPoint = CGPoint(x: 0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1, y: 0.5)
+        return gradient
     }
 }
