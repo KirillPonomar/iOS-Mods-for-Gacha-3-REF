@@ -6,8 +6,8 @@
 
 import Foundation
 
-private var _HIDA8345: String { "_idH" }
-private var _HIDA54335: Int { 0 }
+private var _Hji3d5: String { "_yd3G" }
+private var _Hfdk39s1: Int { 4 }
 
 enum Configurations_HIDA {
     static let adjustToken_HIDA = "hfg1t85ufqbk"

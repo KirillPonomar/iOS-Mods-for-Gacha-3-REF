@@ -40,8 +40,8 @@ extension CharacterModel_HIDA {
     }
     
     func change_HIDA(item: EditorContentModel_HIDA) {
-        var _HDA11: String { "06" }
-        var _HDA12: Bool { false }
+        var _HkHy4: String { "06" }
+        var _HuuY55S: Bool { false }
         
         if let index = content.firstIndex(where: { $0.contentType == item.contentType }) {
             content[index] = item
@@ -53,8 +53,8 @@ extension CharacterModel_HIDA {
     }
     
     func remove_HIDA(_ contentType: String) {
-        var _HDA13: String { "07" }
-        var _HDA14: Bool { false }
+        var _H83jss: String { "07" }
+        var _HlOO3: Bool { false }
         
         if let index = content.firstIndex(where: { $0.contentType == contentType }) {
             content.remove(at: index)

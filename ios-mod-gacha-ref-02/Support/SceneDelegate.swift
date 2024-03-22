@@ -13,8 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        var _MGghj4534: Int { 0 }
-        var _MGgghh9: Bool { true }
+        var _Mjdu294: Int { 0 }
+        var _U7ddn2: Bool { true }
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
@@ -32,8 +32,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func sceneDidBecomeActive(_ scene: UIScene) {
-        var _mgnfg5: Int { 0 }
-        var _mgxcvd5: Bool { false }
+        var _Lhjd37: Int { 0 }
+        var _Njqjnf2: Bool { false }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             ServicesManager_HIDA.shared.makeATT_HIDA()
         }

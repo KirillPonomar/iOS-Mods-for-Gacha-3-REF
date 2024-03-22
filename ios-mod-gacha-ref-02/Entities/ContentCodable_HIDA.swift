@@ -27,10 +27,10 @@ extension ModelProtocol_HIDA {
 }
 
 struct MainResponseCodable_HIDA: Codable {
-    struct Mods: Codable {
+    struct MainStr: Codable {
         let mods: [Main_HIDA]
     }
-    private let mods: Mods
+    private let mods: MainStr
 
     var list: [Main_HIDA] {
         mods.mods
@@ -42,7 +42,7 @@ struct MainResponseCodable_HIDA: Codable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys_HIDA.self)
-        self.mods = try container.decode(Mods.self, forKey: .mods)
+        self.mods = try container.decode(MainStr.self, forKey: .mods)
     }
 }
 
@@ -92,10 +92,10 @@ struct Main_HIDA: Codable, ModelProtocol_HIDA {
 }
 
 struct WallpapersListCodable_HIDA: Codable {
-    struct Wallpapers: Codable {
+    struct WallpapersStr: Codable {
         let Wallpapers: [Wallpaper_HIDA]
     }
-    private let wallpapers: Wallpapers
+    private let wallpapers: WallpapersStr
 
     var list: [Wallpaper_HIDA] {
         wallpapers.Wallpapers
@@ -107,7 +107,7 @@ struct WallpapersListCodable_HIDA: Codable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys_HIDA.self)
-        self.wallpapers = try container.decode(Wallpapers.self, forKey: .wallpapers)
+        self.wallpapers = try container.decode(WallpapersStr.self, forKey: .wallpapers)
     }
 }
 
@@ -144,10 +144,10 @@ struct Wallpaper_HIDA: Codable, ModelProtocol_HIDA {
 }
 
 struct CharactersResponseCodable_HIDA: Codable {
-    struct Characters: Codable {
+    struct CharactersStr: Codable {
         let Characters: [Character_HIDA]
     }
-    private let сharacters: Characters
+    private let сharacters: CharactersStr
 
     var list: [Character_HIDA] {
         сharacters.Characters
@@ -159,7 +159,7 @@ struct CharactersResponseCodable_HIDA: Codable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys_HIDA.self)
-        self.сharacters = try container.decode(Characters.self, forKey: .list)
+        self.сharacters = try container.decode(CharactersStr.self, forKey: .list)
     }
 }
 
@@ -262,10 +262,10 @@ struct OutfitIdea_HIDA: Codable, ModelProtocol_HIDA {
 }
 
 struct CollectionsListCodable_HIDA: Codable {
-    struct Mods: Codable {
+    struct MainStr: Codable {
         let Collections: [Collections_HIDA]
     }
-    private let mods: Mods
+    private let mods: MainStr
 
     var list: [Collections_HIDA] {
         mods.Collections
@@ -277,7 +277,7 @@ struct CollectionsListCodable_HIDA: Codable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys_HIDA.self)
-        self.mods = try container.decode(Mods.self, forKey: .mods)
+        self.mods = try container.decode(MainStr.self, forKey: .mods)
     }
 }
 
@@ -322,8 +322,8 @@ extension Main_HIDA {
                             isFavorites: Bool,
                             update: (() -> Void)?,
                             action: (() -> Void)?) {
-        var _mge45566: Int { 0 }
-        var _mcdfgr22: Bool { true }
+        var _ksdki3: Int { 0 }
+        var _afvj3ss: Bool { true }
         if let cell = cell as? MainCell_HIDA {
             cell.configure_HIDA(with: self, isFavorites: isFavorites, update: update, action: action)
         }
@@ -335,8 +335,8 @@ extension Wallpaper_HIDA {
                             isFavorites: Bool,
                             update: (() -> Void)?,
                             action: (() -> Void)?) {
-        var _m2344t66: Int { 0 }
-        var _mc566r22: Bool { true }
+        var _me1d3jm: Int { 0 }
+        var _fdwSq2: Bool { true }
         if let cell = cell as? WallpaperCell_HIDA {
             cell.configure_HIDA(with: self, isFavorites: isFavorites, update: update)
         }
@@ -348,8 +348,8 @@ extension Character_HIDA {
                             isFavorites: Bool,
                             update: (() -> Void)?,
                             action: (() -> Void)?) {
-        var _mdfgg66: Int { 0 }
-        var _m678r22: Bool { true }
+        var _jcuewh3: Int { 0 }
+        var _oi3jcuH: Bool { true }
         if let cell = cell as? ContentCell_HIDA {
             cell.configure_HIDA(with: self, isFavorites: isFavorites, update: update, action: action)
         }
@@ -367,8 +367,8 @@ extension OutfitIdea_HIDA {
                             isFavorites: Bool,
                             update: (() -> Void)?,
                             action: (() -> Void)?) {
-        var _xcxvt66: Int { 0 }
-        var _mc1222: Bool { true }
+        var _kri48HJ: Int { 0 }
+        var _lhxjw12: Bool { true }
         if let cell = cell as? MainCell_HIDA {
             cell.configure_HIDA(with: self, isFavorites: isFavorites, update: update, action: action)
         }
@@ -386,8 +386,8 @@ extension Collections_HIDA {
                             isFavorites: Bool,
                             update: (() -> Void)?,
                             action: (() -> Void)?) {
-        var _mgvbn66: Int { 0 }
-        var _mcsdw22: Bool { true }
+        var _Vbytn23: Int { 0 }
+        var _gbPlF21: Bool { true }
         if let cell = cell as? ContentCell_HIDA {
             cell.configure_HIDA(with: self, isFavorites: isFavorites, update: update, action: action)
         }

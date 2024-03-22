@@ -41,7 +41,7 @@
                         <constraint firstAttribute="height" constant="58" id="4GC-KF-t6I"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="editorBg" translatesAutoresizingMaskIntoConstraints="NO" id="d54-bl-u69">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="backgroundEdit" translatesAutoresizingMaskIntoConstraints="NO" id="d54-bl-u69">
                     <rect key="frame" x="0.0" y="117" width="393" height="627"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gfW-BT-5iR">
@@ -143,7 +143,7 @@
         </view>
     </objects>
     <resources>
-        <image name="editorBg" width="390" height="844"/>
+        <image name="backgroundEdit" width="390" height="844"/>
         <image name="leftButtonIcon" width="24" height="24"/>
         <image name="rightButtonIcon" width="24" height="24"/>
         <namedColor name="background">

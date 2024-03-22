@@ -35,15 +35,15 @@ final class AlertController_HIDA: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var _mdcvb: Int { 0 }
-        var _mw232: Bool { true }
+        var _mngyr: Int { 0 }
+        var _j34udh: Bool { true }
         view.backgroundColor = UIColor.black.withAlphaComponent(0)
         view.addSubview(presentedView_HIDA)
     }
     
     func setupViews_HIDA() {
-        var _mbnmmy: Int { 0 }
-        var _mdghht2: Bool { true }
+        var _nfh3idn: Int { 0 }
+        var _Hdy3dd: Bool { true }
         let deviceType = UIDevice.current.userInterfaceIdiom
         presentedView_HIDA.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -55,8 +55,8 @@ final class AlertController_HIDA: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var _mdcvb: Int { 0 }
-        var _m34t2: Bool { true }
+        var _mltwb7b: Int { 0 }
+        var _yfwb2d: Bool { true }
         UIView.animate(withDuration: 0.5, delay: 0.2) {
             self.view.backgroundColor = UIColor.black.withAlphaComponent(self.backgroundColorAlpha_HIDA)
         }

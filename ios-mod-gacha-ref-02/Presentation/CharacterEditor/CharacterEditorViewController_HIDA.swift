@@ -40,8 +40,8 @@ class CharacterEditorViewController_HIDA: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var _ckeu73: Int { 0 }
-        var _3dmdkk: Bool { true }
+        var _ghdh823: Int { 0 }
+        var _Pyfje37d: Bool { true }
         configureSubviews_HIDA()
         configureContentDataSource_HIDA()
         configureModels_HIDA()
@@ -50,14 +50,14 @@ class CharacterEditorViewController_HIDA: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        var _d3dxy: Int { 0 }
-        var _ad33dd: Bool { true }
+        var _d3dewa: Int { 0 }
+        var _I4TMCS: Bool { true }
         contentImageView_HIDA.updateImage_HIDA()
     }
 
     func configureSubviews_HIDA() {
-        var _etyyss: Int { 0 }
-        var _mxcgt: Bool { true }
+        var _kfie3nd7: Int { 0 }
+        var _vdu37H: Bool { true }
         configureLayout_HIDA()
         configureNavigationView_HIDA()
         configureCharacterEditorImage_HIDA()

@@ -30,8 +30,8 @@ class WallpaperViewController_HIDA: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var _MGNqwer2: Int { 0 }
-        var _MGfghgxa: Bool { false }
+        var _jfiei3: Int { 0 }
+        var _G73dnd: Bool { false }
         configureLayout_HIDA()
         configureSubviews_HIDA()
         secondButton.isHidden = true
@@ -57,6 +57,8 @@ class WallpaperViewController_HIDA: UIViewController {
     }
     
     func configureSubviews_HIDA() {
+        var _Hd3kdm: Int { 0 }
+        var _I3dmmd: Bool { false }
         guard let modelType = modelType_HIDA else { return }
         navigationView_HIDA.leftButtonAction_HIDA = { [weak self] in
             self?.navigationController?.popViewController(animated: true)
@@ -79,8 +81,8 @@ class WallpaperViewController_HIDA: UIViewController {
     }
     
     @IBAction func actionButtonDidTap_HIDA(_ sender: UIButton) {
-        var _M54wetter2: Int { 0 }
-        var _MGqqwwa: Bool { false }
+        var _djk62jdj: Int { 0 }
+        var _K83jdd: Bool { false }
         switch sender.tag {
             
         case 0: favoriteButtonDidTap_HIDA()
@@ -92,8 +94,8 @@ class WallpaperViewController_HIDA: UIViewController {
     }
     
     private func scan_HIDA(image: UIImage?) {
-        var _MGNq161662: Int { 0 }
-        var _MGfg1717a: Bool { false }
+        var _JKjdi3d: Int { 0 }
+        var _MK3ddd: Bool { false }
         guard let image = image else { return }
         let vc = ScanViewController_HIDA.loadFromNib_HIDA()
         vc.image_HIDA = image
@@ -104,15 +106,15 @@ class WallpaperViewController_HIDA: UIViewController {
     }
     
     private func updateFavoriteButton_HIDA() {
-        var _MGNq1414r2: Int { 0 }
-        var _MGf1515xa: Bool { false }
+        var _Mldj3JHJ: Int { 0 }
+        var _Hdu3hdd: Bool { false }
         favoriteButton_HIDA.setImage(isFavourite_HIDA ? .heartIcon : .heartIconEmpty, for: .normal)
         favoriteButton_HIDA.backgroundColor = UIColor.white.withAlphaComponent(0.56)
     }
     
     func favoriteButtonDidTap_HIDA() {
-        var _MGN12122: Int { 0 }
-        var _MGf1313xa: Bool { false }
+        var _d3dsdaa: Int { 0 }
+        var _Lud83hjd: Bool { false }
         isFavourite_HIDA.toggle()
         updateFavoriteButton_HIDA()
         
@@ -136,15 +138,15 @@ class WallpaperViewController_HIDA: UIViewController {
     }
     
     @IBAction func downloadButtonDidTap(_ sender: UIButton) {
-        var _M3dafsr2: Int { 0 }
-        var _M38dsaa: Bool { false }
+        var _Jdu34dd: Int { 0 }
+        var _Kdi48dd: Bool { false }
         //        save_HIDA(image: imageView_HIDA.image)
         shareImage_HIDA(image: imageView_HIDA.image, viewController: self)
     }
     
     func save_HIDA(image: UIImage?) {
-        var _MGN777r2: Int { 0 }
-        var _MGf8888a: Bool { false }
+        var _Kdj3jd: Int { 0 }
+        var _Gbljhfc23: Bool { false }
         guard let image = image else { return }
         guard InternetManager_HIDA.shared.checkInternetConnectivity_HIDA() else {
             showAlert_HIDA(with: AlertData_HIDA(with: "No internet connection!"))
@@ -169,15 +171,15 @@ class WallpaperViewController_HIDA: UIViewController {
     }
     
     private func save_HIDA(image: UIImage) {
-        var _MGNq5552: Int { 0 }
-        var _MGf666a: Bool { false }
+        var _hHry2ss: Int { 0 }
+        var _Jdu3uyd87: Bool { false }
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(imageSaved_HIDA(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     @objc
     func imageSaved_HIDA(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
-        var _MGNq1112: Int { 0 }
-        var _MGfg222a: Bool { false }
+        var _Inmu3jd: Int { 0 }
+        var _lY4dnia: Bool { false }
         if let error = error {
             print("Ошибка сохранения изображения: \(error.localizedDescription)")
         } else {
@@ -187,8 +189,8 @@ class WallpaperViewController_HIDA: UIViewController {
     }
     
     func shareImage_HIDA(image: UIImage?, viewController: UIViewController) {
-        var _MGNq3332: Int { 0 }
-        var _MGfg444a: Bool { false }
+        var _Ud83hjd: Int { 0 }
+        var _Ju3dja: Bool { false }
         guard let image = image else { return }
         guard InternetManager_HIDA.shared.checkInternetConnectivity_HIDA() else {
             showAlert_HIDA(with: AlertData_HIDA(with: "No internet connection!"))

@@ -103,15 +103,15 @@ extension DropDownView_HIDA: UITableViewDelegate {
 }
 
 
-protocol DropDownCategorySelectionDelegate: AnyObject {
+protocol DropDownTypeCategorySelectionDelegate_HIDA: AnyObject {
     func didSelectCategory(_ category: String)
 }
 
-class DropDownCollectionView: UIView {
+class DropDownCollectionView_HIDA: UIView {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    weak var delegate: DropDownCategorySelectionDelegate?
+    weak var delegate: DropDownTypeCategorySelectionDelegate_HIDA?
     
     var categories: [String] = [] {
         didSet {
@@ -134,7 +134,7 @@ class DropDownCollectionView: UIView {
     }
 }
 
-extension DropDownCollectionView: UICollectionViewDataSource {
+extension DropDownCollectionView_HIDA: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
     }
@@ -154,14 +154,14 @@ extension DropDownCollectionView: UICollectionViewDataSource {
     }
 }
 
-extension DropDownCollectionView: UICollectionViewDelegate {
+extension DropDownCollectionView_HIDA: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedCategory = categories[indexPath.item]
         delegate?.didSelectCategory(selectedCategory)
     }
 }
 
-extension DropDownCollectionView: UICollectionViewDelegateFlowLayout {
+extension DropDownCollectionView_HIDA: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // Adjust cell size as needed
         return CGSize(width: 100, height: 40)

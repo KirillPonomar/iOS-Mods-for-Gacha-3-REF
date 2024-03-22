@@ -44,7 +44,7 @@
                         <constraint firstAttribute="height" constant="58" id="2sj-w9-hlC"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editorBg" translatesAutoresizingMaskIntoConstraints="NO" id="CEB-ki-ZtU">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundEdit" translatesAutoresizingMaskIntoConstraints="NO" id="CEB-ki-ZtU">
                     <rect key="frame" x="0.0" y="117" width="393" height="556"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEn-Ca-y72" customClass="CharacterEditorImage_HIDA" customModule="ios_mod_gacha_ref_02" customModuleProvider="target">
@@ -130,7 +130,7 @@
         </view>
     </objects>
     <resources>
-        <image name="editorBg" width="390" height="844"/>
+        <image name="backgroundEdit" width="390" height="844"/>
         <namedColor name="background">
             <color red="0.097999997437000275" green="0.10580000281333923" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

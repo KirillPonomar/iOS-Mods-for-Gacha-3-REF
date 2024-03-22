@@ -6,7 +6,7 @@
 
 import UIKit
 
-class CircularProgressView: UIView {
+class CircularSplashProgressView_HIDA: UIView {
     private var progressLayer = CAShapeLayer()
     private var trackLayer = CAShapeLayer()
     private var progressLabel = UILabel()
@@ -100,8 +100,8 @@ class SplashViewController_HIDA: UIViewController {
         return label
     }()
     
-    private let progressBar_HIDA: CircularProgressView = {
-        let progressBar = CircularProgressView()
+    private let progressBar_HIDA: CircularSplashProgressView_HIDA = {
+        let progressBar = CircularSplashProgressView_HIDA()
         progressBar.trackColor = .lightGray
         progressBar.lineWidth = 2
         return progressBar
@@ -171,8 +171,9 @@ class SplashViewController_HIDA: UIViewController {
     }
 }
 
+typealias UIColor_HID = UIColor
 
-extension UIColor {
+extension UIColor_HID {
     static func gradient(from colors: [UIColor], frame: CGRect, startPoint: CGPoint, endPoint: CGPoint) -> UIColor? {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = frame

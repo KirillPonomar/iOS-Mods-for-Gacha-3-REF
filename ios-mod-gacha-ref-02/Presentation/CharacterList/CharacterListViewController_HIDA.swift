@@ -29,8 +29,8 @@ class CharacterListViewController_HIDA: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var _ecvbyss: Int { 0 }
-        var _wetgt: Bool { true }
+        var _dd2f4s: Int { 0 }
+        var _g4sfS32t: Bool { true }
         loadCharacters_HIDA()
         loadContent_HIDA()
         configureLayout_HIDA()

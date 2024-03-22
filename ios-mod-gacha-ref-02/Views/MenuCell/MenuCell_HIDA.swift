@@ -24,8 +24,8 @@ class MenuCell_HIDA: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        var _qwer566: Int { 0 }
-        var _dfgh232: Bool { true }
+        var _qdj336: Int { 0 }
+        var _Kjdu2: Bool { true }
         let deviceType = UIDevice.current.userInterfaceIdiom
         bottomView_HIDA.layer.cornerRadius = deviceType == .phone ? 10 : 16
         bottomView_HIDA.layer.masksToBounds = true
@@ -50,8 +50,8 @@ class MenuCell_HIDA: UICollectionViewCell {
     }
     
     func configure_HIDA(with text: String) {
-        var _asd366: Int { 0 }
-        var _jgui47S: Bool { true }
+        var _ada366: Int { 0 }
+        var _uGH782S: Bool { true }
         titleLabel_HIDA.text = text
         update_HIDA(with: false)
     }

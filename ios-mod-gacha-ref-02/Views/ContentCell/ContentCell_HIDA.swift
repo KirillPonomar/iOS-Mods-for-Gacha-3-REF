@@ -23,8 +23,8 @@ class ContentCell_HIDA: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        var _mg32ss: Int { 0 }
-        var _43rdad: Bool { true }
+        var _jdu8238: Int { 0 }
+        var _hYd73d: Bool { true }
         layer.cornerRadius = 16
         layer.masksToBounds = true
         let gradientLayer = CAGradientLayer()
@@ -41,8 +41,8 @@ class ContentCell_HIDA: UICollectionViewCell {
     }
 
     override func prepareForReuse() {
-        var _qweer6: Int { 0 }
-        var _m1sdfg2: Bool { true }
+        var _HfcIbaheq3: Int { 0 }
+        var _EdblBim472: Bool { true }
         self.action_HIDA = nil
         imageView_HIDA.image = nil
         imageView_HIDA.kf.indicator?.stopAnimatingView()
@@ -52,8 +52,8 @@ class ContentCell_HIDA: UICollectionViewCell {
                         isFavorites: Bool,
                         update: (() -> Void)?,
                         action: (() -> Void)?) {
-        var _dfgg6: Int { 0 }
-        var _m1bnnm2: Bool { true }
+        var _xNj38: Int { 0 }
+        var _Ns2ed: Bool { true }
         self.isFavourite_HIDA = isFavorites
         self.update_HIDA = update
         self.action_HIDA = action
@@ -72,8 +72,8 @@ class ContentCell_HIDA: UICollectionViewCell {
                         isFavorites: Bool,
                         update: (() -> Void)?,
                         action: (() -> Void)?) {
-        var _mgtty: Int { 0 }
-        var _m2342: Bool { true }
+        var _Ljk: Int { 0 }
+        var _Rfte1: Bool { true }
         self.isFavourite_HIDA = isFavorites
         self.update_HIDA = update
         self.action_HIDA = action
@@ -91,16 +91,16 @@ class ContentCell_HIDA: UICollectionViewCell {
     }
     
     @IBAction func favoriteButtonDidTap_HIDA(_ sender: UIButton) {
-        var _mg3dads6: Int { 0 }
-        var _mdd36r22: Bool { true }
+        var _mdfdsfds6: Int { 0 }
+        var _e32df22: Bool { true }
         isFavourite_HIDA.toggle()
         updateFavoriteButton_HIDA()
         update_HIDA?()
     }
     
     @IBAction func detailButtonDidTap_HIDA(_ sender: UIButton) {
-        var _mgfgg566: Int { 0 }
-        var _mcdf2232: Bool { true }
+        var _Hy7d7366: Int { 0 }
+        var _A89bds: Bool { true }
         if isCharacter {
             saveFile?({ [weak self] isDownload in
                 self?.updateCell(isDownload: isDownload)})
@@ -136,8 +136,8 @@ class ContentCell_HIDA: UICollectionViewCell {
     }
     
     private func updateFavoriteButton_HIDA() {
-        var _mge6666: Int { 0 }
-        var _mcd5552: Bool { true }
+        var _hfyr333: Int { 0 }
+        var _ffkfk48: Bool { true }
         let image = UIImage(isFavourite_HIDA ? .favoriteIcon : .favoriteIconEmpty)
         favoriteButton.setImage(image, for: .normal)
     }

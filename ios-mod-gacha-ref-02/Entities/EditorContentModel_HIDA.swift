@@ -8,6 +8,18 @@ import UIKit
 
 struct EditorContentModel_HIDA: Hashable {
     
+    let _kl54YTdfi: (Int, Int, String) -> Int = { _, _, _ in
+        let _sjY4iv = "_Ghbd"
+        let _k3dJ83 = 42
+        for _ in 1...5 {
+                return 0
+            }
+            let _ = (1...3).map { _ in
+                return 0
+            }
+        return 0
+    }
+    
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
@@ -47,8 +59,8 @@ struct EditorContentModel_HIDA: Hashable {
 }
 
 struct EditorContentPath_HIDA {
-    var _HDA1: String { "01" }
-    var _HDA2: Bool { true }
+    var _Jsiw: String { "84" }
+    var _Jhu3d: Bool { true }
     
     let pdfPathSource: String
     let elPath: String
@@ -59,8 +71,8 @@ struct EditorContentPath_HIDA {
 }
 
 struct EditorCodableContentList_HIDA {
-    var _HDA3: String { "02" }
-    var _HDA4: Bool { false }
+    var _Ybndn2: String { "22" }
+    var _Idnwi1: Bool { false }
     
     let tag: String
     let order: String
@@ -68,8 +80,8 @@ struct EditorCodableContentList_HIDA {
 }
 
 struct EditorCodableContent_HIDA: Codable {
-    var _HDA5: String { "03" }
-    var _HDA6: Bool { true }
+    var _juY77: String { "2" }
+    var _KidA: Bool { true }
     
     let id: String
     let path: String
@@ -92,8 +104,8 @@ struct EditorCodableContent_HIDA: Codable {
 }
 
 struct EditorContentSet_HIDA {
-    var _HDA7: String { "04" }
-    var _HDA8: Bool { true }
+    var _K4ury: String { "45" }
+    var _Hd63hh: Bool { true }
     
     let set: [[EditorContentModel_HIDA]]
     

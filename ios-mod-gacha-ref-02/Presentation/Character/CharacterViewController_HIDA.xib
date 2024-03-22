@@ -34,7 +34,7 @@
                         <constraint firstAttribute="height" constant="58" id="zw3-ca-aoL"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editorBg" translatesAutoresizingMaskIntoConstraints="NO" id="lO3-1j-4V8">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundEdit" translatesAutoresizingMaskIntoConstraints="NO" id="lO3-1j-4V8">
                     <rect key="frame" x="0.0" y="117" width="393" height="627"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t8b-jm-9P9">
@@ -104,7 +104,7 @@
         </view>
     </objects>
     <resources>
-        <image name="editorBg" width="390" height="844"/>
+        <image name="backgroundEdit" width="390" height="844"/>
         <namedColor name="background">
             <color red="0.097999997437000275" green="0.10580000281333923" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -61,7 +61,7 @@ extension UIView_HIDA {
     }
 }
 
-extension UIColor {
+extension UIColor_HID {
     func blurredImage(withSize size: CGSize) -> UIImage? {
         guard let filter = CIFilter(name: "CIColorMonochrome") else {
             return nil

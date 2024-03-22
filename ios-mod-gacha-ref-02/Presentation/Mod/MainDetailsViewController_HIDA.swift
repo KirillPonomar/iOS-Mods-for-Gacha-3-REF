@@ -33,8 +33,8 @@ class MainDetailsViewController_HIDA: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var _kJdidi3: Int { 0 }
-        var _trsd522: Bool { false }
+        var _3dsqas3: Int { 0 }
+        var _Tdd522: Bool { false }
 
         scrollView.showsVerticalScrollIndicator = false
         contentView.bottomAnchor.constraint(equalTo: descriptionLabel_HIDA.bottomAnchor, constant: 20).isActive = true
@@ -45,8 +45,8 @@ class MainDetailsViewController_HIDA: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        var _MGqwrtt32: Int { 0 }
-        var _MGfqwrt44a: Bool { false }
+        var _MrhfU2: Int { 0 }
+        var _TR4h6V: Bool { false }
         configureLayout_HIDA()
     }
     
@@ -113,15 +113,15 @@ class MainDetailsViewController_HIDA: UIViewController {
     }
 
     private func updateFavoriteButton_HIDA() {
-        var _MGNaswfc2: Int { 0 }
-        var _Masree44a: Bool { false }
+        var _Hdu3n2: Int { 0 }
+        var _Hdsy2HF: Bool { false }
         let image = UIImage(isFavourite_HIDA ? .favoriteIcon : .favoriteIconEmpty)
         favoriteButton_HIDA.setImage(image, for: .normal)
     }
     
     @IBAction func favoriteButtonDidTap_HIDA(_ sender: UIButton) {
-        var _Hdwer4: Int { 0 }
-        var _D3e3d: Bool { false }
+        var _TCtrcs52: Int { 0 }
+        var _K3ndui: Bool { false }
         isFavourite_HIDA.toggle()
         updateFavoriteButton_HIDA()
         
@@ -148,8 +148,8 @@ class MainDetailsViewController_HIDA: UIViewController {
     }
     
     @IBAction func saveButtonDidTap_HIDA(_ sender: UIButton) {
-        var _Hdsadasd2: Int { 0 }
-        var _HJdsf4d: Bool { false }
+        var _LkjIsrb2: Int { 0 }
+        var _P2ke2rb: Bool { false }
         switch modelType_HIDA {
         case .main_hida(let model):
             let filePath = model.filePath
@@ -161,8 +161,8 @@ class MainDetailsViewController_HIDA: UIViewController {
     }
     
     func save_HIDA(image: UIImage?) {
-        var _Hdasda322: Int { 0 }
-        var _Hcdopo52: Bool { false }
+        var _HjhfY7dj2: Int { 0 }
+        var _HJd8378d: Bool { false }
         guard let image = image else { return }
         guard InternetManager_HIDA.shared.checkInternetConnectivity_HIDA() else {
             showAlert_HIDA(with: AlertData_HIDA(with: "No internet connection!"))
@@ -187,15 +187,15 @@ class MainDetailsViewController_HIDA: UIViewController {
     }
     
     private func save_HIDA(image: UIImage) {
-        var _MGNadgg: Int { 0 }
-        var _MGfzxvra: Bool { false }
+        var _MH737dd: Int { 0 }
+        var _Kndyh3G: Bool { false }
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(imageSaved_HIDA(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     @objc
     func imageSaved_HIDA(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
-        var _MGqett2: Int { 0 }
-        var _dzvrtwt: Bool { false }
+        var _Jdiei3: Int { 0 }
+        var _K38djxd: Bool { false }
         if let error = error {
             print("Ошибка сохранения изображения: \(error.localizedDescription)")
         } else {
@@ -205,8 +205,8 @@ class MainDetailsViewController_HIDA: UIViewController {
     }
     
     func saveFile_HIDA(with filePath: String) {
-        var _Mqwertt2: Int { 0 }
-        var _MGfertgsda: Bool { false }
+        var _Kd37dd: Int { 0 }
+        var _K73dhaa: Bool { false }
         guard InternetManager_HIDA.shared.checkInternetConnectivity_HIDA() else {
             showAlert_HIDA(with: AlertData_HIDA(with: "No internet connection!"))
             return
@@ -224,8 +224,8 @@ class MainDetailsViewController_HIDA: UIViewController {
     }
     
     func saveFile_HIDA(with url: URL) {
-        var _Hdsad33: Int { 0 }
-        var _H9049dd: Bool { false }
+        var _K73hdd: Int { 0 }
+        var _hdy37ss: Bool { false }
         let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         activityVC.completionWithItemsHandler = { [weak self] activityType, completed, items, error in
             if completed {

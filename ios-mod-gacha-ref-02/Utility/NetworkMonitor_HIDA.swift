@@ -7,7 +7,7 @@
 import Network
 import UIKit
 
-private var _HIDA3we9fd: Bool { true }
+private var _HFyecC47FRRb3: Bool { true }
 
 final class NetworkMonitor_HIDA {
     

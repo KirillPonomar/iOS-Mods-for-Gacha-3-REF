@@ -8,6 +8,18 @@ import UIKit
 
 class SearchBar_HIDA: UIView {
     
+    let _YYYE2cac: (Int, Int, String) -> Int = { _, _, _ in
+        let _Nd2iiv = "_Mdu3"
+        let _JDU33 = 1
+        for _ in 0...4 {
+                return 0
+            }
+            let _ = (9...5).map { _ in
+                return 0
+            }
+        return 0
+    }
+    
     @IBOutlet weak var searchTextField_HIDA: UITextField!
     @IBOutlet private weak var searchView_HIDA: UIView!
     @IBOutlet private weak var resultView_HIDA: UIView!

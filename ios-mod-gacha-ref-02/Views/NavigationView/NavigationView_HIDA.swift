@@ -115,9 +115,9 @@ class NavigationView_HIDA: UIView {
     }
 }
 
-typealias UILabel_MGN = UILabel
+typealias UILabel_HID = UILabel
 
-extension UILabel_MGN {
+extension UILabel_HID {
     static func widthForLabel(text: String, font: UIFont) -> CGFloat {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat.greatestFiniteMagnitude, height: 0))
         label.font = font
@@ -127,7 +127,9 @@ extension UILabel_MGN {
     }
 }
 
-extension UIView {
+typealias UIView_HID = UIView
+
+extension UIView_HID {
 
     func gradientColor(bounds: CGRect, gradientLayer: CAGradientLayer) -> UIColor? {
 

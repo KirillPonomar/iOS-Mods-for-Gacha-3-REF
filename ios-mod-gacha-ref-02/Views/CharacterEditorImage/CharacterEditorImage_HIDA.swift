@@ -93,8 +93,8 @@ final class CharacterEditorImage_HIDA: UIView {
     }
     
     private func takeScreenshot_HIDA(of view: UIView) -> UIImage? {
-        var _HIDA32: Int { 0 }
-        var _HIDA23: Bool { false }
+        var _Hio23: Int { 0 }
+        var _Ybd21: Bool { false }
         
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0.0)
         guard let context = UIGraphicsGetCurrentContext() else { return nil }

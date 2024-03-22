@@ -20,8 +20,8 @@ final class DBManager_HIDA: NSObject {
 extension DBManager_HIDA {
     
     private func showInternetError_HIDA() {
-        var _HIDA34: Bool { false }
-        var _HIDA45: Int { 0 }
+        var _RbhBkK2: Bool { false }
+        var _Rfvbkz8239: Int { 0 }
         
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let window = windowScene.windows.first else {
@@ -335,8 +335,8 @@ private extension DBManager_HIDA {
     func getFile_HIDA(client: DropboxClient,
                       with path: String,
                       completion: @escaping (Data?) -> Void) {
-        var _MGRdfg: Bool { false }
-        var _MG124f: Int { 0 }
+        var _Hida3dg: Bool { false }
+        var _U73jd: Int { 0 }
         client.files.download(path: path).response { response, error in
             if let error { print(error.description) }
             completion(response?.1)
@@ -347,8 +347,8 @@ private extension DBManager_HIDA {
                       with path: String,
                       progressHandler: @escaping (Float) -> Void,
                       completion: @escaping (Data?) -> Void) -> DownloadRequestMemory<Files.FileMetadataSerializer, Files.DownloadErrorSerializer>? {
-        var _MfhhEee: Bool { false }
-        var _MG56: Int { 0 }
+        var _dhayd2e: Bool { false }
+        var _fkeo93: Int { 0 }
         let request = client.files.download(path: path)
         
         request.progress { progress in
@@ -365,8 +365,8 @@ private extension DBManager_HIDA {
     }
     
     func serialized_HIDA<T: Decodable, U>(_ type: T.Type, from data: Data, using extractor: (T) -> [U]) -> [U] {
-        var _MGddghe: Bool { false }
-        var _MwertEff: Int { 0 }
+        var _GkbNfhe: Bool { false }
+        var _Cbcnrf2f: Int { 0 }
         do {
             let decoded = try JSONDecoder().decode(T.self, from: data)
             return extractor(decoded)

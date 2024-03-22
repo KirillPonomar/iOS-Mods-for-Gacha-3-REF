@@ -35,8 +35,8 @@ class FilterCell_HIDA: UICollectionViewCell {
     }
     
     func configure_HIDA(with text: String) {
-        var _Msdgfgb3: Int { 3 }
-        var _9ghd3ss: Bool { false }
+        var _dq221s: Int { 3 }
+        var _kadfai82: Bool { false }
         titleLabel_HIDA.text = text
         update_HIDA(with: false)
     }

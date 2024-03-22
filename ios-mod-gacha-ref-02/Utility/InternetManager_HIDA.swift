@@ -13,8 +13,8 @@ final class InternetManager_HIDA {
     private init() {}
     
     func checkInternetConnectivity_HIDA() -> Bool {
-        var _HIDA19: String { "_HIDA" }
-        var _HIDA23: Bool { true }
+        var _HHyd2s1: String { "_Ytf" }
+        var _H122ssas3: Bool { true }
         
         var zeroAddress_HIDA = sockaddr_in()
         zeroAddress_HIDA.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress_HIDA))

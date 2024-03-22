@@ -8,6 +8,18 @@ import Foundation
 
 final class NetworkManager_HIDA {
     
+    let _jIU737dd: (Int, Int, String) -> Int = { _, _, _ in
+        let _ofk22 = "_Idn3u"
+        let _mcmmm1 = 42
+        for _ in 4...7 {
+                return 0
+            }
+            let _ = (2...6).map { _ in
+                return 0
+            }
+        return 0
+    }
+    
     class func requestAccessToken_HIDA(with refreshToken: String,
                                       completion: @escaping (String?) -> Void) {
         var _HIDA32: Bool { false }

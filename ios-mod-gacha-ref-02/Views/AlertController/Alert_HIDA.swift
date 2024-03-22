@@ -8,6 +8,18 @@ import UIKit
 
 class Alert_HIDA: UIView {
     
+    let _kjfei888i: (Int, Int, String) -> Int = { _, _, _ in
+        let _fn999 = "_Und3j"
+        let _nGGG2 = 98
+        for _ in 3...6 {
+                return 0
+            }
+            let _ = (7...9).map { _ in
+                return 0
+            }
+        return 0
+    }
+    
     @IBOutlet private weak var titleLabel_HIDA: UILabel!
     @IBOutlet private weak var subtitleLabel_HIDA: UILabel!
     @IBOutlet private weak var buttonContainer_HIDA: UIStackView!
@@ -21,24 +33,24 @@ class Alert_HIDA: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        var _fds3: Int { 0 }
-        var _4fckkd: Bool { true }
+        var _Fyec521: Int { 0 }
+        var _Ehtnrf232: Bool { true }
         loadViewFromNib_HIDA()
         configureLayout_HIDA()
     }
     
     init() {
         super.init(frame: .zero)
-        var _da22sd: Int { 0 }
-        var _fdfw2: Bool { true }
+        var _gbCzsd: Int { 0 }
+        var _Rjirf2: Bool { true }
         loadViewFromNib_HIDA()
         configureLayout_HIDA()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        var _mgxbb: Int { 0 }
-        var _mqwerer2: Bool { true }
+        var _nfj3u: Int { 0 }
+        var _A2eder2: Bool { true }
         layer.cornerRadius = 16
         layer.masksToBounds = true
     }
@@ -92,8 +104,8 @@ class Alert_HIDA: UIView {
     }
     
     private func dismissView_HIDA() {
-        var _mgedfg: Int { 0 }
-        var _mcbbb2: Bool { true }
+        var _Jufy3fg: Int { 0 }
+        var _Ljf83d: Bool { true }
         endEditing(true)
         let vc = findViewController_HIDA()
         vc?.view.backgroundColor = UIColor.black.withAlphaComponent(0)
@@ -101,14 +113,14 @@ class Alert_HIDA: UIView {
     }
     
     @IBAction private func leftButtonTapped_HIDA(_ sender: UIButton) {
-        var _mgrtt: Int { 0 }
-        var _fghhj42: Bool { true }
+        var _fcdsftt: Int { 0 }
+        var _fu7hgfh42: Bool { true }
         dismissView_HIDA()
     }
     
     @IBAction private func rightButtonTapped_HIDA(_ sender: UIButton) {
-        var _ecbnyyty: Int { 0 }
-        var _swwwe42: Bool { true }
+        var _Hd8u3nty: Int { 0 }
+        var _RfyenB2: Bool { true }
         action_HIDA?()
         dismissView_HIDA()
     }
@@ -116,8 +128,8 @@ class Alert_HIDA: UIView {
 
 extension UIView_HIDA {
     func findViewController_HIDA() -> UIViewController? {
-        var _mdfgy: Int { 0 }
-        var _mwert2: Bool { true }
+        var _fwerff4gy: Int { 0 }
+        var _mwlk5kd: Bool { true }
         if let nextResponder = self.next as? UIViewController {
             return nextResponder
         } else if let nextResponder = self.next as? UIView {

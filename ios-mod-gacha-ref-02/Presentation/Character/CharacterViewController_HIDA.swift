@@ -22,8 +22,8 @@ class CharacterViewController_HIDA: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var _mdmmm: Int { 0 }
-        var _m3nnn: Bool { true }
+        var _jfu8H73n: Int { 0 }
+        var _J8d873n: Bool { true }
         secondButton.isHidden = true
         configureLayout_HIDA()
         configureNavigationView_HIDA()
@@ -56,8 +56,8 @@ class CharacterViewController_HIDA: UIViewController {
     }
     
     private func configureSubviews_HIDA() {
-        var _mdbbb: Int { 0 }
-        var _mvvv: Bool { true }
+        var _jHyd82: Int { 0 }
+        var _Jud3i: Bool { true }
         imageView_HIDA.image = image_HIDA
     }
     
@@ -143,8 +143,8 @@ class CharacterViewController_HIDA: UIViewController {
     
     @objc
     func imageSaved_HIDA(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
-        var _mssss: Int { 0 }
-        var _m3fff: Bool { true }
+        var _gd62s: Int { 0 }
+        var _mdb38f: Bool { true }
         if let error = error {
             print("Ошибка сохранения изображения: \(error.localizedDescription)")
         } else {

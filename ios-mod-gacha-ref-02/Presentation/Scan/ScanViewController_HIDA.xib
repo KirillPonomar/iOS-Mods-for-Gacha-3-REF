@@ -33,14 +33,14 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="svG-zr-2jL">
                             <rect key="frame" x="17.5" y="16" width="529" height="61"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanIcon1" translatesAutoresizingMaskIntoConstraints="NO" id="LlW-TI-I6y">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appsIcon1" translatesAutoresizingMaskIntoConstraints="NO" id="LlW-TI-I6y">
                                     <rect key="frame" x="0.0" y="0.0" width="61" height="61"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="61" id="ZTe-hO-FYI"/>
                                         <constraint firstAttribute="height" constant="61" id="qen-r2-ZwC"/>
                                     </constraints>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanIcon2" translatesAutoresizingMaskIntoConstraints="NO" id="HLV-kC-Kr5">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appsIcon2" translatesAutoresizingMaskIntoConstraints="NO" id="HLV-kC-Kr5">
                                     <rect key="frame" x="78" y="0.0" width="61" height="61"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="61" id="O3k-Fs-yZ1"/>
@@ -53,7 +53,7 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanIcon3" translatesAutoresizingMaskIntoConstraints="NO" id="Iqj-Tu-IIh">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appsIcon3" translatesAutoresizingMaskIntoConstraints="NO" id="Iqj-Tu-IIh">
                                     <rect key="frame" x="156" y="0.0" width="61" height="61"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="61" id="DrA-3l-pSM"/>
@@ -66,7 +66,7 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanIcon7" translatesAutoresizingMaskIntoConstraints="NO" id="bKa-xG-gna">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appsIcon7" translatesAutoresizingMaskIntoConstraints="NO" id="bKa-xG-gna">
                                     <rect key="frame" x="234" y="0.0" width="61" height="61"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="61" id="Wx5-6Z-2VR"/>
@@ -79,7 +79,7 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanIcon5" translatesAutoresizingMaskIntoConstraints="NO" id="oTP-JP-Nqp">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appsIcon5" translatesAutoresizingMaskIntoConstraints="NO" id="oTP-JP-Nqp">
                                     <rect key="frame" x="312" y="0.0" width="61" height="61"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="61" id="49O-1q-vae"/>
@@ -92,7 +92,7 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanIcon6" translatesAutoresizingMaskIntoConstraints="NO" id="YF4-6X-BiI">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appsIcon6" translatesAutoresizingMaskIntoConstraints="NO" id="YF4-6X-BiI">
                                     <rect key="frame" x="390" y="0.0" width="61" height="61"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="61" id="A2N-wa-uEY"/>
@@ -105,7 +105,7 @@
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scanIcon4" translatesAutoresizingMaskIntoConstraints="NO" id="7aJ-y1-UrK">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appsIcon4" translatesAutoresizingMaskIntoConstraints="NO" id="7aJ-y1-UrK">
                                     <rect key="frame" x="468" y="0.0" width="61" height="61"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="61" id="lka-BQ-Znc"/>
@@ -159,13 +159,13 @@
         </view>
     </objects>
     <resources>
-        <image name="scanIcon1" width="60" height="60"/>
-        <image name="scanIcon2" width="60" height="60"/>
-        <image name="scanIcon3" width="60" height="60"/>
-        <image name="scanIcon4" width="60" height="60"/>
-        <image name="scanIcon5" width="60" height="60"/>
-        <image name="scanIcon6" width="60" height="60"/>
-        <image name="scanIcon7" width="60" height="60"/>
+        <image name="appsIcon1" width="60" height="60"/>
+        <image name="appsIcon2" width="60" height="60"/>
+        <image name="appsIcon3" width="60" height="60"/>
+        <image name="appsIcon4" width="60" height="60"/>
+        <image name="appsIcon5" width="60" height="60"/>
+        <image name="appsIcon6" width="60" height="60"/>
+        <image name="appsIcon7" width="60" height="60"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

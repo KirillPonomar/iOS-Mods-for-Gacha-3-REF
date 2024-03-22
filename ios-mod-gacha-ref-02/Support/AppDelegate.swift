@@ -13,16 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        var _mgfghh22: Int { 0 }
-        var _mgwe4522: Bool { true }
+        var _vfPlf22: Int { 0 }
+        var _Rfvhb35: Bool { true }
         ServicesManager_HIDA.shared.initializePushwoosh_HIDA(delegate: self)
         ServicesManager_HIDA.shared.initializeAdjust_HIDA()
         return true
     }
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        var _hida12522: Int { 0 }
-        var _hida1df22: Bool { true }
+        var _RfvfGe5z3: Int { 0 }
+        var _Rbhbr453: Bool { true }
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 }
