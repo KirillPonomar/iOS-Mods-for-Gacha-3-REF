@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.overrideUserInterfaceStyle = .light
         self.window = window
         
-        let baseContainer = SplashViewController_MGRE()
+        let baseContainer = SplashViewController_HIDA()
         let navigationController = UINavigationController(rootViewController: baseContainer)
         navigationController.modalPresentationStyle = .fullScreen
         window.rootViewController = navigationController
@@ -35,7 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         var _mgnfg5: Int { 0 }
         var _mgxcvd5: Bool { false }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            ServicesManager_MGRE.shared.makeATT_MGRE()
+            ServicesManager_HIDA.shared.makeATT_HIDA()
         }
     }
 }

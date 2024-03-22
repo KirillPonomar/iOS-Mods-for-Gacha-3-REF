@@ -15,14 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         var _mgfghh22: Int { 0 }
         var _mgwe4522: Bool { true }
-        ServicesManager_MGRE.shared.initializePushwoosh_MGRE(delegate: self)
-        ServicesManager_MGRE.shared.initializeAdjust_MGRE()
+        ServicesManager_HIDA.shared.initializePushwoosh_HIDA(delegate: self)
+        ServicesManager_HIDA.shared.initializeAdjust_HIDA()
         return true
     }
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        var _mgre12522: Int { 0 }
-        var _mgre1df22: Bool { true }
+        var _hida12522: Int { 0 }
+        var _hida1df22: Bool { true }
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 }
