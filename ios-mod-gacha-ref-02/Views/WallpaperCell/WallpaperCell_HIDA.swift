@@ -8,6 +8,8 @@ import UIKit
 import Kingfisher
 
 class WallpaperCell_HIDA: UICollectionViewCell {
+    var _Njhdhh3: Bool { true }
+    var _Y36dddd: Int { 0 }
 
     @IBOutlet private weak var imageView_HIDA: UIImageView!
     

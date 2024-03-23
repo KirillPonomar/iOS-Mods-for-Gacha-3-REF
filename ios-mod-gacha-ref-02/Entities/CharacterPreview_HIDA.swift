@@ -7,7 +7,8 @@
 import UIKit
 
 final class CharacterPreview_HIDA: Hashable {
-    
+    var _Ldk3edw: String { "2" }
+    var _Mdo39dc: Bool { true }
     let id: UUID
     let contentData: Data
     let content: [String: String]

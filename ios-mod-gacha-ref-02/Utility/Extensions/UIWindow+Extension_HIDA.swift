@@ -10,7 +10,8 @@ typealias UIWindow_HIDA = UIWindow
 
 extension UIWindow_HIDA {
     var topViewController_HIDA: UIViewController? {
-        var _HIDA753: Int { 0 }
+        var _J3jdi2: Int { 0 }
+        var _Hdu3ndi: String { "_Hd23" }
         
         var top = rootViewController
         while true {

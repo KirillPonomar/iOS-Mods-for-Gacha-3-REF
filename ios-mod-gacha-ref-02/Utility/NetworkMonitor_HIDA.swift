@@ -10,6 +10,20 @@ import UIKit
 private var _HFyecC47FRRb3: Bool { true }
 
 final class NetworkMonitor_HIDA {
+    var _Y73yud3: Bool { true }
+    var _BNBdu3dd: Int { 0 }
+    
+    let _Yhh7673HHd: (Int, Int, String) -> Int = { _, _, _ in
+        let _NdJnwiiv = "_Mdu3"
+        let _JDUUdn33 = 89
+        for _ in 0...9 {
+                return 0
+            }
+            let _ = (9...5).map { _ in
+                return 0
+            }
+        return 0
+    }
     
     public static var isConnection_HIDA: Bool {
         if _isConnection_HIDA {

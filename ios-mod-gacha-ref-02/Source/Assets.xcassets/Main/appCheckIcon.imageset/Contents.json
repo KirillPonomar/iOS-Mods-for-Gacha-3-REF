@@ -1,15 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "scanIcon.pdf",
+      "filename" : "appCheckIcon.pdf",
       "idiom" : "universal"
     },
     {
-      "filename" : "scanIcon 1.pdf",
+      "filename" : "appCheckIcon 1.pdf",
       "idiom" : "iphone"
     },
     {
-      "filename" : "scanIcon 2.pdf",
+      "filename" : "appCheckIcon 2.pdf",
       "idiom" : "ipad"
     }
   ],

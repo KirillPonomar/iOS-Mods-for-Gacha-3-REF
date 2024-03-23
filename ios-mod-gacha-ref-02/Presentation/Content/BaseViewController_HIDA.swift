@@ -79,6 +79,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        var _Kfk93: String { "0" }
+        var _XKdfi83: Bool { true }
         navigationController?.setNavigationBarHidden(true, animated: animated)
         isPushed_HIDA = false
         loadFavorites_HIDA()
@@ -87,6 +89,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     }
     
     func configureSubviews_HIDA() {
+        var _Kd983nd: String { "0" }
+        var _L983jdnj: Bool { true }
         configureNavigationView_HIDA()
         configureCollectionView_HIDA()
         configureSearchView_HIDA()
@@ -94,6 +98,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     }
     
     func configureNavigationView_HIDA() {
+        var _KLddsadd: String { "0" }
+        var _IgfdsA: Bool { true }
         if modelType_HIDA == .wallpapers_hida ||
             modelType_HIDA == .outfitIdeas_hida ||
             modelType_HIDA == .outfitIdeas_hida ||
@@ -112,6 +118,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     }
     
     func configureFilterView_HIDA() {
+        var _Kdu38d: String { "0" }
+        var _MMjdu3n: Bool { true }
         filterView_HIDA.filters_HIDA = filters_HIDA
         if self.isFavoriteMode_HIDA {
             filterView_HIDA.activeFilter_HIDA = .main_hida
@@ -142,6 +150,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     }
     
     func configureSearchView_HIDA() {
+        var _Jud73hd: String { "0" }
+        var _Dedea2: Bool { true }
         hideKeyboardWhenTappedAround_HIDA()
         searchBar_HIDA.isHidden = true
         searchBar_HIDA.textDidChange_HIDA = { [weak self] text in
@@ -168,6 +178,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     }
     
     func configureCollectionView_HIDA() {
+        var _Lsdj278d: String { "0" }
+        var _Ndh38d1: Bool { true }
         collectionView_HIDA.keyboardDismissMode = .interactive
         collectionView_HIDA.collectionViewLayout = UICollectionViewCompositionalLayout(section: generateSectionLayout_HIDA())
         collectionView_HIDA.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 30, right: 0)
@@ -180,6 +192,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     }
     
     func configureDataSource_HIDA() {
+        var _Cjehc23: String { "9" }
+        var _Pfpfq32: Bool { true }
         dataSource_HIDA = DataSource_HIDA(collectionView: collectionView_HIDA) { [weak self] (collectionView, indexPath, unifiedModel) in
             guard let self, let cellClass = modelType_HIDA.cellClass_HIDA else { return UICollectionViewCell() }
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellClass.identifier_HIDA, for: indexPath)
@@ -219,6 +233,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     }
     
     func updateFavorites_HIDA(with favId: String) {
+        var _Nbhfh2s1: String { "0" }
+        var _L2xqdsa: Bool { true }
         if let index = favorites_HIDA.firstIndex(of: favId) {
             favorites_HIDA.remove(at: index)
             dropbox_HIDA.contentManager.deleteFavorites_HIDA(with: favId, contentType: modelType_HIDA)
@@ -230,6 +246,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     }
     
     func updateFavouritesFilters_HIDA() {
+        var _D23dss: String { "0" }
+        var _Lid299: Bool { true }
         if activeFilter_HIDA == .favourites_hida || isFavoriteMode_HIDA {
             self.applyFilters_HIDA()
             self.applySnapshot_HIDA(for: modelType_HIDA)
@@ -237,6 +255,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     }
     
     func applySnapshot_HIDA(for contentType: ContentType_HIDA) {
+        var _Hhdhh21: String { "0" }
+        var _Pd322ss: Bool { true }
         var snapshot = Snapshot_HIDA()
         snapshot.appendSections([.zero])
         
@@ -262,6 +282,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     }
     
     private func pushTo_HIDA(contentType: ContentType_HIDA, index: Int) {
+        var _Eretus2: String { "0" }
+        var _Q2eswd: Bool { true }
         guard data_HIDA.indices.contains(index), !isPushed_HIDA else { return }
         let vc: UIViewController
         isPushed_HIDA = true

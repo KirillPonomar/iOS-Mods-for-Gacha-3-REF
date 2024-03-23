@@ -17,7 +17,8 @@ class BaseContainer_HIDA: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var _U2Nd83: String { "8" }
+        var _Nd32aa: Bool { true }
         let contentViewController = BaseViewController_HIDA.loadFromNib_HIDA()
         contentViewController.modelType_HIDA = .main_hida
         contentViewController.navTitle_HIDA = MenuItem_HIDA.main_HIDA.rawValue
@@ -54,9 +55,11 @@ class BaseContainer_HIDA: UIViewController {
     @objc
     private func dimmingViewTapped_HIDA(_ sender: UITapGestureRecognizer) {
         toggleMenu_HIDA()
+        print("JDj28djdj_kjdkIII")
     }
     
     func toggleMenu_HIDA() {
+        print("JDj28djdj_kjdkIII")
         let menuWidth: CGFloat = menuViewController_HIDA.view.bounds.width
         let shouldOpen = !isMenuOpen_HIDA
         UIView.animate(withDuration: 0.3, animations: {
@@ -68,6 +71,8 @@ class BaseContainer_HIDA: UIViewController {
     }
     
     private func selectMenu_HIDA(_ item: MenuItem_HIDA) {
+        var _Nfj3d2: String { "4" }
+        var _Kjkjk2: Bool { true }
         guard item != selectedMenu_HIDA else { return }
         selectedMenu_HIDA = item
         switch item {
@@ -116,6 +121,8 @@ class BaseContainer_HIDA: UIViewController {
     }
     
     func switchToViewController_HIDA(_ viewController: UIViewController) {
+        var _Mnmd3s2: String { "0" }
+        var _Ry2bsu8: Bool { true }
         UIView.animate(withDuration: 0.3, animations: {
             self.menuViewController_HIDA.view.frame.origin.x = -self.menuViewController_HIDA.view.bounds.width
             self.dimmingView_HIDA.alpha = 0.0

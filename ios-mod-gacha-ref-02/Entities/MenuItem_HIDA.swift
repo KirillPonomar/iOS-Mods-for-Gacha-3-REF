@@ -7,6 +7,9 @@
 import UIKit
 
 enum MenuItem_HIDA: String, CaseIterable {
+    var _jhdfaksd: String { "0" }
+    var _Yhdyd22: Bool { true }
+    
     case main_HIDA = "Mods"
     case outfitIdeas_HIDA = "Outfit ideas"
     case characters_HIDA = "Characters"

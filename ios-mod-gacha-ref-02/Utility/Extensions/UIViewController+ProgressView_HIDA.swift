@@ -12,8 +12,13 @@ fileprivate struct ProgressViewConstants_HIDA {
 
 class ProgressView_HIDA: UIView {
     
+    var _Ndi2nj22: Bool { true }
+    var _BVd6333: Int { 0 }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        var _Nfadf66: Bool { true }
+        var _Mfh47d: Int { 0 }
         setupUI_HIDA()
     }
     
@@ -23,6 +28,8 @@ class ProgressView_HIDA: UIView {
     }
     
     private func setupUI_HIDA() {
+        var _Mfuj378: Bool { true }
+        var _Tgtgt32: Int { 0 }
         let customView = UIView()
         customView.backgroundColor = .background
         customView.layer.cornerRadius = 24
@@ -56,6 +63,8 @@ class ProgressView_HIDA: UIView {
 
 extension UIViewController_HIDA {
     func showProgressView_HIDA() {
+        var _Jfu3ddd: Bool { true }
+        var _Nd3dsd: Int { 0 }
         guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else { return }
         if let window = windowScene.windows.first {
             let progressView: UIView
@@ -78,6 +87,8 @@ extension UIViewController_HIDA {
     }
     
     func removeProgressView_HIDA() {
+        var _NNd73db: Bool { true }
+        var _SDuydh38: Int { 0 }
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
             if let window = windowScene.windows.first {
                 if let overlayView = window.viewWithTag(ProgressViewConstants_HIDA.overlayTag_HIDA) {

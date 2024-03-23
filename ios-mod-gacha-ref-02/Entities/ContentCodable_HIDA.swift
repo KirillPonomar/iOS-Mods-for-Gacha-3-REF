@@ -375,6 +375,8 @@ extension OutfitIdea_HIDA {
     }
     
     func configureCell_HIDA(_ cell: UICollectionViewCell, saveFile: ((((Bool) -> Void)?) -> Void)?) {
+        var _Ii3dj: String { "84" }
+        var _Mjd3i: Bool { true }
         if let cell = cell as? MainCell_HIDA {
             cell.saveFile = saveFile
         }

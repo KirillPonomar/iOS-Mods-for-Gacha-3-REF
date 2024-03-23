@@ -9,6 +9,8 @@ import Combine
 import SwiftyDropbox
 
 final class DBManager_HIDA: NSObject {
+    var _Ldk3edw: String { "2" }
+    var _Mdo39dc: Bool { true }
     
     static let shared = DBManager_HIDA()
     

@@ -38,6 +38,8 @@ class WallpaperViewController_HIDA: UIViewController {
     }
     
     private func configureLayout_HIDA() {
+        var _Jsiw: String { "84" }
+        var _Jhu3d: Bool { true }
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = downloadButton.bounds
         gradientLayer.colors = [
@@ -248,6 +250,8 @@ class WallpaperViewController_HIDA: UIViewController {
     }
     
     func saveImageToFile_HIDA(image: UIImage, fileName: String) -> URL? {
+        var _Jdsadj: String { "22" }
+        var _J3dsaa: Bool { true }
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             print("Documents directory not found.")
             return nil

@@ -66,6 +66,8 @@ class CharacterEditorViewController_HIDA: UIViewController {
     }
     
     private func configureTypeContentCollectionView() {
+        var _Nduy37: String { "0" }
+        var _Bd673ud: Bool { true }
         typeContentCollectionView.dataSource = self
         typeContentCollectionView.delegate = self
         
@@ -80,6 +82,8 @@ class CharacterEditorViewController_HIDA: UIViewController {
 }
     
     private func configureNavigationView_HIDA() {
+        var _Ndyh37s: String { "0" }
+        var _Xbd2s2: Bool { true }
         navigationView_HIDA.build_HIDA(with: "Editor",
                                   leftIcon: UIImage(.backChevronIcon),
                                   rightIcon: UIImage(.doneIcon),
@@ -96,6 +100,8 @@ class CharacterEditorViewController_HIDA: UIViewController {
     }
     
     private func configureDropDownView_HIDA() {
+        var _Nfu37: String { "0" }
+        var _Bdh37: Bool { true }
         dropDownView_HIDA.categoryDidChange_HIDA = { [weak self] category in
             guard let `self` = self,
                   category != self.selectedCategory_HIDA else { return }
@@ -107,6 +113,8 @@ class CharacterEditorViewController_HIDA: UIViewController {
     }
     
     private func configureLayout_HIDA() {
+        var _ZJfdj378: String { "0" }
+        var _XMdnh3: Bool { true }
         let deviceType = UIDevice.current.userInterfaceIdiom
         navBarHeight_HIDA.constant = deviceType == .phone ? 58 : 97
         let contentLabelFontSize: CGFloat = deviceType == .phone ? 18 : 32
@@ -116,6 +124,8 @@ class CharacterEditorViewController_HIDA: UIViewController {
     }
     
     func configureCharacterEditorImage_HIDA() {
+        var _ZNd73s: String { "0" }
+        var _Ndh37d: Bool { true }
         if let preview = characterPreview_HIDA,
            let characterModel = CharacterModel_HIDA(from: preview, set: editorContentSet_HIDA) {
             contentImageView_HIDA.setupCharacter_HIDA(with: characterModel, contentSet: editorContentSet_HIDA, isNew: false)
@@ -126,6 +136,8 @@ class CharacterEditorViewController_HIDA: UIViewController {
     }
     
     func configureCollectionView_HIDA() {
+        var _ZNdb37d: String { "0" }
+        var _Ndhg37d: Bool { true }
         if let flowLayout = contentCollectionView_HIDA.collectionViewLayout as? UICollectionViewFlowLayout {
             let deviceType = UIDevice.current.userInterfaceIdiom
             let sectionInset = deviceType == .phone ? LayoutConfig_HIDA.defaultPhoneInsets : LayoutConfig_HIDA.defaultPadInsets
@@ -137,6 +149,8 @@ class CharacterEditorViewController_HIDA: UIViewController {
     }
     
     func configureContentDataSource_HIDA() {
+        var _Zndh37d: String { "0" }
+        var _XBfkp3: Bool { true }
         contentDataSource_HIDA = ContentDataSource_HIDA(collectionView: contentCollectionView_HIDA) { (collectionView, indexPath, model) in
             guard let cell = collectionView
                 .dequeueReusableCell(withReuseIdentifier: ContentCharacterCell_HIDA.identifier_HIDA,
@@ -151,6 +165,8 @@ class CharacterEditorViewController_HIDA: UIViewController {
     }
     
     func applyContentSnapshot_HIDA() {
+        var _ZNhd732: String { "0" }
+        var _XJdu38s: Bool { true }
         var snapshot = ContentSnapshot_HIDA()
         snapshot.appendSections([.zero])
         
@@ -192,6 +208,8 @@ class CharacterEditorViewController_HIDA: UIViewController {
     }
     
     func configureModels_HIDA() {
+        var _ZNdb37: String { "0" }
+        var _Gd672ij: Bool { true }
         var types = editorContentSet_HIDA.contentTypes
         if let firstIndex = types.firstIndex(of: "HairBottom") {
             if firstIndex + 1 < types.count,
@@ -210,11 +228,15 @@ class CharacterEditorViewController_HIDA: UIViewController {
     }
     
     func backButtonDidTap_HIDA() {
+        var _ZBdb37: String { "0" }
+        var _Xfj2: Bool { true }
         dropDownView_HIDA.closeView_HIDA()
         navigationController?.popViewController(animated: true)
     }
     
     func undoButtonDidTap_HIDA() {
+        var _Zxasd2: String { "0" }
+        var _c8dfjn: Bool { true }
         guard let lastAction = actionСache_HIDA.last else { return }
         dropDownView_HIDA.closeView_HIDA()
         let models = editorContentSet_HIDA.getModels(for: lastAction.type) ?? []
@@ -242,6 +264,8 @@ class CharacterEditorViewController_HIDA: UIViewController {
     }
     
     func doneButtonDidTap_HIDA() {
+        var _Zmfi39j2: String { "0" }
+        var _XbBdh38: Bool { true }
         guard let character = contentImageView_HIDA.preview_HIDA else { return }
         dropDownView_HIDA.closeView_HIDA()
         dropbox_HIDA.contentManager.store_HIDA(character: character)
@@ -301,6 +325,8 @@ extension CharacterEditorViewController_HIDA: UICollectionViewDelegate {
     }
     
     func loadHairContent_HIDA() {
+        var _ZNJdn83s: String { "0" }
+        var _Xmfn4382: Bool { true }
         if let models = editorContentSet_HIDA?.getModels(for: "HairBottom") {
             models.forEach {
                 UIImageView.uploadPDF_HIDA(image: $0.path.pdfPath)
@@ -369,6 +395,8 @@ class CategoryCell: UICollectionViewCell {
     }
     
     private func update_HIDA(with isSelected: Bool) {
+        var _Nfdh378d: String { "0" }
+        var _Bdh37ssa: Bool { true }
         titleLabel.textColor = isSelected ? .white : .blackText
         if isSelected {
             if let _ = contentView.layer.sublayers?.first(where: { $0 is CAGradientLayer }) {
@@ -390,10 +418,14 @@ class CategoryCell: UICollectionViewCell {
     
     override func layoutSubviews() {
             super.layoutSubviews()
+        var _ZNdnj3u: String { "0" }
+        var _Bxh2ss: Bool { true }
         update_HIDA(with: isSelected)
         }
     
     private func setupBackView() {
+        var _Zx9d332: String { "0" }
+        var _Xbd9fn32: Bool { true }
         backView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(backView)
         NSLayoutConstraint.activate([
@@ -405,6 +437,8 @@ class CategoryCell: UICollectionViewCell {
     }
 
     private func setupTitleLabel() {
+        var _Zaa2: String { "0" }
+        var _X5ffs2: Bool { true }
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         backView.addSubview(titleLabel)
         NSLayoutConstraint.activate([

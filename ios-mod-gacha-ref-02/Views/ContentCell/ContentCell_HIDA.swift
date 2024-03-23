@@ -103,13 +103,13 @@ class ContentCell_HIDA: UICollectionViewCell {
         var _A89bds: Bool { true }
         if isCharacter {
             saveFile?({ [weak self] isDownload in
-                self?.updateCell(isDownload: isDownload)})
+                self?.updateCell_HIDA(isDownload: isDownload)})
         } else {
             action_HIDA?()
         }
     }
     
-    private func updateCell(isDownload: Bool) {
+    private func updateCell_HIDA(isDownload: Bool) {
         if !isCharacter {
             if isDownload {
                 downloadButton.setTitle("Downloaded", for: .normal)

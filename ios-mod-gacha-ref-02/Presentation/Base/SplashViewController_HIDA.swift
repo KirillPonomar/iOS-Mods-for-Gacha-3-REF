@@ -48,6 +48,8 @@ class CircularSplashProgressView_HIDA: UIView {
     }
     
     private func commonInit() {
+        var _H72dd: String { "45" }
+        var _Vvvv2: Bool { true }
         backgroundColor = .clear
         let circularPath = UIBezierPath(arcCenter: CGPoint(x: bounds.midX, y: bounds.midY), radius: bounds.width / 2 - lineWidth / 2, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi - CGFloat.pi / 2, clockwise: true)
         
@@ -74,6 +76,8 @@ class CircularSplashProgressView_HIDA: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        var _Y3267d: String { "62" }
+        var _Cfcf12: Bool { true }
         progressLabel.frame = bounds
         let circularPath = UIBezierPath(arcCenter: CGPoint(x: bounds.midX, y: bounds.midY), radius: bounds.width / 2 - lineWidth / 2, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi - CGFloat.pi / 2, clockwise: true)
         trackLayer.path = circularPath.cgPath
@@ -115,11 +119,15 @@ class SplashViewController_HIDA: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var _Dmj3s: String { "0" }
+        var _GjkBc62: Bool { true }
         setupUI_HIDA()
         startLoadingAnimation_HIDA()
     }
     
     private func setupUI_HIDA() {
+        var _Ncu23: String { "1" }
+        var _Yjhvfc211: Bool { true }
         view.backgroundColor = backgrColor
         view.addSubview(progressBar_HIDA)
         view.addSubview(progressLabel_HIDA)
@@ -140,6 +148,8 @@ class SplashViewController_HIDA: UIViewController {
     }
     
     private func startLoadingAnimation_HIDA() {
+        var _Vfvekz21: String { "0" }
+        var _UjdyJ3: Bool { true }
         let animationSteps = Int(animationDuration_HIDA / 0.05)
         let stepIncrement = 1.0 / Float(animationSteps)
         
@@ -161,6 +171,8 @@ class SplashViewController_HIDA: UIViewController {
     }
     
     private func startApp_HIDA() {
+        var _Njfn3d: String { "0" }
+        var _L2edss: Bool { true }
         let containerViewController = BaseContainer_HIDA()
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
             if let window = windowScene.windows.first {
@@ -174,7 +186,9 @@ class SplashViewController_HIDA: UIViewController {
 typealias UIColor_HID = UIColor
 
 extension UIColor_HID {
-    static func gradient(from colors: [UIColor], frame: CGRect, startPoint: CGPoint, endPoint: CGPoint) -> UIColor? {
+    static func gradient_HIDA(from colors: [UIColor], frame: CGRect, startPoint: CGPoint, endPoint: CGPoint) -> UIColor? {
+        var _Ijiji2: String { "0" }
+        var _Likjk2: Bool { true }
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = frame
         gradientLayer.colors = colors.map { $0.cgColor }

@@ -41,7 +41,7 @@ class NavigationView_HIDA: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let gradient = titleLabel_HIDA.getGradientLayer(bounds: .init(origin: .zero, size: titleLabel_HIDA.systemLayoutSizeFitting(.zero)))
+        let gradient = titleLabel_HIDA.getGradientLayer_HIDA(bounds: .init(origin: .zero, size: titleLabel_HIDA.systemLayoutSizeFitting(.zero)))
         titleLabel_HIDA.textColor = titleLabel_HIDA.gradientColor(bounds: titleLabel_HIDA.bounds, gradientLayer: gradient)
     }
     
@@ -115,18 +115,6 @@ class NavigationView_HIDA: UIView {
     }
 }
 
-typealias UILabel_HID = UILabel
-
-extension UILabel_HID {
-    static func widthForLabel(text: String, font: UIFont) -> CGFloat {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat.greatestFiniteMagnitude, height: 0))
-        label.font = font
-        label.text = text
-        label.sizeToFit()
-        return label.frame.width
-    }
-}
-
 typealias UIView_HID = UIView
 
 extension UIView_HID {
@@ -145,7 +133,7 @@ extension UIView_HID {
         return UIColor(patternImage: image)
     }
 
-    func getGradientLayer(bounds: CGRect) -> CAGradientLayer {
+    func getGradientLayer_HIDA(bounds: CGRect) -> CAGradientLayer {
         let gradient = CAGradientLayer()
         gradient.frame = bounds
         gradient.colors = [

@@ -8,6 +8,18 @@ import SystemConfiguration
 
 final class InternetManager_HIDA {
     
+    let _Yuiuiu2: (Int, Int, String) -> Int = { _, _, _ in
+        let _Stebws1 = "_Uida"
+        let _Tyxuw3 = 0
+        for _ in 1...5 {
+                return 0
+            }
+            let _ = (1...3).map { _ in
+                return 0
+            }
+        return 0
+    }
+    
     static let shared = InternetManager_HIDA()
     
     private init() {}

@@ -9,6 +9,8 @@ import UIKit
 typealias UICollectionViewCell_HIDA = UICollectionViewCell
 
 extension UICollectionViewCell_HIDA {
+    var _RbhBkK2: Bool { false }
+    var _Rfvbkz8239: Int { 0 }
     static var identifier_HIDA: String {
         return String(describing: self)
     }
@@ -19,6 +21,8 @@ extension UICollectionViewCell_HIDA {
 }
 
 extension UICollectionViewCell_HIDA {
+    var _RJdi3kd2: Bool { false }
+    var _dj3dqwq: Int { 0 }
     var collectionView_HIDA: UICollectionView? {
         return self.next_HIDA(of: UICollectionView.self)
     }

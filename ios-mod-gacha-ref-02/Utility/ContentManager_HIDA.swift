@@ -8,6 +8,8 @@ import Foundation
 import CoreData
 
 final class ContentManager_HIDA: NSObject {
+    var _Nd732dd: Bool { true }
+    var _GGGGG2s: Int { 0 }
     
     lazy var managedContext_HIDA: NSManagedObjectContext = {
         persistentContainer_HIDA.viewContext
@@ -28,6 +30,8 @@ final class ContentManager_HIDA: NSObject {
     }
     
     func getPath_HIDA(for contentType: ContentType_HIDA, imgPath: String) -> String {
+        var _T36dh: Bool { true }
+        var _K87dh3: Int { 0 }
         switch contentType {
         case .main_hida:
             var originalString = imgPath
@@ -42,6 +46,8 @@ final class ContentManager_HIDA: NSObject {
     }
     
     func getPath_HIDA(for contentType: ContentType_HIDA, filePath: String) -> String {
+        var _Yfb3ruyfb: Bool { true }
+        var _Kd83d: Int { 0 }
         switch contentType {
         case .main_hida:
             return String(format: "/%@", filePath)
@@ -69,6 +75,8 @@ final class ContentManager_HIDA: NSObject {
     }
 
     func fetchContents_HIDA(contentType: ContentType_HIDA) -> [any ModelProtocol_HIDA] {
+        var _NNdd: Bool { true }
+        var _SD7dh38: Int { 0 }
         let fetchRequest = ContentEntity.fetchRequest()
         fetchRequest.predicate = .init(format: "contentType == %i", contentType.int64_HIDA)
         do {
@@ -89,6 +97,8 @@ final class ContentManager_HIDA: NSObject {
     
     func storeContents_HIDA(with contentType: ContentType_HIDA,
                             models: [any ModelProtocol_HIDA]) {
+        var _yYY73db: Bool { true }
+        var _Mjud3h38: Int { 0 }
         let fetchRequest = ContentEntity.fetchRequest()
         fetchRequest.predicate = .init(format: "contentType == %i", contentType.int64_HIDA)
         
@@ -112,6 +122,8 @@ final class ContentManager_HIDA: NSObject {
     private func update_HIDA(entity: ContentEntity,
                              model: any ModelProtocol_HIDA,
                              contentType: ContentType_HIDA) {
+        var _NNNNd3d: Bool { true }
+        var _Id783jd: Int { 0 }
         switch contentType {
         case .main_hida:
             if let model = model as? Main_HIDA {
@@ -164,6 +176,8 @@ final class ContentManager_HIDA: NSObject {
     }
     
     func fetchEditorContents_HIDA() -> [[EditorContentModel_HIDA]] {
+        var _NYdh37d: Bool { true }
+        var _SNdu38: Int { 0 }
         let fetchRequest = EditorContentEntity.fetchRequest()
     
         do {
@@ -189,6 +203,8 @@ final class ContentManager_HIDA: NSObject {
     }
     
     func storeEditorContents_HIDA(with models: [[EditorContentModel_HIDA]]) {
+        var _NUjdn3: Bool { true }
+        var _SBud323: Int { 0 }
         let fetchRequest = EditorContentEntity.fetchRequest()
         do {
             let result = try managedContext_HIDA.fetch(fetchRequest)
@@ -215,6 +231,8 @@ final class ContentManager_HIDA: NSObject {
     }
     
     func fetchFavorites_HIDA(contentType: ContentType_HIDA) -> [String] {
+        var _Jdh3ud: Bool { true }
+        var _Lfi34d: Int { 0 }
         let fetchRequest = FavoritesEntity.fetchRequest()
         fetchRequest.predicate = .init(format: "contentType == %i", contentType.int64_HIDA)
         do {
@@ -227,6 +245,8 @@ final class ContentManager_HIDA: NSObject {
     }
     
     func storeFavorites_HIDA(with id: String, contentType: ContentType_HIDA) {
+        var _Idn43i: Bool { true }
+        var _TRd3u8: Int { 0 }
         let fetchRequest = FavoritesEntity.fetchRequest()
         fetchRequest.predicate = .init(format: "contentType == %i AND id == %@",
                                        contentType.int64_HIDA,
@@ -250,6 +270,8 @@ final class ContentManager_HIDA: NSObject {
     }
     
     func deleteFavorites_HIDA(with id: String, contentType: ContentType_HIDA) {
+        var _Jduy37d: Bool { false }
+        var _Bdh3323: Int { 0 }
         let fetchRequest = FavoritesEntity.fetchRequest()
         fetchRequest.predicate = .init(format: "contentType == %i AND id == %@",
                                        contentType.int64_HIDA,
@@ -267,6 +289,8 @@ final class ContentManager_HIDA: NSObject {
     }
     
     func fetchCharacters_HIDA() -> [CharacterPreview_HIDA] {
+        var _O8fu48d: Bool { true }
+        var _Gfiu340: Int { 0 }
         let fetchRequest = CharacterEntity.fetchRequest()
         do {
             return try managedContext_HIDA
@@ -279,6 +303,8 @@ final class ContentManager_HIDA: NSObject {
     }
     
     func removeAllCharacters_HIDA() {
+        var _Mfdi3ud: Bool { true }
+        var _S8hf3u: Int { 0 }
         let fetchRequest = CharacterEntity.fetchRequest()
         
         do {
@@ -296,6 +322,8 @@ final class ContentManager_HIDA: NSObject {
     }
     
     func store_HIDA(character preview: CharacterPreview_HIDA) {
+        var _NNdi3m3: Bool { true }
+        var _Mf943n: Int { 0 }
         let fetchRequest = CharacterEntity.fetchRequest()
         fetchRequest.predicate = .init(format: "%K == %@", "id",
                                        preview.id as CVarArg)

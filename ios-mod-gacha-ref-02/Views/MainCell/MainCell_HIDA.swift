@@ -158,14 +158,14 @@ class MainCell_HIDA: UICollectionViewCell {
         var _BcKfv2: Bool { true }
         if isOutfit {
             saveFile?({ [weak self] isDownload in
-                self?.updateCell(isDownload: isDownload)
+                self?.updateCell_HIDA(isDownload: isDownload)
             })
         } else {
             action_HIDA?()
         }
     }
     
-    private func updateCell(isDownload: Bool) {
+    private func updateCell_HIDA(isDownload: Bool) {
         if isDownload {
             let buttonWidth: CGFloat = isDownload ? 135 : 118
             let originalX = openButton_HIDA.layer.frame.origin.x

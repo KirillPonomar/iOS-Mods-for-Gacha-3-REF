@@ -51,16 +51,6 @@ extension UIView_HIDA {
     }
 }
 
-extension UIView_HIDA {
-    func addBlurEffect() {
-        let blurEffect = UIBlurEffect(style: .regular)
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.frame = bounds
-        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        insertSubview(blurView, at: 0)
-    }
-}
-
 extension UIColor_HID {
     func blurredImage(withSize size: CGSize) -> UIImage? {
         guard let filter = CIFilter(name: "CIColorMonochrome") else {

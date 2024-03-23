@@ -7,6 +7,9 @@
 import UIKit
 
 enum ContentType_HIDA: Int, CaseIterable {
+    var _NNfcu83d: Bool { true }
+    var _SajreC1: Int { 0 }
+    
     case editor_hida = 0,
          main_hida,
          outfitIdeas_hida,

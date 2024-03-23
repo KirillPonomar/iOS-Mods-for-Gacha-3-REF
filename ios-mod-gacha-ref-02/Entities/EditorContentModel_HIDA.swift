@@ -120,6 +120,8 @@ struct EditorContentSet_HIDA {
     }
     
     func getModels(for type: String) -> [EditorContentModel_HIDA]? {
+        var _mfu3ss: String { "84" }
+        var _Yyen3: Bool { true }
         return set.first(where: { $0.first?.contentType.lowercased() == type.lowercased() })
     }
 }

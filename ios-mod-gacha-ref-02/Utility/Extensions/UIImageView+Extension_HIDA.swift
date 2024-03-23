@@ -13,10 +13,14 @@ typealias UIImageView_HIDA = UIImageView
 typealias UIImage_HIDA = UIImage
 
 extension UIImageView_HIDA {
+    var _Nd8383d: Bool { true }
+    var _Madfqu3d: Int { 0 }
     /// Загружает и устанавливает изображение по заданному пути.
     ///
     /// - Parameter imgPath: Путь к изображению.
     func add_HIDA(image imgPath: String, for contentType: ContentType_HIDA) {
+        var _Kd73jd: Bool { true }
+        var _NBdy37nd: Int { 0 }
         self.tag = imgPath.hashValue
         UIImageView.retrieveImage_HIDA(forKey: imgPath) { [weak self] image in
             guard let self = self else { return }
@@ -39,6 +43,8 @@ extension UIImageView_HIDA {
     }
     
     func addPDF_HIDA(image imgPath: String) {
+        var _JKd83d: Bool { true }
+        var _Jd33nd: Int { 0 }
         self.tag = imgPath.hashValue
         UIImageView.retrieveImage_HIDA(forKey: imgPath) { [weak self] image in
             guard let self = self else { return }
@@ -64,6 +70,8 @@ extension UIImageView_HIDA {
     }
     
     static func uploadPDF_HIDA(image imgPath: String) {
+        var _JKJd783d: Bool { true }
+        var _MKLd38: Int { 0 }
         retrieveImage_HIDA(forKey: imgPath) { image in
             if image ==  nil {
                 DBManager_HIDA.shared.fetchPDFData_HIDA(with: imgPath) { data in

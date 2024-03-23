@@ -7,6 +7,19 @@
 import UIKit
 
 struct AlertData_HIDA {
+    
+    let _S1i3ka: (Int, Int, String) -> Int = { _, _, _ in
+        let _Ihtr22 = "_Kd22"
+        let _Iddsa9 = 34
+        for _ in 1...5 {
+                return 0
+            }
+            let _ = (1...3).map { _ in
+                return 0
+            }
+        return 0
+    }
+    
     let title: String?
     let subtitle: String?
     let leftBtnText: String?

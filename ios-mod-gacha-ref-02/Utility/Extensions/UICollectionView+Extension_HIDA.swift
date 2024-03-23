@@ -9,6 +9,8 @@ import UIKit
 typealias UICollectionView_HIDA = UICollectionView
 
 extension UICollectionView_HIDA {
+    var _Uddsadnj3: Bool { false }
+    var _BNud83: Int { 0 }
     func registerAllNibs_HIDA() {
         registerNib_HIDA(for: ContentCell_HIDA.self)
         registerNib_HIDA(for: WallpaperCell_HIDA.self)

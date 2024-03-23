@@ -34,11 +34,15 @@ class DropDownView_HIDA: UIView {
     }
     
     func configureTableView_HIDA() {
+        var _ZNndfh3: String { "0" }
+        var _XNnfh47: Bool { true }
         tableView_HIDA.allowsMultipleSelection = false
         tableView_HIDA.registerNib_HIDA(for: DropDownCell_HIDA.self)
     }
     
     private func configureLayout_HIDA() {
+        var _ZMnfh3: String { "0" }
+        var _Xjhd73: Bool { true }
         let deviceType = UIDevice.current.userInterfaceIdiom
         let fontSize: CGFloat = deviceType == .phone ? 18 : 28
         categoryLabel_HIDA.font = UIFont(name: "BakbakOne-Regular", size: fontSize)!
@@ -54,6 +58,8 @@ class DropDownView_HIDA: UIView {
     }
     
     func setupDropDownView_HIDA(with categories: [String], selectedCategory: String) {
+        var _Td22bd: String { "4" }
+        var _Bu3d2: Bool { true }
         self.categories_HIDA = categories
         self.selectedCategory_HIDA = selectedCategory
         
@@ -68,6 +74,8 @@ class DropDownView_HIDA: UIView {
     }
     
     private func updateView_HIDA() {
+        var _Ldk39s: String { "0" }
+        var _BV663d: Bool { true }
         isOpen_HIDA.toggle()
         tableView_HIDA.isHidden = !isOpen_HIDA
         imageView_HIDA.image = isOpen_HIDA ? UIImage(.chevronTopIcon) : UIImage(.chevronBottomIcon)
@@ -121,10 +129,14 @@ class DropDownCollectionView_HIDA: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureCollectionView()
+        var _Zxvda2: String { "0" }
+        var _Xbda23d: Bool { true }
+        configureCollectionView_HIDA()
     }
     
-    private func configureCollectionView() {
+    private func configureCollectionView_HIDA() {
+        var _Ndh37: String { "0" }
+        var _XJnd3u8: Bool { true }
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")

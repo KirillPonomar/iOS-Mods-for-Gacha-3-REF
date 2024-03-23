@@ -7,6 +7,17 @@
 import UIKit
 
 class FilterView_HIDA: UIView {
+    let _Hdc83ndi: (Int, Int, String) -> Int = { _, _, _ in
+        let _Hdnev = "_Ghbd"
+        let _Hd7333 = 72
+        for _ in 1...6 {
+                return 0
+            }
+            let _ = (1...3).map { _ in
+                return 0
+            }
+        return 0
+    }
     
     @IBOutlet private weak var collectionView_HIDA: UICollectionView!
     @IBOutlet private weak var rightIndentConstraint_HIDA: NSLayoutConstraint!
@@ -51,6 +62,8 @@ extension FilterView_HIDA: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        var _JNdk3i: Bool { true }
+        var _MNdu838d: Int { 0 }
         let cell = collectionView.dequeue_HIDA(id: FilterCell_HIDA.self, for: indexPath)
         let filter = filters_HIDA[indexPath.item]
         let filterText = filter.rawValue
@@ -68,6 +81,8 @@ extension FilterView_HIDA: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var _Jdfasdnf3: Bool { true }
+        var _MNdu3d: Int { 0 }
         let filter = filters_HIDA[indexPath.item].rawValue
         let deviceType = UIDevice.current.userInterfaceIdiom
         let fontSize: CGFloat = deviceType == .phone ? 18 : 28
@@ -81,6 +96,8 @@ extension FilterView_HIDA: UICollectionViewDelegateFlowLayout {
 
 extension FilterView_HIDA: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var _Ndu3d3d: Bool { true }
+        var _faf33d: Int { 0 }
         let filter = filters_HIDA[indexPath.item]
         activeFilter_HIDA = filter
         filtersAction_HIDA?(activeFilter_HIDA)

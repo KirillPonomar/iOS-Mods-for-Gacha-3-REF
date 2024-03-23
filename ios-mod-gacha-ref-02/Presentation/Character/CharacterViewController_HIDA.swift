@@ -31,6 +31,8 @@ class CharacterViewController_HIDA: UIViewController {
     }
     
     private func configureLayout_HIDA() {
+        var _Jfdi3s: String { "1" }
+        var _Nfj4s2: Bool { false }
         let deviceType = UIDevice.current.userInterfaceIdiom
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = downloadButton_HIDA.bounds
@@ -62,6 +64,8 @@ class CharacterViewController_HIDA: UIViewController {
     }
     
     private func configureNavigationView_HIDA() {
+        var _Ndh37: String { "0" }
+        var _BV3soa: Bool { true }
         navigationView_HIDA.build_HIDA(with: "Editor",
                                   leftIcon: UIImage(.leftIcon),
                                   rightIcon: nil)
@@ -76,6 +80,8 @@ class CharacterViewController_HIDA: UIViewController {
     }
 
     func shareImage_HIDA(image: UIImage?, fileName: String, viewController: UIViewController) {
+        var _ZNcnhdyu3: String { "0" }
+        var _Ndcn378a: Bool { true }
         guard let image = image else { return }
         guard InternetManager_HIDA.shared.checkInternetConnectivity_HIDA() else {
             showAlert_HIDA(with: AlertData_HIDA(with: "No internet connection!"))
@@ -120,6 +126,8 @@ class CharacterViewController_HIDA: UIViewController {
     }
 
     func saveImageToFile_HIDA(image: UIImage, fileName: String) -> URL? {
+        var _ZNnfdh3: String { "0" }
+        var _XNJndh7: Bool { true }
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             print("Documents directory not found.")
             return nil

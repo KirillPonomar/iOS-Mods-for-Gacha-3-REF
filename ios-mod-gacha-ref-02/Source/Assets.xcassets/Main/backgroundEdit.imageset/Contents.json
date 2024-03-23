@@ -1,15 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "editorBg.pdf",
+      "filename" : "backgroundEdit 1.pdf",
       "idiom" : "universal"
     },
     {
-      "filename" : "editorBg 1.pdf",
+      "filename" : "backgroundEdit 3.pdf",
       "idiom" : "iphone"
     },
     {
-      "filename" : "editorBg 2.pdf",
+      "filename" : "backgroundEdit 2.pdf",
       "idiom" : "ipad"
     }
   ],

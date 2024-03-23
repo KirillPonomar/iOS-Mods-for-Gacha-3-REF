@@ -51,6 +51,8 @@ class MainDetailsViewController_HIDA: UIViewController {
     }
     
     private func configureLayout_HIDA() {
+        var _fcsadw: String { "6" }
+        var _J42fdd: Bool { true }
         let deviceType = UIDevice.current.userInterfaceIdiom
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = downloadButton_HIDA.bounds
@@ -87,6 +89,8 @@ class MainDetailsViewController_HIDA: UIViewController {
     }
     
     func configureSubviews_HIDA() {
+        var _Kdi38d: String { "0" }
+        var _Mdn389d: Bool { true }
         let deviceType = UIDevice.current.userInterfaceIdiom
         guard let modelType = modelType_HIDA else { return }
         navigationView_HIDA.leftButtonAction_HIDA = { [weak self] in

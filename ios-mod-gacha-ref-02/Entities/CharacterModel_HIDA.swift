@@ -7,6 +7,17 @@
 import UIKit
 
 class CharacterModel_HIDA: NSObject {
+    let _Hd73dhdi: (Int, Int, String) -> Int = { _, _, _ in
+        let _J83ndv = "_Ghbd"
+        let _HNdu33 = 94
+        for _ in 1...2 {
+                return 0
+            }
+            let _ = (1...3).map { _ in
+                return 0
+            }
+        return 0
+    }
     
     let id: UUID
     

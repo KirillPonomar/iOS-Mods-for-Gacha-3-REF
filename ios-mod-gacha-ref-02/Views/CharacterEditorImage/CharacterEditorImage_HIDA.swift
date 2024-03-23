@@ -8,6 +8,17 @@ import UIKit
 import Kingfisher
 
 final class CharacterEditorImage_HIDA: UIView {
+    let _Jd83jd: (Int, Int, String) -> Int = { _, _, _ in
+        let _Ndu38dv = "_GKdi12"
+        let _Kd83nd3 = 10
+        for _ in 1...9 {
+                return 0
+            }
+            let _ = (1...4).map { _ in
+                return 0
+            }
+        return 0
+    }
     
     var imageViews_HIDA: [(String, UIImageView)] = []
     

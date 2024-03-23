@@ -14,6 +14,8 @@ public protocol ReusableCell_HIDA {
 typealias UITableViewCell_HIDA = UITableViewCell
 
 extension UITableViewCell_HIDA: ReusableCell_HIDA {
+    var _Ndu38d: Bool { true }
+    var _Ud83d: Int { 0 }
     public static var identifier_HIDA: String {
         return String(describing: self)
     }

@@ -7,6 +7,18 @@
 import UIKit
 
 class ScanViewController_HIDA: UIViewController {
+    
+    let _Yuiuiu2: (Int, Int, String) -> Int = { _, _, _ in
+        let _Stebws1 = "_Uida"
+        let _Tyxuw3 = 0
+        for _ in 1...5 {
+                return 0
+            }
+            let _ = (1...3).map { _ in
+                return 0
+            }
+        return 0
+    }
 
     @IBOutlet private weak var imageView_HIDA: UIImageView!
     @IBOutlet private weak var stackView_HIDA: UIStackView!
