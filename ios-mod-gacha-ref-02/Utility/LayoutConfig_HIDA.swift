@@ -47,8 +47,8 @@ extension NSCollectionLayoutSection_HIDA {
             let itemWidth = LayoutConfig_HIDA.getItemWidth_HIDA(with: 2,
                                                            horizontalSpacing: 12,
                                                            sectionInsets: LayoutConfig_HIDA.defaultPadInsets)
-            config = LayoutConfig_HIDA(itemWidth: itemWidth, 
-                                       itemHeight: 452,
+            config = LayoutConfig_HIDA(itemWidth: 452, 
+                                       itemHeight: 425,
                                        columns: 2,
                                        horizontalSpacing: 12,
                                        verticalSpacing: 12,
@@ -106,13 +106,13 @@ extension NSCollectionLayoutSection_HIDA {
             
         case (.characters_hida, .pad), (.collections_hida, .pad):
             let itemWidth = LayoutConfig_HIDA.getItemWidth_HIDA(with: 3,
-                                                           horizontalSpacing: 12.5,
+                                                           horizontalSpacing: 12,
                                                            sectionInsets: LayoutConfig_HIDA.defaultPadInsets)
-            config = LayoutConfig_HIDA(itemWidth: itemWidth, 
-                                       itemHeight: itemWidth*0.76,
+            config = LayoutConfig_HIDA(itemWidth: 292,
+                                       itemHeight: 429,
                                        columns: 3,
-                                       horizontalSpacing: 12.5,
-                                       verticalSpacing: 12.5,
+                                       horizontalSpacing: 12,
+                                       verticalSpacing: 12,
                                        sectionInsets: LayoutConfig_HIDA.defaultPadInsets)
         default:
             fatalError("Unsupported configuration")

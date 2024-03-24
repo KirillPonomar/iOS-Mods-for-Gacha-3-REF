@@ -100,10 +100,7 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     func configureNavigationView_HIDA() {
         var _KLddsadd: String { "0" }
         var _IgfdsA: Bool { true }
-        if modelType_HIDA == .wallpapers_hida ||
-            modelType_HIDA == .outfitIdeas_hida ||
-            modelType_HIDA == .outfitIdeas_hida ||
-            modelType_HIDA == .characters_hida {
+        if modelType_HIDA == .editor_hida {
             navigationView_HIDA.build_HIDA(with: navTitle_HIDA, rightIcon: nil)
         } else {
             navigationView_HIDA.build_HIDA(with: navTitle_HIDA)

@@ -47,8 +47,8 @@ class NavigationView_HIDA: UIView {
     
     private func configureLayout_HIDA() {
         let deviceType = UIDevice.current.userInterfaceIdiom
-        rightIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85
-        leftIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85
+        rightIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 48
+        leftIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 48
         viewHeight_HIDA.constant = deviceType == .phone ? 58 : 97
         
         titleHeight_HIDA.constant = deviceType == .phone ? 42 : 52
@@ -81,12 +81,6 @@ class NavigationView_HIDA: UIView {
                     rightIcon: UIImage? = UIImage(.searchIcon), 
                     isEditor: Bool = false) {
         titleLabel_HIDA.text = title
-//        titleView_MGRE.isHidden = isEditor ? true : false
-        
-//        if title.isEmpty {
-//            titleView_MGRE.isHidden = true
-//        }
-        
         if let leftIcon = leftIcon {
             leftButton_HIDA.isHidden = false
             leftButton_HIDA.setImage(leftIcon, for: .normal)

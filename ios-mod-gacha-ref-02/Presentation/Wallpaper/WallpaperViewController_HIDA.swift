@@ -56,6 +56,8 @@ class WallpaperViewController_HIDA: UIViewController {
         downloadButton.setTitle("Download", for: .normal)
         downloadButton.configuration?.imagePadding = 12
         imageView_HIDA.layer.cornerRadius = 20
+        shareButton_HIDA.backgroundColor = UIColor.white.withAlphaComponent(0.56)
+        previewButton_HIDA.backgroundColor = UIColor.white.withAlphaComponent(0.56)
     }
     
     func configureSubviews_HIDA() {

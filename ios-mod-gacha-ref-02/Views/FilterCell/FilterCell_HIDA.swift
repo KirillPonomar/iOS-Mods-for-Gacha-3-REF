@@ -22,14 +22,15 @@ class FilterCell_HIDA: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let deviceType = UIDevice.current.userInterfaceIdiom
-        cellBottomView_HIDA.layer.cornerRadius = deviceType == .phone ? 12 : 24
+        update_HIDA(with: isSelected)
+        let deviceType_HIDA = UIDevice.current.userInterfaceIdiom
+        cellBottomView_HIDA.layer.cornerRadius = deviceType_HIDA == .phone ? 12 : 16
         cellBottomView_HIDA.layer.masksToBounds = true
         
-        rightIndentConstraint_HIDA.constant = deviceType == .phone ? 12 : 28
-        leftIndentConstraint_HIDA.constant = deviceType == .phone ? 12 : 28
+        rightIndentConstraint_HIDA.constant = deviceType_HIDA == .phone ? 12 : 28
+        leftIndentConstraint_HIDA.constant = deviceType_HIDA == .phone ? 12 : 28
         
-        let fontSize: CGFloat = deviceType == .phone ? 18 : 28
+        let fontSize: CGFloat = deviceType_HIDA == .phone ? 18 : 28
         titleLabel_HIDA.font = UIFont(name: "BakbakOne-Regular", size: fontSize)!
         titleLabel_HIDA.textColor = .background
     }

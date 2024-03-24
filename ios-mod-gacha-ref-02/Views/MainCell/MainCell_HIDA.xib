@@ -66,8 +66,10 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdL-7G-MtH">
                         <rect key="frame" x="322" y="20" width="40" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" name="buttonBg"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="fo8-CD-2Jy"/>
+                        </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title=""/>
                         <connections>
@@ -84,11 +86,14 @@
                 <constraint firstItem="viy-HW-DJ3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Ren-WE-BBV"/>
                 <constraint firstItem="viy-HW-DJ3" firstAttribute="centerX" secondItem="dus-1k-kxP" secondAttribute="centerX" id="Sug-g1-97p"/>
                 <constraint firstItem="viy-HW-DJ3" firstAttribute="top" secondItem="3FF-6j-ZvQ" secondAttribute="bottom" constant="24" id="V3r-AL-D4a"/>
+                <constraint firstItem="rdL-7G-MtH" firstAttribute="trailing" secondItem="OEa-Ln-yMv" secondAttribute="trailing" id="WeB-r1-Cm4"/>
                 <constraint firstItem="3FF-6j-ZvQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="eiJ-Dr-CZP"/>
+                <constraint firstItem="OEa-Ln-yMv" firstAttribute="top" secondItem="rdL-7G-MtH" secondAttribute="bottom" constant="82" id="eur-VV-YCv"/>
                 <constraint firstItem="dus-1k-kxP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gjZ-hH-SIn"/>
                 <constraint firstItem="dus-1k-kxP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="lcu-rg-wos"/>
                 <constraint firstItem="viy-HW-DJ3" firstAttribute="top" secondItem="dus-1k-kxP" secondAttribute="bottom" constant="8" id="r3C-qb-yGv"/>
                 <constraint firstItem="OEa-Ln-yMv" firstAttribute="leading" secondItem="3FF-6j-ZvQ" secondAttribute="trailing" constant="63" id="w2Z-Uy-Blz"/>
+                <constraint firstItem="rdL-7G-MtH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="yZp-mW-r1b"/>
             </constraints>
             <size key="customSize" width="401" height="213"/>
             <connections>

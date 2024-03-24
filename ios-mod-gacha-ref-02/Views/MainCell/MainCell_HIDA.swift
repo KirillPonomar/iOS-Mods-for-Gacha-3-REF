@@ -96,14 +96,12 @@ class MainCell_HIDA: UICollectionViewCell {
         descriptionLabel_HIDA.isHidden = true
         imageView_HIDA.add_HIDA(image: data.image, for: .outfitIdeas_hida)
         imageView_HIDA.layer.cornerRadius = 20
-        imageView_HIDA.layer.frame.size.height = 182
         openButton_HIDA.setImage(.downloadIcon, for: .normal)
         openButton_HIDA.setTitle("Download", for: .normal)
         openButton_HIDA.configuration?.contentInsets.leading = -5
         openButton_HIDA.configuration?.contentInsets.trailing = -5
         openButton_HIDA.configuration?.imagePadding = 8
         openButton_HIDA.layer.frame = CGRect(x: newOriginX, y: openButton_HIDA.layer.frame.origin.y, width: buttonWidth, height: openButton_HIDA.layer.frame.size.height)
-        layer.frame.size.height = 198
         
         configureCell_HIDA()
     }
@@ -134,6 +132,8 @@ class MainCell_HIDA: UICollectionViewCell {
         favoriteButton_HIDA.layer.cornerRadius = 8
         favoriteButton_HIDA.backgroundColor = .white.withAlphaComponent(0.56)
         imageViewHeight_HIDA.constant = deviceType == .phone ? 182 : 296
+        let buttonSize: CGSize = deviceType == .pad ? CGSize(width: 80, height: 80) : CGSize(width: 40, height: 40)
+        favoriteButton_HIDA.frame.size = buttonSize
         
         updateFavoriteButton_HIDA()
     }

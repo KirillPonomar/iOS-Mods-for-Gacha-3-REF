@@ -112,7 +112,7 @@ extension SearchBar_HIDA: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DropDownCell_HIDA.identifier_HIDA, for: indexPath) as! DropDownCell_HIDA
-        cell.buildCell_HIDA(with: results_HIDA[indexPath.row], titleColor: UIColor(red: 0.304, green: 0.304, blue: 0.304, alpha: 1))
+        cell.buildCell_HIDA(with: results_HIDA[indexPath.row], titleColor: UIColor.white)
         return cell
     }
 }

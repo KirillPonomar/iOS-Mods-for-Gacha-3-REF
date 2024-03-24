@@ -45,9 +45,9 @@ class FilterView_HIDA: UIView {
     
     private func configureLayout_HIDA() {
         let deviceType = UIDevice.current.userInterfaceIdiom
-        rightIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85
-        leftIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85
-        collectionViewHeight_HIDA.constant = deviceType == .phone ? 32 : 44
+        rightIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 48
+        leftIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 48
+        collectionViewHeight_HIDA.constant = deviceType == .phone ? 32 : 86
     }
     
     func configureCollectionView_HIDA() {
@@ -71,8 +71,8 @@ extension FilterView_HIDA: UICollectionViewDataSource {
            !(collectionView.indexPathsForSelectedItems?.contains(indexPath) ?? false) {
             collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
         }
-        cell.configure_HIDA(with: filterText)
         cell.update_HIDA(with: activeFilter_HIDA == filter)
+        cell.configure_HIDA(with: filterText)
         return cell
     }
 }

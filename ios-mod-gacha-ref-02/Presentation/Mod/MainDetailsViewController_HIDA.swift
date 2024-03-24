@@ -22,12 +22,9 @@ class MainDetailsViewController_HIDA: UIViewController {
     @IBOutlet private weak var titleLabel_HIDA: UILabel!
     @IBOutlet private weak var descriptionLabel_HIDA: UILabel!
     @IBOutlet private weak var imageView_HIDA: UIImageView!
-    @IBOutlet private weak var rightIndentConstraint_HIDA: NSLayoutConstraint!
-    @IBOutlet private weak var leftIndentConstraint_HIDA: NSLayoutConstraint!
     @IBOutlet private weak var favoriteButton_HIDA: UIButton!
     @IBOutlet private weak var downloadButton_HIDA: UIButton!
     @IBOutlet private weak var secondButton: UIButton!
-    
     var modelType_HIDA: ModelType_HIDA?
     var isFavourite_HIDA: Bool = false
 
@@ -63,13 +60,10 @@ class MainDetailsViewController_HIDA: UIViewController {
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 0)
         downloadButton_HIDA.layer.insertSublayer(gradientLayer, at: 0)
-        downloadButton_HIDA.layer.cornerRadius = 16
         downloadButton_HIDA.layer.masksToBounds = true
         downloadButton_HIDA.configuration?.imagePadding = 12
         downloadButton_HIDA.semanticContentAttribute = .forceRightToLeft
         downloadButton_HIDA.setImage(.downloadIcon, for: .normal)
-        rightIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85
-        leftIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85
         
         let downloadButtonFontSize: CGFloat = deviceType == .phone ? 18 : 28
         downloadButton_HIDA.titleLabel?.font = UIFont(name: "BakbakOne-Regular", size: downloadButtonFontSize) ?? UIFont.systemFont(ofSize: downloadButtonFontSize)
@@ -81,7 +75,7 @@ class MainDetailsViewController_HIDA: UIViewController {
         let descriptionFontSize: CGFloat = deviceType == .phone ? 14 : 24
         descriptionLabel_HIDA.font = UIFont(name: "SF Pro Display Regular", size: descriptionFontSize) ?? UIFont.systemFont(ofSize: descriptionFontSize)
         
-        let buttonCornerRadius: CGFloat = deviceType == .phone ? 16 : 26
+        let buttonCornerRadius: CGFloat = deviceType == .phone ? 16 : 28
         downloadButton_HIDA.layer.cornerRadius = buttonCornerRadius
         favoriteButton_HIDA.layer.cornerRadius = 8
         favoriteButton_HIDA.backgroundColor = .white.withAlphaComponent(0.56)
