@@ -18,7 +18,7 @@ struct Keys_HIDA {
         
         var contentPath: String {
             if self == .editor_hida {
-                return .init(format: "/%@/girl/content.json", rawValue, rawValue)
+                return .init(format: "/%@/boy/content.json", rawValue, rawValue)
             }
             return .init(format: "/%@/content.json", rawValue, rawValue)
         }

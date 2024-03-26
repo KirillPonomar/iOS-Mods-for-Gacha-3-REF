@@ -278,8 +278,8 @@ extension DBManager_HIDA {
                         EditorContentModel_HIDA(id: $0.id,
                                                 contentType: markup.tag,
                                                 order: markup.order,
-                                                path: "girl/" + $0.path,
-                                                preview: "girl/" + $0.preview)
+                                                path: "boy/" + $0.path,
+                                                preview: "boy/" + $0.preview)
                     }
                     modelsSet.append(models)
                 }

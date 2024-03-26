@@ -116,48 +116,50 @@ extension UIImageView_HIDA {
 
 fileprivate extension UIImage_HIDA {
     static func getImage_HIDA(withPDFData data: Data, completion: @escaping (UIImage?) -> Void) {
-        DispatchQueue.global().async {
-            autoreleasepool {
-                guard let provider = CGDataProvider(data: data as CFData),
-                      let pdfDoc = CGPDFDocument(provider),
-                      let pdfPage = pdfDoc.page(at: 1)
-                else {
-                    DispatchQueue.main.async {
-                        completion(nil)
-                    }
-                    return
-                }
-                
-                let dpi: CGFloat = 300.0
-                let pageRect = pdfPage.getBoxRect(.mediaBox)
-                let imageSize = CGSize(width: pageRect.size.width * dpi / 72.0,
-                                       height: pageRect.size.height * dpi / 72.0)
-                
-                let deviceType = UIDevice.current.userInterfaceIdiom
-                let scaleFactor: CGFloat
-                if deviceType == .phone {
-                    scaleFactor = 1.0 / 8.0
-                } else {
-                    scaleFactor = 1.0 / 5.0
-                }
-                let newSize = CGSize(width: imageSize.width * scaleFactor, height: imageSize.height * scaleFactor)
-                
-                let renderer = UIGraphicsImageRenderer(size: newSize)
-                
-                let image = renderer.image { ctx in
-                    UIColor.clear.set()
-                    ctx.fill(CGRect(origin: .zero, size: newSize))
-                    ctx.cgContext.translateBy(x: 0.0, y: newSize.height)
-                    ctx.cgContext.scaleBy(x: newSize.width / pageRect.width,
-                                          y: -newSize.height / pageRect.height)
-                    ctx.cgContext.drawPDFPage(pdfPage)
-                }
-                
-                DispatchQueue.main.async {
-                    completion(image)
-                }
-            }
-        }
+        completion (UIImage(data: data))
+//        DispatchQueue.global().async {
+            
+//            autoreleasepool {
+//                guard let provider = CGDataProvider(data: data as CFData),
+//                      let pdfDoc = CGPDFDocument(provider),
+//                      let pdfPage = pdfDoc.page(at: 1)
+//                else {
+//                    DispatchQueue.main.async {
+//                        completion(nil)
+//                    }
+//                    return
+//                }
+//                
+//                let dpi: CGFloat = 300.0
+//                let pageRect = pdfPage.getBoxRect(.mediaBox)
+//                let imageSize = CGSize(width: pageRect.size.width * dpi / 72.0,
+//                                       height: pageRect.size.height * dpi / 72.0)
+//                
+//                let deviceType = UIDevice.current.userInterfaceIdiom
+//                let scaleFactor: CGFloat
+//                if deviceType == .phone {
+//                    scaleFactor = 1.0 / 8.0
+//                } else {
+//                    scaleFactor = 1.0 / 5.0
+//                }
+//                let newSize = CGSize(width: imageSize.width * scaleFactor, height: imageSize.height * scaleFactor)
+//                
+//                let renderer = UIGraphicsImageRenderer(size: newSize)
+//                
+//                let image = renderer.image { ctx in
+//                    UIColor.clear.set()
+//                    ctx.fill(CGRect(origin: .zero, size: newSize))
+//                    ctx.cgContext.translateBy(x: 0.0, y: newSize.height)
+//                    ctx.cgContext.scaleBy(x: newSize.width / pageRect.width,
+//                                          y: -newSize.height / pageRect.height)
+//                    ctx.cgContext.drawPDFPage(pdfPage)
+//                }
+//                
+//                DispatchQueue.main.async {
+//                    completion(image)
+//                }
+//            }
+//        }
     }
 }
 

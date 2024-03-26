@@ -72,7 +72,7 @@ class CharacterEditorViewController_HIDA: UIViewController {
         typeContentCollectionView.delegate = self
         
         layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 10
+        layout.minimumInteritemSpacing = 16
         layout.sectionInset = .init(top: 10, left: 10, bottom: 10, right: 10)
         layout.estimatedItemSize = .init(width: 50, height: 50)
         
@@ -131,7 +131,7 @@ class CharacterEditorViewController_HIDA: UIViewController {
             contentImageView_HIDA.setupCharacter_HIDA(with: characterModel, contentSet: editorContentSet_HIDA, isNew: false)
         } else if let body = editorContentSet_HIDA.getModels(for: "body")?.first {
             let characterModel = CharacterModel_HIDA(content: [body])
-            contentImageView_HIDA.setupCharacter_HIDA(with: characterModel, contentSet: editorContentSet_HIDA, isNew: true)
+            contentImageView_HIDA.setupCharacter_HIDA(with: characterModel, contentSet: editorContentSet_HIDA, isNew: false)
         }
     }
     

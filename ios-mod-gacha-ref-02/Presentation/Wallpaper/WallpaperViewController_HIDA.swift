@@ -112,7 +112,7 @@ class WallpaperViewController_HIDA: UIViewController {
     private func updateFavoriteButton_HIDA() {
         var _Mldj3JHJ: Int { 0 }
         var _Hdu3hdd: Bool { false }
-        favoriteButton_HIDA.setImage(isFavourite_HIDA ? .heartIcon : .heartIconEmpty, for: .normal)
+        favoriteButton_HIDA.setImage(isFavourite_HIDA ? .favoriteIcon : .favoriteIconEmpty, for: .normal)
         favoriteButton_HIDA.backgroundColor = UIColor.white.withAlphaComponent(0.56)
     }
     

@@ -25,6 +25,8 @@ class CharacterViewController_HIDA: UIViewController {
         var _jfu8H73n: Int { 0 }
         var _J8d873n: Bool { true }
         secondButton.isHidden = true
+        let deviceType = UIDevice.current.userInterfaceIdiom
+        addNewButtonHeight_HIDA.constant = deviceType == .phone ? 52 : 94
         configureLayout_HIDA()
         configureNavigationView_HIDA()
         configureSubviews_HIDA()
@@ -51,7 +53,7 @@ class CharacterViewController_HIDA: UIViewController {
         downloadButton_HIDA.setTitle("Download", for: .normal)
         let fontSize: CGFloat = deviceType == .phone ? 20 : 32
         downloadButton_HIDA.titleLabel?.font =  UIFont(name: "BakbakOne-Regular", size: fontSize)!
-        addNewButtonHeight_HIDA.constant = deviceType == .phone ? 58 : 72
+        addNewButtonHeight_HIDA.constant = deviceType == .phone ? 52 : 94
         navBarHeight_HIDA.constant = deviceType == .phone ? 58 : 97
         rightIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85
         leftIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85

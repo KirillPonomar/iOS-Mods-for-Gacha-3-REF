@@ -167,7 +167,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DFF5A707-00C5-45B0-8B72-4BD90F087F5E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ios-mod-gacha-ref-02/Presentation/Base/SplashViewController_HIDA.swift"
@@ -176,6 +176,278 @@
             startingLineNumber = "167"
             endingLineNumber = "167"
             landmarkName = "startLoadingAnimation_HIDA()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A165941-E3F9-4645-B408-1A401039B9A0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Presentation/CharacterEditor/CharacterEditorViewController_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "configureCharacterEditorImage_HIDA()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A763DD1-CD7A-4423-B9BB-0AA8C7A4BCA1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Presentation/CharacterEditor/CharacterEditorViewController_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "configureCharacterEditorImage_HIDA()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E02E636B-0422-45EB-98D1-2949812429E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/Extensions/UIImageView+Extension_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "retrieveImage_HIDA(forKey:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B84B839-E615-40BF-AE65-629055EAD86C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/Extensions/UIImageView+Extension_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "addPDF_HIDA(image:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F08C7C0-F0A0-4A55-AF16-CDA41576445B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/Extensions/UIImageView+Extension_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "addPDF_HIDA(image:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF2D9586-0A0B-45A0-845E-595001335671"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/Extensions/UIImageView+Extension_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "addPDF_HIDA(image:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5DC84389-1540-445E-A3EE-6C9296E289E5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/Extensions/UIImageView+Extension_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "addPDF_HIDA(image:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5DC84389-1540-445E-A3EE-6C9296E289E5 - 68bbd87705ab0c31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.UIImage&gt;) -&gt; () in __C.UIImageView.addPDF_HIDA(image: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Utility/Extensions/UIImageView+Extension_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  uuid = "5DC84389-1540-445E-A3EE-6C9296E289E5 - 81476fab0fe26616"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Stack Promoted from Box&gt; of closure #1 (Swift.Optional&lt;__C.UIImage&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.UIImage&gt;) -&gt; () in __C.UIImageView.addPDF_HIDA(image: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Utility/Extensions/UIImageView+Extension_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B47C4D3-0FCA-43D5-879D-5B6F4E309DB4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/Extensions/UIImageView+Extension_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "addPDF_HIDA(image:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2B47C4D3-0FCA-43D5-879D-5B6F4E309DB4 - 20fd092b37e3a2d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.UIImageView.addPDF_HIDA(image: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Utility/Extensions/UIImageView+Extension_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "2B47C4D3-0FCA-43D5-879D-5B6F4E309DB4 - 33eea156f58f66e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;) -&gt; () in __C.UIImageView.addPDF_HIDA(image: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Utility/Extensions/UIImageView+Extension_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F997B0E9-54A2-4A88-94D1-C7F167C078BE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "saveFile_HIDA(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2A0C0E1-9C5C-4F88-B2E6-A0744C0F0451"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
+            landmarkName = "saveFile_HIDA(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2EABA97A-0435-41E6-BD31-86E61BF35638"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "saveFile_HIDA(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2154A709-4196-4873-AF6F-34ECF96319A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/ContentManager_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "getPath_HIDA(for:filePath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D82F123-7755-4E37-96ED-3EE46672BA97"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/ContentManager_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "getPath_HIDA(for:imgPath:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -1003,7 +1003,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ios-mod-gacha-ref-02/ios-mod-gacha-ref-02.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WSL2HKX9YP;
+				DEVELOPMENT_TEAM = 89SPL377XV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-mod-gacha-ref-02/Support/Info.plist";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app requires access to the photo library. Downloading content to Photo Library.";
@@ -1036,7 +1036,7 @@
 				CODE_SIGN_ENTITLEMENTS = "ios-mod-gacha-ref-02/ios-mod-gacha-ref-02.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WSL2HKX9YP;
+				DEVELOPMENT_TEAM = 89SPL377XV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-mod-gacha-ref-02/Support/Info.plist";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app requires access to the photo library. Downloading content to Photo Library.";
