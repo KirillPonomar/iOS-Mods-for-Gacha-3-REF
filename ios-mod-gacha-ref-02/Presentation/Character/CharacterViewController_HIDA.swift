@@ -106,7 +106,7 @@ class CharacterViewController_HIDA: UIViewController {
             } else {
                 print("Действие отменено")
                 self?.secondButton.isHidden = false
-                self?.secondButton.setTitle("Failed", for: .normal)
+                self?.secondButton.setTitle("Download Failed", for: .normal)
                 self?.secondButton.semanticContentAttribute = .forceRightToLeft
                 self?.secondButton.setImage(.failureIcon, for: .normal)
                 self?.secondButton.setTitleColor(.systemRed, for: .normal)

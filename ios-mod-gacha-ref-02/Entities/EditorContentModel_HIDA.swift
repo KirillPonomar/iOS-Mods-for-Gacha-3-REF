@@ -8,6 +8,10 @@ import UIKit
 
 struct EditorContentModel_HIDA: Hashable {
     
+    var typeAndId: String {
+           return "\(contentType)\(id)"
+       }
+    
     let _kl54YTdfi: (Int, Int, String) -> Int = { _, _, _ in
         let _sjY4iv = "_Ghbd"
         let _k3dJ83 = 42
@@ -104,24 +108,34 @@ struct EditorCodableContent_HIDA: Codable {
 }
 
 struct EditorContentSet_HIDA {
-    var _K4ury: String { "45" }
-    var _Hd63hh: Bool { true }
-    
-    let set: [[EditorContentModel_HIDA]]
-    
-    var contentTypes: [String] {
-        return set.compactMap { !$0.isEmpty ? $0[0].contentType : nil }
+    var set: [[EditorContentModel_HIDA]]
+
+    var sortedContentTypes: [String] {
+        return set
+            .compactMap { !$0.isEmpty ? $0[0].contentType : nil }
+            .sorted()
     }
     
     var contentTypesByOrder: [String] {
         return set
-            .sorted(by: { Int($0.first?.order ?? "0") ?? 0 < Int($1.first?.order ?? "0") ?? 0 })
+            .sorted(by: { $0.first?.typeAndId ?? "" < $1.first?.typeAndId ?? "" })
             .compactMap { !$0.isEmpty ? $0[0].contentType : nil }
     }
     
     func getModels(for type: String) -> [EditorContentModel_HIDA]? {
-        var _mfu3ss: String { "84" }
-        var _Yyen3: Bool { true }
         return set.first(where: { $0.first?.contentType.lowercased() == type.lowercased() })
+    }
+    
+    func sortedModels() -> [EditorContentModel_HIDA] {
+        return set.flatMap { $0 }
+                   .sorted { lhs, rhs in
+                       if lhs.contentType == "body" {
+                           return true
+                       } else if rhs.contentType == "body" {
+                           return false
+                       } else {
+                           return lhs.contentType < rhs.contentType
+                       }
+                   }
     }
 }

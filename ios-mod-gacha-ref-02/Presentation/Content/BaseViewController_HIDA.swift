@@ -14,6 +14,10 @@ enum Filter_HIDA: String {
          characters_hida = "Characters", collections_hida = "Collections", wallpapers_hida = "Wallpapers"
 }
 
+enum TypeEditor_HIDA: String {
+    case body = "body", accessories = "accessories", brows = "brows", clothes = "clothes", eyes = "eyes", glasses = "glasses", hair = "hair", hats = "hats", nose = "nose"
+}
+
 class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
     
     let _Kejdeiu3n: (Int, Int, String) -> Int = { _, _, _ in

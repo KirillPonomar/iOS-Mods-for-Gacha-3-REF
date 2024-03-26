@@ -24,6 +24,7 @@ class CharacterEditorViewController_HIDA: UIViewController {
     private var dropbox_HIDA: DBManager_HIDA { .shared }
     var editorContentSet_HIDA: EditorContentSet_HIDA!
     var characterPreview_HIDA: CharacterPreview_HIDA?
+    var activeType_HIDA: TypeEditor_HIDA = .accessories
     let layout = UICollectionViewFlowLayout()
     
     private var categories_HIDA: [String] = []
@@ -177,8 +178,7 @@ class CharacterEditorViewController_HIDA: UIViewController {
             selectedCategory_HIDA.lowercased() != "trousers" &&
             selectedCategory_HIDA.lowercased() != "mouth" {
             let buttonModel = EditorContentModel_HIDA(id: "DeleteButton",
-                                                      contentType: selectedCategory_HIDA,
-                                                      order: "0", path: "", preview: "")
+                                                      contentType: selectedCategory_HIDA, order: "0", path: "", preview: "")
             snapshot.appendItems([buttonModel] + contentModels_HIDA, toSection: .zero)
         } else {
             snapshot.appendItems(contentModels_HIDA)
@@ -210,7 +210,7 @@ class CharacterEditorViewController_HIDA: UIViewController {
     func configureModels_HIDA() {
         var _ZNdb37: String { "0" }
         var _Gd672ij: Bool { true }
-        var types = editorContentSet_HIDA.contentTypes
+        var types = editorContentSet_HIDA.sortedContentTypes
         if let firstIndex = types.firstIndex(of: "HairBottom") {
             if firstIndex + 1 < types.count,
                let secondIndex = types[firstIndex+1..<types.count].firstIndex(of: "HairTop") {
@@ -219,7 +219,7 @@ class CharacterEditorViewController_HIDA: UIViewController {
             }
         }
         categories_HIDA = types
-        selectedCategory_HIDA = editorContentSet_HIDA.contentTypes.first ?? "body"
+        selectedCategory_HIDA = editorContentSet_HIDA.sortedContentTypes.first ?? "body"
         
         contentModels_HIDA = editorContentSet_HIDA.getModels(for: selectedCategory_HIDA) ?? []
         
@@ -358,9 +358,14 @@ extension CharacterEditorViewController_HIDA: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue_HIDA(id: CategoryCell.self, for: indexPath)
         let categoryName = categories_HIDA[indexPath.item]
+        let categories = categories_HIDA
         if let categoryCell = cell as? CategoryCell {
             categoryCell.titleLabel.text = categoryName
-            
+            if activeType_HIDA.rawValue == categoryName,
+               !(collectionView.indexPathsForSelectedItems?.contains(indexPath) ?? false) {
+                collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .bottom)
+            }
+            categoryCell.update_HIDA(with: activeType_HIDA.rawValue == categoryName)
         }
         return cell
     }
@@ -394,7 +399,7 @@ class CategoryCell: UICollectionViewCell {
         setupTitleLabel()
     }
     
-    private func update_HIDA(with isSelected: Bool) {
+    func update_HIDA(with isSelected: Bool) {
         var _Nfdh378d: String { "0" }
         var _Bdh37ssa: Bool { true }
         titleLabel.textColor = isSelected ? .white : .blackText

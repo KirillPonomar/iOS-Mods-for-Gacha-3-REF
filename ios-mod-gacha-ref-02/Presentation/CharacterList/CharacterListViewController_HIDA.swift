@@ -206,7 +206,7 @@ extension CharacterListViewController_HIDA {
     func loadStartContent_HIDA() {
         var _KMdk38d: String { "0" }
         var _Mdu389d: Bool { true }
-        editorContentSet_HIDA?.contentTypes.forEach { [weak self] type in
+        editorContentSet_HIDA?.sortedContentTypes.forEach { [weak self] type in
             if let model = self?.editorContentSet_HIDA?.getModels(for: type)?.first {
                 UIImageView.uploadPDF_HIDA(image: model.path.pdfPath)
             }
