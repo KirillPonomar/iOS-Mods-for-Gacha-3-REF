@@ -38,21 +38,20 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="58" translatesAutoresizingMaskIntoConstraints="NO" id="CM3-mR-Plf" customClass="NavigationView_HIDA" customModule="ios_mod_gacha_ref_02" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="59" width="393" height="58"/>
+                    <rect key="frame" x="0.0" y="59" width="394" height="58"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha2-9Y-DIf" customClass="UIScrollView">
-                    <rect key="frame" x="0.0" y="139" width="393" height="613"/>
+                    <rect key="frame" x="0.0" y="139" width="394" height="613"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V14-Nz-iXb" userLabel="ContentView">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="613"/>
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="613"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="G1D-z2-XSl">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" id="G1D-z2-XSl">
                                     <rect key="frame" x="16" y="16" width="361" height="182"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="182" id="WoU-T8-f58"/>
-                                        <constraint firstAttribute="width" constant="353" id="XX4-D2-G1t"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -62,7 +61,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcc-fd-SrB">
-                                    <rect key="frame" x="325" y="28" width="40" height="40"/>
+                                    <rect key="frame" x="326" y="28" width="40" height="40"/>
                                     <color key="backgroundColor" name="buttonBg"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="DAJ-op-NIS"/>
@@ -75,13 +74,13 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QME-i2-5KZ">
-                                    <rect key="frame" x="16" y="230" width="361" height="25.333333333333343"/>
+                                    <rect key="frame" x="16" y="230" width="362" height="25.333333333333343"/>
                                     <fontDescription key="fontDescription" name="BakbakOne-Regular" family="Bakbak One" pointSize="18"/>
                                     <color key="textColor" systemColor="systemBackgroundColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfr-nf-3Xg">
-                                    <rect key="frame" x="16" y="271.33333333333331" width="361" height="14.333333333333314"/>
+                                    <rect key="frame" x="16" y="271.33333333333331" width="362" height="14.333333333333314"/>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
                                     <color key="textColor" systemColor="systemBackgroundColor"/>
                                     <nil key="highlightedColor"/>

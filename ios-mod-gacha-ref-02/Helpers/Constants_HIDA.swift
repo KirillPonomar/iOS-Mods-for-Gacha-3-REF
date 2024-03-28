@@ -30,6 +30,7 @@ enum Images_HIDA: String {
     case chevronBottomIcon
     case successIcon
     case successIconWhite
+    case noInternet
     
     case deleteLargeIcon
 }

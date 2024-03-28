@@ -41,12 +41,10 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="7ou-hJ-KAw">
                         <rect key="frame" x="8" y="198" width="148" height="36"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Download">
-                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                        </buttonConfiguration>
+                        <buttonConfiguration key="configuration" style="plain" title="Download"/>
                         <connections>
                             <action selector="detailButtonDidTap_HIDA:" destination="gTV-IL-0wX" eventType="touchUpInside" id="duk-Rh-I3h"/>
                         </connections>

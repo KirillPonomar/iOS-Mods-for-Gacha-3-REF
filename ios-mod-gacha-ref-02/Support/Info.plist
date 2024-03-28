@@ -10,6 +10,10 @@
 	<string>NONE</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>K2D-Bold.ttf</string>
+		<string>K2D-SemiBold.ttf</string>
+		<string>K2D-Medium.ttf</string>
+		<string>K2D-Regular.ttf</string>
 		<string>SFPro-Display-Regular.otf</string>
 		<string>BakbakOne-Regular.ttf</string>
 	</array>

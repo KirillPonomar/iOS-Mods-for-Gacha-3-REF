@@ -45,7 +45,7 @@ class DropDownView_HIDA: UIView {
         var _Xjhd73: Bool { true }
         let deviceType = UIDevice.current.userInterfaceIdiom
         let fontSize: CGFloat = deviceType == .phone ? 18 : 28
-        categoryLabel_HIDA.font = UIFont(name: "BakbakOne-Regular", size: fontSize)!
+        categoryLabel_HIDA.font = UIFont(name: "K2D-Medium", size: fontSize)
         categoryLabelHeight_HIDA.constant = deviceType == .phone ? 48 : 63
         tableView_HIDA.isHidden = !isOpen_HIDA
         imageView_HIDA.image = isOpen_HIDA ? UIImage(.chevronTopIcon) : UIImage(.chevronBottomIcon)

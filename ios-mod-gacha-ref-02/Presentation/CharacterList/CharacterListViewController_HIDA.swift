@@ -68,7 +68,7 @@ class CharacterListViewController_HIDA: UIViewController {
         leftButton_HIDA.backgroundColor = .white.withAlphaComponent(0.56)
         
         let fontSize: CGFloat = deviceType == .phone ? 20 : 32
-        addNewButton_HIDA.titleLabel?.font =  UIFont(name: "BakbakOne-Regular", size: fontSize)!
+        addNewButton_HIDA.titleLabel?.font = UIFont(name: "K2D-SemiBold", size: fontSize)
     }
     
     private func updateCharImageView_HIDA() {

@@ -56,7 +56,7 @@ class NavigationView_HIDA: UIView {
         rightButtonHeight_HIDA.constant = deviceType == .phone ? 42 : 52
         
         let titleFontSize: CGFloat = deviceType == .phone ? 22 : 40
-        titleLabel_HIDA.font = UIFont(name: "BakbakOne-Regular", size: titleFontSize) ?? UIFont.systemFont(ofSize: titleFontSize)
+        titleLabel_HIDA.font = UIFont(name: "K2D-SemiBold", size: titleFontSize)
         leftButton_HIDA.layer.cornerRadius = deviceType == .phone ? 21 : 26
         rightButton_HIDA.layer.cornerRadius = deviceType == .phone ? 21 : 26
 //        undoButtonBottomView_MGRE.layer.cornerRadius = deviceType == .phone ? 21 : 26

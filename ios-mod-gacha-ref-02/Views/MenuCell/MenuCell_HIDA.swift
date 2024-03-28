@@ -31,22 +31,9 @@ class MenuCell_HIDA: UICollectionViewCell {
         bottomView_HIDA.layer.masksToBounds = true
         
         let fontSize: CGFloat = deviceType == .phone ? 18 : 24
-        titleLabel_HIDA.font = UIFont(name: "BakbakOne-Regular", size: fontSize)!
+        titleLabel_HIDA.font = UIFont(name: "K2D-Medium", size: fontSize)
         chevronHeight_HIDA.constant = deviceType == .phone ? 15 : 32
         bottomViewHeight_HIDA.constant = deviceType == .phone ? 44 : 56
-        
-        gradientLayer = CAGradientLayer()
-               gradientLayer?.frame = bottomView_HIDA.bounds
-               gradientLayer?.colors = [
-                   UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
-                   UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor
-               ]
-               gradientLayer?.startPoint = CGPoint(x: 0, y: 0)
-               gradientLayer?.endPoint = CGPoint(x: 1, y: 0)
-               bottomView_HIDA.layer.insertSublayer(gradientLayer!, at: 0)
-               
-               bottomView_HIDA.layer.cornerRadius = deviceType == .phone ? 10 : 16
-               bottomView_HIDA.layer.masksToBounds = true
     }
     
     func configure_HIDA(with text: String) {
@@ -57,23 +44,26 @@ class MenuCell_HIDA: UICollectionViewCell {
     }
     
     private func update_HIDA(with isSelected: Bool) {
-        if isSelected {
-            gradientLayer = CAGradientLayer()
-            gradientLayer?.frame = bottomView_HIDA.bounds
-            gradientLayer?.colors = [
-                UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
-                UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor
-            ]
-            gradientLayer?.startPoint = CGPoint(x: 0, y: 0)
-            gradientLayer?.endPoint = CGPoint(x: 1, y: 0)
-            bottomView_HIDA.layer.insertSublayer(gradientLayer!, at: 0)
-            bottomView_HIDA.backgroundColor = .clear
-        } else {
-            gradientLayer?.removeFromSuperlayer()
-            gradientLayer = nil
-            bottomView_HIDA.backgroundColor = .clear
+            if isSelected {
+                if gradientLayer == nil {
+                    gradientLayer = CAGradientLayer()
+                    gradientLayer?.frame = bottomView_HIDA.bounds
+                    gradientLayer?.colors = [
+                        UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
+                        UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor
+                    ]
+                    gradientLayer?.startPoint = CGPoint(x: 0, y: 0)
+                    gradientLayer?.endPoint = CGPoint(x: 1, y: 0)
+                    bottomView_HIDA.layer.insertSublayer(gradientLayer!, at: 0)
+                    bottomView_HIDA.backgroundColor = .clear
+                }
+            } else {
+                contentView.layer.sublayers?.removeAll(where: { $0 is CAGradientLayer })
+                gradientLayer?.removeFromSuperlayer()
+                gradientLayer = nil
+                bottomView_HIDA.backgroundColor = .clear
+            }
+            titleLabel_HIDA.textColor = .white
+            chevronImage_HIDA.image = UIImage(.menuChevron)
         }
-        titleLabel_HIDA.textColor = .white
-        chevronImage_HIDA.image = UIImage(.menuChevron)
     }
-}

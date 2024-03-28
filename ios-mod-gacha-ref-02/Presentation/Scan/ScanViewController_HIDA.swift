@@ -47,8 +47,8 @@ class ScanViewController_HIDA: UIViewController {
         var _Yjhv7FE: Bool { true }
         guard let contentType = contentType_HIDA else { return }
         switch contentType {
-        case .wallpapers_hida:       imageView_HIDA.contentMode = .scaleAspectFill
-        case .collections_hida:      imageView_HIDA.contentMode = .scaleAspectFill
+        case .wallpapers_hida:       imageView_HIDA.contentMode = .center
+        case .collections_hida:      imageView_HIDA.contentMode = .center
         default: break
         }
     }

@@ -25,7 +25,7 @@ class DropDownCell_HIDA: UITableViewCell {
         selectionStyle = .none
         let deviceType = UIDevice.current.userInterfaceIdiom
         let fontSize: CGFloat = deviceType == .phone ? 18 : 28
-        titleLabel_HIDA.font = UIFont(name: "BakbakOne-Regular", size: fontSize)!
+        titleLabel_HIDA.font = UIFont(name: "K2D-Medium", size: fontSize)
     }
     
     public func buildCell_HIDA(with category: String, titleColor: UIColor = .white) {

@@ -71,7 +71,7 @@ class MainCell_HIDA: UICollectionViewCell {
         imageView_HIDA.layer.cornerRadius = 20
         titleLabel_HIDA.text = data.name
         titleLabel_HIDA.textColor = .white
-        titleLabel_HIDA.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
+        titleLabel_HIDA.font = UIFont(name: "K2D-SemiBold", size: 22)
         descriptionLabel_HIDA.text = data.description
         descriptionLabel_HIDA.textColor = .white
         openButton_HIDA.setTitle("Open", for: .normal)
@@ -118,14 +118,14 @@ class MainCell_HIDA: UICollectionViewCell {
         layer.insertSublayer(gradientLayer, at: 0)
         let deviceType = UIDevice.current.userInterfaceIdiom
         let openButtonFontSize: CGFloat = deviceType == .phone ? 16 : 32
-        openButton_HIDA.titleLabel?.font = UIFont(name: "BakbakOne-Regular", size: openButtonFontSize) ?? UIFont.systemFont(ofSize: openButtonFontSize)
+        openButton_HIDA.titleLabel?.font = UIFont(name: "K2D-Medium", size: openButtonFontSize)
         openButton_HIDA.setTitleColor(.white, for: .normal)
         
         let titleFontSize: CGFloat = deviceType == .phone ? 22 : 36
-        titleLabel_HIDA.font = UIFont(name: "BakbakOne-Regular", size: titleFontSize) ?? UIFont.systemFont(ofSize: titleFontSize)
+        titleLabel_HIDA.font = UIFont(name: "K2D-SemiBold", size: titleFontSize)
         
         let descriptionFontSize: CGFloat = deviceType == .phone ? 16 : 32
-        descriptionLabel_HIDA.font = UIFont(name: "SF Pro Display Regular", size: descriptionFontSize) ?? UIFont.systemFont(ofSize: descriptionFontSize)
+        descriptionLabel_HIDA.font = UIFont(name: "K2D-Regular", size: descriptionFontSize)
         
         let buttonCornerRadius: CGFloat = deviceType == .phone ? 8 : 12
         openButton_HIDA.layer.cornerRadius = buttonCornerRadius
@@ -166,22 +166,44 @@ class MainCell_HIDA: UICollectionViewCell {
     }
     
     private func updateCell_HIDA(isDownload: Bool) {
-        if isDownload {
-            let buttonWidth: CGFloat = isDownload ? 135 : 118
-            let originalX = openButton_HIDA.layer.frame.origin.x
-            let newOriginX = originalX + openButton_HIDA.layer.frame.size.width - buttonWidth
-            openButton_HIDA.layer.frame = CGRect(x: newOriginX, y: openButton_HIDA.layer.frame.origin.y, width: buttonWidth, height: openButton_HIDA.layer.frame.size.height)
-            openButton_HIDA.setTitle("Downloaded", for: .normal)
-            openButton_HIDA.backgroundColor = .systemGreen
-            openButton_HIDA.layer.sublayers?.removeAll { $0 is CAGradientLayer }
+        if !isOutfit {
+            if isDownload {
+                let buttonWidth: CGFloat = isDownload ? 135 : 118
+                let originalX = openButton_HIDA.layer.frame.origin.x
+                let newOriginX = originalX + openButton_HIDA.layer.frame.size.width - buttonWidth
+                openButton_HIDA.layer.frame = CGRect(x: newOriginX, y: openButton_HIDA.layer.frame.origin.y, width: buttonWidth, height: openButton_HIDA.layer.frame.size.height)
+                openButton_HIDA.setTitle("Downloaded", for: .normal)
+                openButton_HIDA.backgroundColor = .systemGreen
+                openButton_HIDA.layer.sublayers?.removeAll { $0 is CAGradientLayer }
+            } else {
+                let buttonWidth: CGFloat = !isDownload ? 165 : 118
+                let originalX = openButton_HIDA.layer.frame.origin.x
+                let newOriginX = originalX + openButton_HIDA.layer.frame.size.width - buttonWidth
+                openButton_HIDA.layer.frame = CGRect(x: newOriginX, y: openButton_HIDA.layer.frame.origin.y, width: buttonWidth, height: openButton_HIDA.layer.frame.size.height)
+                openButton_HIDA.setTitle("Download Failed", for: .normal)
+                openButton_HIDA.backgroundColor = .systemRed
+                openButton_HIDA.layer.sublayers?.removeAll { $0 is CAGradientLayer }
+            }
         } else {
-            let buttonWidth: CGFloat = !isDownload ? 165 : 118
-            let originalX = openButton_HIDA.layer.frame.origin.x
-            let newOriginX = originalX + openButton_HIDA.layer.frame.size.width - buttonWidth
-            openButton_HIDA.layer.frame = CGRect(x: newOriginX, y: openButton_HIDA.layer.frame.origin.y, width: buttonWidth, height: openButton_HIDA.layer.frame.size.height)
-            openButton_HIDA.setTitle("Download Failed", for: .normal)
-            openButton_HIDA.backgroundColor = .systemRed
-            openButton_HIDA.layer.sublayers?.removeAll { $0 is CAGradientLayer }
+            if isDownload {
+                let buttonWidth: CGFloat = isDownload ? 135 : 118
+                let originalX = openButton_HIDA.layer.frame.origin.x
+                let newOriginX = originalX + openButton_HIDA.layer.frame.size.width - buttonWidth
+                openButton_HIDA.layer.frame = CGRect(x: newOriginX, y: openButton_HIDA.layer.frame.origin.y, width: buttonWidth, height: openButton_HIDA.layer.frame.size.height)
+                openButton_HIDA.setTitle("Downloaded", for: .normal)
+                openButton_HIDA.setImage(.successIconWhite, for: .normal)
+                openButton_HIDA.backgroundColor = .systemGreen
+                openButton_HIDA.layer.sublayers?.removeAll { $0 is CAGradientLayer }
+            } else {
+                let buttonWidth: CGFloat = !isDownload ? 165 : 118
+                let originalX = openButton_HIDA.layer.frame.origin.x
+                let newOriginX = originalX + openButton_HIDA.layer.frame.size.width - buttonWidth
+                openButton_HIDA.layer.frame = CGRect(x: newOriginX, y: openButton_HIDA.layer.frame.origin.y, width: buttonWidth, height: openButton_HIDA.layer.frame.size.height)
+                openButton_HIDA.setTitle("Download Failed", for: .normal)
+                openButton_HIDA.setImage(.failureIconWhite, for: .normal)
+                openButton_HIDA.backgroundColor = .systemRed
+                openButton_HIDA.layer.sublayers?.removeAll { $0 is CAGradientLayer }
+            }
         }
     }
 }

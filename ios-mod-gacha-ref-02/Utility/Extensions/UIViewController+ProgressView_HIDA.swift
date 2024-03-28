@@ -48,7 +48,7 @@ class ProgressView_HIDA: UIView {
         label.textColor = .white
         let deviceType = UIDevice.current.userInterfaceIdiom
         let titleFontSize: CGFloat = deviceType == .phone ? 22 : 32
-        label.font = UIFont(name: "BakbakOne-Regular", size: titleFontSize)!
+        label.font = UIFont(name: "K2D-SemiBold", size: titleFontSize)
         label.translatesAutoresizingMaskIntoConstraints = false
         customView.addSubview(label)
         

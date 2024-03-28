@@ -52,7 +52,7 @@ class CharacterViewController_HIDA: UIViewController {
         downloadButton_HIDA.setImage(.downloadIcon, for: .normal)
         downloadButton_HIDA.setTitle("Download", for: .normal)
         let fontSize: CGFloat = deviceType == .phone ? 20 : 32
-        downloadButton_HIDA.titleLabel?.font =  UIFont(name: "BakbakOne-Regular", size: fontSize)!
+        downloadButton_HIDA.titleLabel?.font = UIFont(name: "K2D-SemiBold", size: fontSize)
         addNewButtonHeight_HIDA.constant = deviceType == .phone ? 52 : 94
         navBarHeight_HIDA.constant = deviceType == .phone ? 58 : 97
         rightIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85

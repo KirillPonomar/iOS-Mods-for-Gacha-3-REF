@@ -52,7 +52,7 @@ class MenuViewController_HIDA: UIViewController {
         leftIndentConstraint_HIDA.constant = deviceType_HIDA == .phone ? 20 : 85
         
         let fontSize_HIDA: CGFloat = deviceType_HIDA == .phone ? 22 : 32
-        titleLabel_HIDA.font = UIFont(name: "BakbakOne-Regular", size: fontSize_HIDA)!
+        titleLabel_HIDA.font = UIFont(name: "K2D-SemiBold", size: fontSize_HIDA)
         titleLabel_HIDA.textColor = .white
     }
 

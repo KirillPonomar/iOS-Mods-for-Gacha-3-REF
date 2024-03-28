@@ -25,6 +25,7 @@ class SearchBar_HIDA: UIView {
     @IBOutlet private weak var resultView_HIDA: UIView!
     @IBOutlet private weak var resultTableView_HIDA: UITableView!
     
+    @IBOutlet private weak var clearFieldButton: UIButton!
     @IBOutlet private weak var bottomViewHeight_HIDA: NSLayoutConstraint!
     @IBOutlet private weak var searchViewHeight_HIDA: NSLayoutConstraint!
     @IBOutlet private weak var resultViewHeight_HIDA: NSLayoutConstraint!
@@ -59,14 +60,16 @@ class SearchBar_HIDA: UIView {
         rightIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85
         leftIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85
         let fontSize: CGFloat = deviceType == .phone ? 22 : 28
-        searchTextField_HIDA.font = UIFont(name: "SF Pro Display Regular", size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)
+        searchTextField_HIDA.font = UIFont(name: "K2D-Regular", size: fontSize)
         searchTextField_HIDA.textColor = .white
+        searchTextField_HIDA.attributedPlaceholder = NSAttributedString(string: "Search", attributes: [NSAttributedString.Key.foregroundColor : UIColor.textSecondary])
         bottomViewHeight_HIDA.constant = deviceType == .phone ? 58 : 97
         searchViewHeight_HIDA.constant = deviceType == .phone ? 45 : 62
         resultView_HIDA.layer.cornerRadius = 12
         resultView_HIDA.layer.masksToBounds = true
         searchView_HIDA.layer.cornerRadius = deviceType == .phone ? 12 : 20
         resultViewHeight_HIDA.constant = 0
+        clearFieldButton.isHidden = true
     }
     
     func configureTableView_HIDA() {
@@ -87,12 +90,21 @@ class SearchBar_HIDA: UIView {
     @objc
     private func textFieldDidChange_HIDA(_ textField: UITextField) {
         textDidChange_HIDA?(textField.text)
+        clearFieldButton.isHidden = false
     }
+    
+    @IBAction func clearButtonDidTap_HIDA(_ sender: UIButton) {
+        textDidChange_HIDA?(nil)
+        searchTextField_HIDA.text = nil
+        clearFieldButton.isHidden = true
+    }
+    
     
     @IBAction func dismissButtonDidTap_HIDA(_ sender: UIButton) {
         textDidChange_HIDA?(nil)
         searchTextField_HIDA.text = nil
         updateResultView_HIDA(with: [])
+        clearFieldButton.isHidden = true
         searchTextField_HIDA.resignFirstResponder()
         dismiss_HIDA?()
     }
@@ -100,6 +112,10 @@ class SearchBar_HIDA: UIView {
 
 extension SearchBar_HIDA: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textDidChange_HIDA?(nil)
+        searchTextField_HIDA.text = nil
+        updateResultView_HIDA(with: [])
+        clearFieldButton.isHidden = true
         textField.resignFirstResponder()
         return true
     }

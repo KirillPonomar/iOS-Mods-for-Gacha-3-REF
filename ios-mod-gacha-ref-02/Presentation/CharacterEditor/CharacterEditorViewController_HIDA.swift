@@ -119,7 +119,6 @@ class CharacterEditorViewController_HIDA: UIViewController {
         let deviceType = UIDevice.current.userInterfaceIdiom
         navBarHeight_HIDA.constant = deviceType == .phone ? 58 : 97
         let contentLabelFontSize: CGFloat = deviceType == .phone ? 18 : 32
-        contentLabel_HIDA.font = UIFont(name: "BakbakOne-Regular", size: contentLabelFontSize)!
         leftIndentConstraint_HIDA.constant = deviceType == .phone ? 20 : 85
         contentCollectionHeight_HIDA.constant = deviceType == .phone ? 92 : 138
     }
@@ -453,6 +452,6 @@ class CategoryCell: UICollectionViewCell {
             titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
         ])
         titleLabel.textAlignment = .center
-        titleLabel.font = UIFont.systemFont(ofSize: 16)
+        titleLabel.font = UIFont(name: "K2D-Medium", size: 16)
     }
 }

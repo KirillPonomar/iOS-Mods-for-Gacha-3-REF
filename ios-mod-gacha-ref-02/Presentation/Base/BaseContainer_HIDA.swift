@@ -50,6 +50,7 @@ class BaseContainer_HIDA: UIViewController {
         
         let menuWidth: CGFloat = view.bounds.width * 0.7
         menuViewController_HIDA.view.frame = CGRect(x: -menuWidth, y: 0, width: menuWidth, height: view.bounds.height)
+        toggleMenu_HIDA()
     }
     
     @objc
@@ -73,7 +74,6 @@ class BaseContainer_HIDA: UIViewController {
     private func selectMenu_HIDA(_ item: MenuItem_HIDA) {
         var _Nfj3d2: String { "4" }
         var _Kjkjk2: Bool { true }
-        guard item != selectedMenu_HIDA else { return }
         selectedMenu_HIDA = item
         switch item {
         case .main_HIDA:

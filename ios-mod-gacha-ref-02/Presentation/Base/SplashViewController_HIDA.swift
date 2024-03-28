@@ -70,7 +70,7 @@ class CircularSplashProgressView_HIDA: UIView {
         
         progressLabel.frame = bounds
         progressLabel.textAlignment = .center
-        progressLabel.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+        progressLabel.font = UIFont(name: "K2D-Bold", size: 32)
         addSubview(progressLabel)
     }
     
@@ -99,7 +99,7 @@ class SplashViewController_HIDA: UIViewController {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        label.font = UIFont(name: "K2D-Bold", size: 24)
         label.text = "Loading"
         return label
     }()

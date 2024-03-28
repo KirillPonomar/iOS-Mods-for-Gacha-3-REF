@@ -29,14 +29,12 @@ extension DBManager_HIDA {
               let window = windowScene.windows.first else {
             return
         }
-        let alertVC = AlertController_HIDA()
-        alertVC.setupViews_HIDA()
-        alertVC.presentedView_HIDA.build_HIDA(with: AlertData_HIDA(with: "No internet connection!"))
-        alertVC.modalPresentationStyle = .overFullScreen
-        alertVC.modalTransitionStyle = .coverVertical
+        let customVC = InternetErrorView()
+        customVC.modalPresentationStyle = .overFullScreen
+        customVC.modalTransitionStyle = .coverVertical
         
         DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
-            window.rootViewController?.present(alertVC, animated: true)
+            window.rootViewController?.present(customVC, animated: true)
         }
     }
     

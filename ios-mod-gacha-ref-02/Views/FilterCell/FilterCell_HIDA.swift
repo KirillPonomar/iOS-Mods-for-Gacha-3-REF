@@ -12,7 +12,6 @@ class FilterCell_HIDA: UICollectionViewCell {
     @IBOutlet weak private var cellBottomView_HIDA: UIView!
     @IBOutlet private weak var rightIndentConstraint_HIDA: NSLayoutConstraint!
     @IBOutlet private weak var leftIndentConstraint_HIDA: NSLayoutConstraint!
-    private var gradientLayer: CAGradientLayer?
     
     override var isSelected: Bool {
         didSet {
@@ -22,6 +21,8 @@ class FilterCell_HIDA: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        var _dde3d21s: Int { 2 }
+        var _Kd83ji82: Bool { true }
         update_HIDA(with: isSelected)
         let deviceType_HIDA = UIDevice.current.userInterfaceIdiom
         cellBottomView_HIDA.layer.cornerRadius = deviceType_HIDA == .phone ? 12 : 16
@@ -31,7 +32,7 @@ class FilterCell_HIDA: UICollectionViewCell {
         leftIndentConstraint_HIDA.constant = deviceType_HIDA == .phone ? 12 : 28
         
         let fontSize: CGFloat = deviceType_HIDA == .phone ? 18 : 28
-        titleLabel_HIDA.font = UIFont(name: "BakbakOne-Regular", size: fontSize)!
+        titleLabel_HIDA.font = UIFont(name: "K2D-Medium", size: fontSize)
         titleLabel_HIDA.textColor = .background
     }
     

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6D81FE62BB494A00061FA2D /* InternetErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D81FE52BB494A00061FA2D /* InternetErrorView.swift */; };
+		A6D81FEA2BB5DD360061FA2D /* K2D-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6D81FE92BB5DD360061FA2D /* K2D-Regular.ttf */; };
+		A6D81FEC2BB5DF650061FA2D /* K2D-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6D81FEB2BB5DF650061FA2D /* K2D-Medium.ttf */; };
+		A6D81FEE2BB5DF810061FA2D /* K2D-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6D81FED2BB5DF800061FA2D /* K2D-SemiBold.ttf */; };
+		A6D81FF02BB5DF9F0061FA2D /* K2D-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6D81FEF2BB5DF9F0061FA2D /* K2D-Bold.ttf */; };
 		A6FAD79A2B9F5F5F007D5A5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6FAD7992B9F5F5F007D5A5C /* Localizable.strings */; };
 		FE4C8F882B02500D000E3DD1 /* DropDownView_HIDA.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4C8F872B02500D000E3DD1 /* DropDownView_HIDA.swift */; };
 		FE4C8F8A2B025051000E3DD1 /* DropDownView_HIDA.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4C8F892B025051000E3DD1 /* DropDownView_HIDA.xib */; };
@@ -124,6 +129,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A6D81FE52BB494A00061FA2D /* InternetErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetErrorView.swift; sourceTree = "<group>"; };
+		A6D81FE92BB5DD360061FA2D /* K2D-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "K2D-Regular.ttf"; path = "../../../../../../Downloads/k2d-2 (1)/K2D-Regular.ttf"; sourceTree = "<group>"; };
+		A6D81FEB2BB5DF650061FA2D /* K2D-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "K2D-Medium.ttf"; path = "../../../../../../Downloads/k2d-2 (1)/K2D-Medium.ttf"; sourceTree = "<group>"; };
+		A6D81FED2BB5DF800061FA2D /* K2D-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "K2D-SemiBold.ttf"; path = "../../../../../../Downloads/k2d-2 (1)/K2D-SemiBold.ttf"; sourceTree = "<group>"; };
+		A6D81FEF2BB5DF9F0061FA2D /* K2D-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "K2D-Bold.ttf"; path = "../../../../../../Downloads/k2d-2 (1)/K2D-Bold.ttf"; sourceTree = "<group>"; };
 		A6FAD7992B9F5F5F007D5A5C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FE4C8F872B02500D000E3DD1 /* DropDownView_HIDA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView_HIDA.swift; sourceTree = "<group>"; };
 		FE4C8F892B025051000E3DD1 /* DropDownView_HIDA.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownView_HIDA.xib; sourceTree = "<group>"; };
@@ -239,6 +249,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6D81FE42BB494640061FA2D /* InternetErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				A6D81FE52BB494A00061FA2D /* InternetErrorView.swift */,
+			);
+			path = InternetErrorView;
+			sourceTree = "<group>";
+		};
 		A6FAD7982B9F5F4D007D5A5C /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +499,7 @@
 		FE96E8A12AF457330070BCD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A6D81FE42BB494640061FA2D /* InternetErrorView */,
 				FE4C8F802B024E16000E3DD1 /* DropDownView */,
 				FE9554E82B014305000DFF12 /* ContentCharacterCell */,
 				FE9554E32AFEFE83000DFF12 /* CharacterEditorImage */,
@@ -517,6 +536,10 @@
 			children = (
 				FE96E8BC2AF4E7110070BCD2 /* SF-Pro-Display-Regular.otf */,
 				FE96E8BA2AF4E6EF0070BCD2 /* BakbakOne-Regular.ttf */,
+				A6D81FE92BB5DD360061FA2D /* K2D-Regular.ttf */,
+				A6D81FEB2BB5DF650061FA2D /* K2D-Medium.ttf */,
+				A6D81FED2BB5DF800061FA2D /* K2D-SemiBold.ttf */,
+				A6D81FEF2BB5DF9F0061FA2D /* K2D-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -700,7 +723,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6D81FEC2BB5DF650061FA2D /* K2D-Medium.ttf in Resources */,
 				FEBB86182AFABE780059C153 /* MainDetailsViewController_HIDA.xib in Resources */,
+				A6D81FEA2BB5DD360061FA2D /* K2D-Regular.ttf in Resources */,
 				FE9554D32AFE7B7F000DFF12 /* ScanViewController_HIDA.xib in Resources */,
 				FEBB86252AFAC1F20059C153 /* Alert_HIDA.xib in Resources */,
 				FE9554DE2AFE7DE0000DFF12 /* CharacterEditorViewController_HIDA.xib in Resources */,
@@ -715,6 +740,7 @@
 				FE96E8952AF456830070BCD2 /* LaunchScreen.storyboard in Resources */,
 				FE96E8B92AF4E0A80070BCD2 /* MenuViewController_HIDA.xib in Resources */,
 				FE4C8F922B0254C2000E3DD1 /* DropDownCell_HIDA.xib in Resources */,
+				A6D81FEE2BB5DF810061FA2D /* K2D-SemiBold.ttf in Resources */,
 				FE9554D92AFE7DD4000DFF12 /* CharacterListViewController_HIDA.xib in Resources */,
 				FEB5A0652AFE44EA00424791 /* FilterView_HIDA.xib in Resources */,
 				FE96E8BB2AF4E6EF0070BCD2 /* BakbakOne-Regular.ttf in Resources */,
@@ -722,6 +748,7 @@
 				FEBB861D2AFABE8B0059C153 /* WallpaperViewController_HIDA.xib in Resources */,
 				FEBB86312AFB8F160059C153 /* NavigationView_HIDA.xib in Resources */,
 				FEB5A0702AFE519F00424791 /* SearchBar_HIDA.xib in Resources */,
+				A6D81FF02BB5DF9F0061FA2D /* K2D-Bold.ttf in Resources */,
 				FE4C8F8A2B025051000E3DD1 /* DropDownView_HIDA.xib in Resources */,
 				FE96E8922AF456830070BCD2 /* Assets.xcassets in Resources */,
 				FE94C3C02AF8340300B9B5C4 /* ContentCell_HIDA.xib in Resources */,
@@ -783,6 +810,7 @@
 				FEBB86332AFBC3CE0059C153 /* SplashViewController_HIDA.swift in Sources */,
 				FE9554DD2AFE7DE0000DFF12 /* CharacterEditorViewController_HIDA.swift in Sources */,
 				FE96E8B82AF4E0A80070BCD2 /* MenuViewController_HIDA.swift in Sources */,
+				A6D81FE62BB494A00061FA2D /* InternetErrorView.swift in Sources */,
 				FE94C3C12AF8340300B9B5C4 /* ContentCell_HIDA.swift in Sources */,
 				FEBB862F2AFB8F000059C153 /* NavigationView_HIDA.swift in Sources */,
 				FEBB862C2AFAC8270059C153 /* UIViewController+ProgressView_HIDA.swift in Sources */,
@@ -1007,7 +1035,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-mod-gacha-ref-02/Support/Info.plist";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app requires access to the photo library. Downloading content to Photo Library.";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow us to track your in-app activity so that we can use data about your interactions with app features to improve app performance and provide you with personalized recommendations and content based on your preferences";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
@@ -1040,7 +1068,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-mod-gacha-ref-02/Support/Info.plist";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app requires access to the photo library. Downloading content to Photo Library.";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to deliver personalized ads to you.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow us to track your in-app activity so that we can use data about your interactions with app features to improve app performance and provide you with personalized recommendations and content based on your preferences";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;

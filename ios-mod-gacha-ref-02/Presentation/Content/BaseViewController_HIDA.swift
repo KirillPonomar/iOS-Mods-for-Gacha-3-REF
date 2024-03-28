@@ -343,6 +343,8 @@ class BaseViewController_HIDA: UIViewController, UICollectionViewDelegate {
             case .favourites_hida:  return favorites_HIDA.contains(model.favId)
             case .new_hida:         return model.new  == true
             case .top_hida:         return model.top  == true
+                // исправить (не приходит из JSON "Last Added")
+            case .last_hida:        return model.new == true
             default:                return favorites_HIDA.contains(model.favId)
             }
         }

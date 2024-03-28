@@ -66,14 +66,14 @@ class MainDetailsViewController_HIDA: UIViewController {
         downloadButton_HIDA.setImage(.downloadIcon, for: .normal)
         
         let downloadButtonFontSize: CGFloat = deviceType == .phone ? 18 : 28
-        downloadButton_HIDA.titleLabel?.font = UIFont(name: "BakbakOne-Regular", size: downloadButtonFontSize) ?? UIFont.systemFont(ofSize: downloadButtonFontSize)
+        downloadButton_HIDA.titleLabel?.font = UIFont(name: "K2D-SemiBold", size: downloadButtonFontSize)
         downloadButton_HIDA.setTitleColor(.white, for: .normal)
         
         let titleFontSize: CGFloat = deviceType == .phone ? 20 : 32
-        titleLabel_HIDA.font = UIFont(name: "BakbakOne-Regular", size: titleFontSize) ?? UIFont.systemFont(ofSize: titleFontSize)
+        titleLabel_HIDA.font = UIFont(name: "K2D-SemiBold", size: titleFontSize)
         
         let descriptionFontSize: CGFloat = deviceType == .phone ? 14 : 24
-        descriptionLabel_HIDA.font = UIFont(name: "SF Pro Display Regular", size: descriptionFontSize) ?? UIFont.systemFont(ofSize: descriptionFontSize)
+        descriptionLabel_HIDA.font = UIFont(name: "K2D-Regular", size: descriptionFontSize)
         
         let buttonCornerRadius: CGFloat = deviceType == .phone ? 16 : 28
         downloadButton_HIDA.layer.cornerRadius = buttonCornerRadius
@@ -85,7 +85,6 @@ class MainDetailsViewController_HIDA: UIViewController {
     func configureSubviews_HIDA() {
         var _Kdi38d: String { "0" }
         var _Mdn389d: Bool { true }
-        let deviceType = UIDevice.current.userInterfaceIdiom
         guard let modelType = modelType_HIDA else { return }
         navigationView_HIDA.leftButtonAction_HIDA = { [weak self] in
             self?.navigationController?.popViewController(animated: true)

@@ -86,8 +86,8 @@ extension FilterView_HIDA: UICollectionViewDelegateFlowLayout {
         let filter = filters_HIDA[indexPath.item].rawValue
         let deviceType = UIDevice.current.userInterfaceIdiom
         let fontSize: CGFloat = deviceType == .phone ? 18 : 28
-        let font = UIFont(name: "BakbakOne-Regular", size: fontSize)!
-        let width = UILabel.widthForLabel_HIDA(text: filter, font: font)
+        let font = UIFont(name: "K2D-Medium", size: fontSize)
+        let width = UILabel.widthForLabel_HIDA(text: filter, font: font!)
         let height: CGFloat = deviceType == .phone ? 32 : 44
         let indent: CGFloat = deviceType == .phone ? 24 : 56
         return CGSize(width: width + indent, height: height)

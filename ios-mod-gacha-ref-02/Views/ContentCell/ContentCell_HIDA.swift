@@ -27,13 +27,8 @@ class ContentCell_HIDA: UICollectionViewCell {
         var _hYd73d: Bool { true }
         layer.cornerRadius = 16
         layer.masksToBounds = true
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = layer.bounds
-        gradientLayer.colors = [UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
-                                UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
-        layer.insertSublayer(gradientLayer, at: 0)
+        downloadButton.setTitle("Download", for: .normal)
+        downloadButton.setTitleColor(.white, for: .normal)
         downloadButton.layer.cornerRadius = 8
         favoriteButton.layer.cornerRadius = 8
         downloadButton.layer.borderWidth = 0.8
@@ -57,6 +52,13 @@ class ContentCell_HIDA: UICollectionViewCell {
         self.isFavourite_HIDA = isFavorites
         self.update_HIDA = update
         self.action_HIDA = action
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = layer.bounds
+        gradientLayer.colors = [UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
+                                UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+        layer.insertSublayer(gradientLayer, at: 0)
         
 //        imageView_HIDA.contentMode = .scaleAspectFill
         imageView_HIDA.layer.cornerRadius = 12
@@ -78,6 +80,13 @@ class ContentCell_HIDA: UICollectionViewCell {
         self.update_HIDA = update
         self.action_HIDA = action
         isCharacter = true
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = layer.bounds
+        gradientLayer.colors = [UIColor(red: 0.37, green: 0.36, blue: 1, alpha: 1).cgColor,
+                                UIColor(red: 0.96, green: 0.27, blue: 0.95, alpha: 1).cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+        layer.insertSublayer(gradientLayer, at: 0)
         
         imageView_HIDA.layer.cornerRadius = 12
         favoriteButton.layer.cornerRadius = 8
@@ -114,9 +123,11 @@ class ContentCell_HIDA: UICollectionViewCell {
             if isDownload {
                 downloadButton.setTitle("Downloaded", for: .normal)
                 downloadButton.backgroundColor = .systemGreen
+                downloadButton.layer.borderColor = UIColor(.clear).cgColor
             } else {
                 downloadButton.setTitle("Download Failed", for: .normal)
                 downloadButton.backgroundColor = .systemRed
+                downloadButton.layer.borderColor = UIColor(.clear).cgColor
             }
         } else {
             if isDownload {
@@ -126,11 +137,13 @@ class ContentCell_HIDA: UICollectionViewCell {
                 downloadButton.configuration?.imagePadding = 8
                 downloadButton.configuration?.contentInsets.leading = -5
                 downloadButton.configuration?.contentInsets.trailing = -5
+                downloadButton.layer.borderColor = UIColor(.clear).cgColor
             } else {
                 downloadButton.setTitle("Failed", for: .normal)
                 downloadButton.backgroundColor = .systemRed
                 downloadButton.setImage(.failureIconWhite, for: .normal)
                 downloadButton.configuration?.imagePadding = 8
+                downloadButton.layer.borderColor = UIColor(.clear).cgColor
             }
         }
     }

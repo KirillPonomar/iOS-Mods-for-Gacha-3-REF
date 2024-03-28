@@ -189,8 +189,8 @@
             filePath = "ios-mod-gacha-ref-02/Presentation/CharacterEditor/CharacterEditorViewController_HIDA.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "configureCharacterEditorImage_HIDA()"
             landmarkType = "7">
          </BreakpointContent>
@@ -205,8 +205,8 @@
             filePath = "ios-mod-gacha-ref-02/Presentation/CharacterEditor/CharacterEditorViewController_HIDA.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "configureCharacterEditorImage_HIDA()"
             landmarkType = "7">
          </BreakpointContent>
@@ -375,16 +375,63 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F997B0E9-54A2-4A88-94D1-C7F167C078BE"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
             landmarkName = "saveFile_HIDA(with:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F997B0E9-54A2-4A88-94D1-C7F167C078BE - 3cc0dbcce94f3daa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "214"
+                  endingLineNumber = "214"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "F997B0E9-54A2-4A88-94D1-C7F167C078BE - f64f3a410c69a2b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SwiftyDropbox.DownloadRequestMemory&lt;SwiftyDropbox.Files.FileMetadataSerializer, SwiftyDropbox.Files.DownloadErrorSerializer&gt;&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "F997B0E9-54A2-4A88-94D1-C7F167C078BE - f64f3a410c69a2b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SwiftyDropbox.DownloadRequestMemory&lt;SwiftyDropbox.Files.FileMetadataSerializer, SwiftyDropbox.Files.DownloadErrorSerializer&gt;&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -397,57 +444,386 @@
             filePath = "ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "saveFile_HIDA(with:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D2A0C0E1-9C5C-4F88-B2E6-A0744C0F0451 - 3cc0dbcce94f3c47"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  uuid = "D2A0C0E1-9C5C-4F88-B2E6-A0744C0F0451 - f64f3a410c69a338"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SwiftyDropbox.DownloadRequestMemory&lt;SwiftyDropbox.Files.FileMetadataSerializer, SwiftyDropbox.Files.DownloadErrorSerializer&gt;&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "D2A0C0E1-9C5C-4F88-B2E6-A0744C0F0451 - 91ea7cd00bba6810"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "D2A0C0E1-9C5C-4F88-B2E6-A0744C0F0451 - 91ea7cd00bba6810"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "D2A0C0E1-9C5C-4F88-B2E6-A0744C0F0451 - 91ea7cd00bba6810"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "217"
+                  endingLineNumber = "217"
+                  offsetFromSymbolStart = "316">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2EABA97A-0435-41E6-BD31-86E61BF35638"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "saveFile_HIDA(with:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2EABA97A-0435-41E6-BD31-86E61BF35638 - 91ea7cd00bba6852"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "2EABA97A-0435-41E6-BD31-86E61BF35638 - 91ea7cd00bba6852"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
+                  offsetFromSymbolStart = "460">
+               </Location>
+               <Location
+                  uuid = "2EABA97A-0435-41E6-BD31-86E61BF35638 - 91ea7cd00bba6852"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
+                  offsetFromSymbolStart = "500">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2154A709-4196-4873-AF6F-34ECF96319A6"
+            uuid = "1103D495-CD3D-4B2F-85FA-AFE11825EAA7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ios-mod-gacha-ref-02/Utility/ContentManager_HIDA.swift"
+            filePath = "ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "getPath_HIDA(for:filePath:)"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "saveButtonDidTap_HIDA(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1103D495-CD3D-4B2F-85FA-AFE11825EAA7 - d50df449b5f83d30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveButtonDidTap_HIDA(__C.UIButton) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "368">
+               </Location>
+               <Location
+                  uuid = "1103D495-CD3D-4B2F-85FA-AFE11825EAA7 - d50df449b5f83d30"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveButtonDidTap_HIDA(__C.UIButton) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "408">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F1FE61D-203E-4812-9AB3-B7AD415E4807"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "saveButtonDidTap_HIDA(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F1FE61D-203E-4812-9AB3-B7AD415E4807 - d50df449b5f83d1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveButtonDidTap_HIDA(__C.UIButton) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "8F1FE61D-203E-4812-9AB3-B7AD415E4807 - d50df449b5f83d1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveButtonDidTap_HIDA(__C.UIButton) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "8F1FE61D-203E-4812-9AB3-B7AD415E4807 - d50df449b5f83d1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveButtonDidTap_HIDA(__C.UIButton) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "460">
+               </Location>
+               <Location
+                  uuid = "8F1FE61D-203E-4812-9AB3-B7AD415E4807 - d50df449b5f83d1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveButtonDidTap_HIDA(__C.UIButton) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "368">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "16B35E82-4D57-4927-BABB-F9A02BA38AF3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "saveFile_HIDA(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "16B35E82-4D57-4927-BABB-F9A02BA38AF3 - f64f3a410c69a317"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SwiftyDropbox.DownloadRequestMemory&lt;SwiftyDropbox.Files.FileMetadataSerializer, SwiftyDropbox.Files.DownloadErrorSerializer&gt;&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "216"
+                  endingLineNumber = "216"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "16B35E82-4D57-4927-BABB-F9A02BA38AF3 - 91ea7cd00bba683f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "216"
+                  endingLineNumber = "216"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "16B35E82-4D57-4927-BABB-F9A02BA38AF3 - 91ea7cd00bba683f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Foundation.URL&gt;) -&gt; () in ios_mod_gacha_ref_02.MainDetailsViewController_HIDA.saveFile_HIDA(with: Swift.String) -&gt; ()"
+                  moduleName = "ios-mod-gacha-ref-02"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kirillponomarenko/Desktop/work/ios-mod-gacha-ref-02/ios-mod-gacha-ref-02/Presentation/Mod/MainDetailsViewController_HIDA.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "216"
+                  endingLineNumber = "216"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36FF3C25-CEF8-415E-AAE8-0877C42830BB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/DBManager_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "connect_HIDA(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7D82F123-7755-4E37-96ED-3EE46672BA97"
+            uuid = "5782A3D8-4BDE-4F42-84E8-E21A73164481"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ios-mod-gacha-ref-02/Utility/ContentManager_HIDA.swift"
+            filePath = "ios-mod-gacha-ref-02/Utility/DBManager_HIDA.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "getPath_HIDA(for:imgPath:)"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "fetchContent_HIDA(for:isFavoriteMode:vc:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18FA892F-2BA0-4E5D-8DC4-57DE259B4953"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-mod-gacha-ref-02/Utility/DBManager_HIDA.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "fetchEditorContent_HIDA(vc:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
